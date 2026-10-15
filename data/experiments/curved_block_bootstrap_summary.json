@@ -1,0 +1,18 @@
+{
+  "pairs": 200,
+  "curved_available": 159,
+  "smallest_error_counts": {
+    "strict": 70,
+    "linear": 56,
+    "curved": 42,
+    "unavailable": 32
+  },
+  "common_pairs": 168,
+  "changed_gaps": 56,
+  "mean_absolute_change_pp": 0.0433521875297619,
+  "mean_absolute_change_changed_only_pp": 0.13005656258928572,
+  "sign_flips": 4,
+  "resamples_attempted": 318000,
+  "resamples_skipped": 0,
+  "runtime_seconds": 21.987500124960206
+}

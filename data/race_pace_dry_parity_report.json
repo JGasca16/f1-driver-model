@@ -1,0 +1,55 @@
+{
+  "pairs": 200,
+  "comparisons": {
+    "strict_gap": {
+      "missing_value_mismatches": 0,
+      "exact_value_mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    "linear_gap": {
+      "missing_value_mismatches": 0,
+      "exact_value_mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    "final_gap": {
+      "missing_value_mismatches": 0,
+      "exact_value_mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    "strict_se_pp": {
+      "missing_value_mismatches": 0,
+      "exact_value_mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    "linear_se_pp": {
+      "missing_value_mismatches": 0,
+      "exact_value_mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    "strict_ci_low": {
+      "missing_value_mismatches": 0,
+      "exact_value_mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    "strict_ci_high": {
+      "missing_value_mismatches": 0,
+      "exact_value_mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    "linear_ci_low": {
+      "missing_value_mismatches": 0,
+      "exact_value_mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    "linear_ci_high": {
+      "missing_value_mismatches": 0,
+      "exact_value_mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    }
+  },
+  "v3_flags": 18,
+  "standard_flags": 5,
+  "removed_flags": 13,
+  "added_flags": 0,
+  "labels_changed": 0
+}
