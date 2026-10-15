@@ -1,0 +1,817 @@
+round_number,race,team,driver,teammate,heldout_driver_number,heldout_stint,test_laps,train_laps,linear_mae_seconds,linear_reason_code,curved_mae_seconds,curved_reason_code,common_valid_fold
+2,Chinese Grand Prix,Haas F1 Team,BEA,OCO,31,1.0,6,92,,effects_not_identifiable,,effects_not_identifiable,False
+2,Chinese Grand Prix,Haas F1 Team,BEA,OCO,31,2.0,43,55,,strategy_confounded,,strategy_confounded,False
+2,Chinese Grand Prix,Haas F1 Team,BEA,OCO,87,1.0,21,77,,strategy_confounded,,strategy_confounded,False
+2,Chinese Grand Prix,Haas F1 Team,BEA,OCO,87,2.0,28,70,,effects_not_identifiable,,effects_not_identifiable,False
+2,Chinese Grand Prix,Kick Sauber,BOR,HUL,27,1.0,15,81,,unseen_compound,,unseen_compound,False
+2,Chinese Grand Prix,Kick Sauber,BOR,HUL,27,2.0,33,63,,strategy_confounded,,strategy_confounded,False
+2,Chinese Grand Prix,Kick Sauber,BOR,HUL,5,2.0,21,75,,effects_not_identifiable,,effects_not_identifiable,False
+2,Chinese Grand Prix,Kick Sauber,BOR,HUL,5,3.0,27,69,,effects_not_identifiable,,effects_not_identifiable,False
+2,Chinese Grand Prix,McLaren,NOR,PIA,4,1.0,11,89,,effects_not_identifiable,,effects_not_identifiable,False
+2,Chinese Grand Prix,McLaren,NOR,PIA,4,2.0,39,61,,effects_not_identifiable,,effects_not_identifiable,False
+2,Chinese Grand Prix,McLaren,NOR,PIA,81,1.0,10,90,,effects_not_identifiable,,effects_not_identifiable,False
+2,Chinese Grand Prix,McLaren,NOR,PIA,81,2.0,40,60,,effects_not_identifiable,,effects_not_identifiable,False
+2,Chinese Grand Prix,Mercedes,ANT,RUS,12,1.0,8,92,,effects_not_identifiable,,effects_not_identifiable,False
+2,Chinese Grand Prix,Mercedes,ANT,RUS,12,2.0,42,58,,too_few_clean_laps,,too_few_clean_laps,False
+2,Chinese Grand Prix,Mercedes,ANT,RUS,63,1.0,10,90,,effects_not_identifiable,,effects_not_identifiable,False
+2,Chinese Grand Prix,Mercedes,ANT,RUS,63,2.0,40,60,,effects_not_identifiable,,effects_not_identifiable,False
+2,Chinese Grand Prix,Racing Bulls,HAD,TSU,22,1.0,6,80,0.25519844389724494,,0.37349698847633545,,True
+2,Chinese Grand Prix,Racing Bulls,HAD,TSU,22,2.0,20,66,0.3364768878365396,,0.32208239647222214,,True
+2,Chinese Grand Prix,Racing Bulls,HAD,TSU,22,3.0,8,78,0.15494315642982848,,0.1825871623352402,,True
+2,Chinese Grand Prix,Racing Bulls,HAD,TSU,22,4.0,7,79,0.633636065172435,,0.6969733683950048,,True
+2,Chinese Grand Prix,Racing Bulls,HAD,TSU,6,1.0,7,79,0.2555614596663633,,0.32442438701696324,,True
+2,Chinese Grand Prix,Racing Bulls,HAD,TSU,6,2.0,18,68,0.43099548137407356,,0.4080205565738129,,True
+2,Chinese Grand Prix,Racing Bulls,HAD,TSU,6,3.0,20,66,0.4028606382246721,,0.7418619717894657,,True
+2,Chinese Grand Prix,Red Bull Racing,LAW,VER,1,1.0,9,87,0.5813519207853753,,0.5248185749836757,,True
+2,Chinese Grand Prix,Red Bull Racing,LAW,VER,1,2.0,41,55,,too_few_clean_laps,,too_few_clean_laps,False
+2,Chinese Grand Prix,Red Bull Racing,LAW,VER,30,1.0,13,83,15.657814430117911,,22.897848974576384,,True
+2,Chinese Grand Prix,Red Bull Racing,LAW,VER,30,2.0,9,87,0.5364288736695926,,0.3370823437816834,,True
+2,Chinese Grand Prix,Red Bull Racing,LAW,VER,30,3.0,24,72,0.5853638352866568,,2.370914467040089,,True
+2,Chinese Grand Prix,Williams,ALB,SAI,23,1.0,15,83,,effects_not_identifiable,,effects_not_identifiable,False
+2,Chinese Grand Prix,Williams,ALB,SAI,23,2.0,34,64,,effects_not_identifiable,,effects_not_identifiable,False
+2,Chinese Grand Prix,Williams,ALB,SAI,55,1.0,12,86,,effects_not_identifiable,,effects_not_identifiable,False
+2,Chinese Grand Prix,Williams,ALB,SAI,55,2.0,37,61,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Aston Martin,ALO,STR,14,1.0,22,72,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Aston Martin,ALO,STR,14,2.0,27,67,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Aston Martin,ALO,STR,18,1.0,7,87,,unseen_compound,,unseen_compound,False
+3,Japanese Grand Prix,Aston Martin,ALO,STR,18,2.0,18,76,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Aston Martin,ALO,STR,18,3.0,20,74,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Ferrari,HAM,LEC,16,1.0,19,79,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Ferrari,HAM,LEC,16,2.0,30,68,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Ferrari,HAM,LEC,44,1.0,28,70,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Ferrari,HAM,LEC,44,2.0,21,77,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Haas F1 Team,BEA,OCO,31,1.0,30,68,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Haas F1 Team,BEA,OCO,31,2.0,19,79,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Haas F1 Team,BEA,OCO,87,1.0,21,77,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Haas F1 Team,BEA,OCO,87,2.0,28,70,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Kick Sauber,BOR,HUL,27,1.0,20,78,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Kick Sauber,BOR,HUL,27,2.0,29,69,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Kick Sauber,BOR,HUL,5,1.0,29,69,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Kick Sauber,BOR,HUL,5,2.0,20,78,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,McLaren,NOR,PIA,4,1.0,19,78,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,McLaren,NOR,PIA,4,2.0,29,68,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,McLaren,NOR,PIA,81,1.0,18,79,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,McLaren,NOR,PIA,81,2.0,31,66,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Mercedes,ANT,RUS,12,1.0,28,67,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Mercedes,ANT,RUS,12,2.0,19,76,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Mercedes,ANT,RUS,63,1.0,17,78,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Mercedes,ANT,RUS,63,2.0,31,64,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Red Bull Racing,TSU,VER,1,1.0,19,78,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Red Bull Racing,TSU,VER,1,2.0,30,67,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Red Bull Racing,TSU,VER,22,1.0,21,76,,effects_not_identifiable,,effects_not_identifiable,False
+3,Japanese Grand Prix,Red Bull Racing,TSU,VER,22,2.0,27,70,,effects_not_identifiable,,effects_not_identifiable,False
+4,Bahrain Grand Prix,Alpine,DOO,GAS,10,1.0,8,79,0.8553282457625038,,0.9576393265454186,,True
+4,Bahrain Grand Prix,Alpine,DOO,GAS,10,2.0,15,72,0.33373445386961104,,0.4259420151898591,,True
+4,Bahrain Grand Prix,Alpine,DOO,GAS,10,3.0,22,65,0.4230004307783917,,0.46350279598747207,,True
+4,Bahrain Grand Prix,Alpine,DOO,GAS,7,1.0,7,80,0.8498642302332351,,0.9280810945815229,,True
+4,Bahrain Grand Prix,Alpine,DOO,GAS,7,2.0,15,72,0.36426456634699966,,0.39419263519431996,,True
+4,Bahrain Grand Prix,Alpine,DOO,GAS,7,3.0,20,67,0.36595369858469695,,0.5528077349707289,,True
+4,Bahrain Grand Prix,Aston Martin,ALO,STR,14,1.0,14,81,0.29922966633135367,,0.4288663061032289,,True
+4,Bahrain Grand Prix,Aston Martin,ALO,STR,14,2.0,13,82,0.3540492474050788,,0.337680000906617,,True
+4,Bahrain Grand Prix,Aston Martin,ALO,STR,14,3.0,21,74,0.2521465761359917,,0.24040369673302361,,True
+4,Bahrain Grand Prix,Aston Martin,ALO,STR,18,1.0,10,85,,unseen_compound,,unseen_compound,False
+4,Bahrain Grand Prix,Aston Martin,ALO,STR,18,2.0,17,78,0.27189832574880185,,0.2704526724900108,,True
+4,Bahrain Grand Prix,Aston Martin,ALO,STR,18,3.0,20,75,0.26424672442445074,,0.2224347564228495,,True
+4,Bahrain Grand Prix,Ferrari,HAM,LEC,16,1.0,15,79,0.2906873428244315,,0.3115613554618799,,True
+4,Bahrain Grand Prix,Ferrari,HAM,LEC,16,2.0,12,82,0.2989279045573549,,0.28441435945233806,,True
+4,Bahrain Grand Prix,Ferrari,HAM,LEC,16,3.0,20,74,0.28868411280601763,,0.21213753996141377,,True
+4,Bahrain Grand Prix,Ferrari,HAM,LEC,44,1.0,15,79,0.4100348441403317,,0.40681754290718575,,True
+4,Bahrain Grand Prix,Ferrari,HAM,LEC,44,2.0,12,82,0.5709169015002095,,0.5544318455975864,,True
+4,Bahrain Grand Prix,Ferrari,HAM,LEC,44,3.0,20,74,0.29287129723374716,,0.18996066353473254,,True
+4,Bahrain Grand Prix,Haas F1 Team,BEA,OCO,31,1.0,6,85,0.20721704700725732,,0.18430738250965342,,True
+4,Bahrain Grand Prix,Haas F1 Team,BEA,OCO,31,2.0,16,75,,unseen_compound,,unseen_compound,False
+4,Bahrain Grand Prix,Haas F1 Team,BEA,OCO,31,3.0,23,68,,strategy_confounded,,strategy_confounded,False
+4,Bahrain Grand Prix,Haas F1 Team,BEA,OCO,87,1.0,12,79,0.2987521236318405,,0.32573530462905137,,True
+4,Bahrain Grand Prix,Haas F1 Team,BEA,OCO,87,2.0,15,76,,strategy_confounded,,strategy_confounded,False
+4,Bahrain Grand Prix,Haas F1 Team,BEA,OCO,87,3.0,19,72,0.3919873960325318,,0.3438338185521484,,True
+4,Bahrain Grand Prix,McLaren,NOR,PIA,4,1.0,8,86,0.29814556963153116,,0.2949691362637754,,True
+4,Bahrain Grand Prix,McLaren,NOR,PIA,4,2.0,19,75,0.650574379434779,,0.6640471932876594,,True
+4,Bahrain Grand Prix,McLaren,NOR,PIA,4,3.0,20,74,0.5699308286757173,,0.5803508000962687,,True
+4,Bahrain Grand Prix,McLaren,NOR,PIA,81,1.0,12,82,0.31267738591857136,,0.35311625976898736,,True
+4,Bahrain Grand Prix,McLaren,NOR,PIA,81,2.0,14,80,0.40967019991731995,,0.3955058635478587,,True
+4,Bahrain Grand Prix,McLaren,NOR,PIA,81,3.0,21,73,0.48974358385644173,,0.4870912622908544,,True
+4,Bahrain Grand Prix,Mercedes,ANT,RUS,12,1.0,8,63,0.697604219551442,,0.6990639645744121,,True
+4,Bahrain Grand Prix,Mercedes,ANT,RUS,12,2.0,12,59,0.4986613529896111,,0.4745487072171066,,True
+4,Bahrain Grand Prix,Mercedes,ANT,RUS,12,3.0,2,69,0.385779288035792,,0.9860514410347605,,True
+4,Bahrain Grand Prix,Mercedes,ANT,RUS,12,4.0,21,50,0.9964823398321963,,3.4971801051065303,,True
+4,Bahrain Grand Prix,Mercedes,ANT,RUS,63,1.0,11,60,0.7591935853232676,,0.7572859139819805,,True
+4,Bahrain Grand Prix,Mercedes,ANT,RUS,63,2.0,16,55,0.6715782514154736,,0.6139032418812462,,True
+4,Bahrain Grand Prix,Mercedes,ANT,RUS,63,3.0,1,70,0.7961144049816085,,0.866304078975233,,True
+4,Bahrain Grand Prix,Racing Bulls,HAD,LAW,30,1.0,12,78,0.1735113307776667,,0.47254797843327623,,True
+4,Bahrain Grand Prix,Racing Bulls,HAD,LAW,30,2.0,14,76,0.3196988375211376,,0.5674460274446906,,True
+4,Bahrain Grand Prix,Racing Bulls,HAD,LAW,30,3.0,21,69,0.5110538017731281,,1.1806093843092924,,True
+4,Bahrain Grand Prix,Racing Bulls,HAD,LAW,6,1.0,3,87,0.29741718792676863,,2.2545378660580297,,True
+4,Bahrain Grand Prix,Racing Bulls,HAD,LAW,6,2.0,18,72,0.4630223958565575,,0.6729472467510687,,True
+4,Bahrain Grand Prix,Racing Bulls,HAD,LAW,6,3.0,22,68,0.3597927250822947,,0.5232165414542284,,True
+4,Bahrain Grand Prix,Red Bull Racing,TSU,VER,1,1.0,8,79,0.8762422948615569,,0.37914042063653675,,True
+4,Bahrain Grand Prix,Red Bull Racing,TSU,VER,1,2.0,13,74,,unseen_compound,,unseen_compound,False
+4,Bahrain Grand Prix,Red Bull Racing,TSU,VER,1,3.0,21,66,0.9951933650223703,,0.3950050074932568,,True
+4,Bahrain Grand Prix,Red Bull Racing,TSU,VER,22,1.0,8,79,0.5971063254127653,,0.2803362972801242,,True
+4,Bahrain Grand Prix,Red Bull Racing,TSU,VER,22,2.0,18,69,0.8593719552111878,,0.4715270391570756,,True
+4,Bahrain Grand Prix,Red Bull Racing,TSU,VER,22,3.0,19,68,1.9066829573123107,,0.7970422877228884,,True
+4,Bahrain Grand Prix,Williams,ALB,SAI,23,1.0,14,68,0.957442274718937,,0.6591005668328904,,True
+4,Bahrain Grand Prix,Williams,ALB,SAI,23,2.0,13,69,2.166624209196234,,1.5056673200305932,,True
+4,Bahrain Grand Prix,Williams,ALB,SAI,23,3.0,21,61,2.0492117329819033,,2.1093090109078467,,True
+4,Bahrain Grand Prix,Williams,ALB,SAI,55,1.0,12,70,1.3308162280357045,,1.1906721239243343,,True
+4,Bahrain Grand Prix,Williams,ALB,SAI,55,2.0,15,67,1.6692196181722485,,1.1519691527918003,,True
+4,Bahrain Grand Prix,Williams,ALB,SAI,55,3.0,7,75,2.1470925867510937,,1.3002438448254412,,True
+5,Saudi Arabian Grand Prix,Aston Martin,ALO,STR,14,1.0,14,69,,effects_not_identifiable,,effects_not_identifiable,False
+5,Saudi Arabian Grand Prix,Aston Martin,ALO,STR,14,2.0,28,55,,effects_not_identifiable,,effects_not_identifiable,False
+5,Saudi Arabian Grand Prix,Aston Martin,ALO,STR,18,1.0,33,50,,too_few_clean_laps,,too_few_clean_laps,False
+5,Saudi Arabian Grand Prix,Aston Martin,ALO,STR,18,2.0,8,75,,effects_not_identifiable,,effects_not_identifiable,False
+5,Saudi Arabian Grand Prix,Ferrari,HAM,LEC,16,1.0,24,61,,effects_not_identifiable,,effects_not_identifiable,False
+5,Saudi Arabian Grand Prix,Ferrari,HAM,LEC,16,2.0,19,66,,effects_not_identifiable,,effects_not_identifiable,False
+5,Saudi Arabian Grand Prix,Ferrari,HAM,LEC,44,1.0,18,67,,effects_not_identifiable,,effects_not_identifiable,False
+5,Saudi Arabian Grand Prix,Ferrari,HAM,LEC,44,2.0,24,61,,effects_not_identifiable,,effects_not_identifiable,False
+5,Saudi Arabian Grand Prix,McLaren,NOR,PIA,4,1.0,28,57,,effects_not_identifiable,,effects_not_identifiable,False
+5,Saudi Arabian Grand Prix,McLaren,NOR,PIA,4,2.0,14,71,,effects_not_identifiable,,effects_not_identifiable,False
+5,Saudi Arabian Grand Prix,McLaren,NOR,PIA,81,1.0,14,71,,effects_not_identifiable,,effects_not_identifiable,False
+5,Saudi Arabian Grand Prix,McLaren,NOR,PIA,81,2.0,29,56,,effects_not_identifiable,,effects_not_identifiable,False
+5,Saudi Arabian Grand Prix,Mercedes,ANT,RUS,12,1.0,14,71,,effects_not_identifiable,,effects_not_identifiable,False
+5,Saudi Arabian Grand Prix,Mercedes,ANT,RUS,12,2.0,28,57,,effects_not_identifiable,,effects_not_identifiable,False
+5,Saudi Arabian Grand Prix,Mercedes,ANT,RUS,63,1.0,15,70,,effects_not_identifiable,,effects_not_identifiable,False
+5,Saudi Arabian Grand Prix,Mercedes,ANT,RUS,63,2.0,28,57,,effects_not_identifiable,,effects_not_identifiable,False
+5,Saudi Arabian Grand Prix,Racing Bulls,HAD,LAW,30,1.0,14,68,,effects_not_identifiable,,effects_not_identifiable,False
+5,Saudi Arabian Grand Prix,Racing Bulls,HAD,LAW,30,2.0,27,55,,effects_not_identifiable,,effects_not_identifiable,False
+5,Saudi Arabian Grand Prix,Racing Bulls,HAD,LAW,6,1.0,27,55,,effects_not_identifiable,,effects_not_identifiable,False
+5,Saudi Arabian Grand Prix,Racing Bulls,HAD,LAW,6,2.0,14,68,,effects_not_identifiable,,effects_not_identifiable,False
+5,Saudi Arabian Grand Prix,Williams,ALB,SAI,23,1.0,16,69,,effects_not_identifiable,,effects_not_identifiable,False
+5,Saudi Arabian Grand Prix,Williams,ALB,SAI,23,2.0,26,59,,effects_not_identifiable,,effects_not_identifiable,False
+5,Saudi Arabian Grand Prix,Williams,ALB,SAI,55,1.0,16,69,,effects_not_identifiable,,effects_not_identifiable,False
+5,Saudi Arabian Grand Prix,Williams,ALB,SAI,55,2.0,27,58,,effects_not_identifiable,,effects_not_identifiable,False
+7,Emilia Romagna Grand Prix,Alpine,COL,GAS,10,1.0,5,83,0.3560055145208736,,0.4145766014532882,,True
+7,Emilia Romagna Grand Prix,Alpine,COL,GAS,10,2.0,16,72,0.43337446482997066,,0.4238148648899829,,True
+7,Emilia Romagna Grand Prix,Alpine,COL,GAS,10,3.0,22,66,0.7105128697681334,,1.8166468386435595,,True
+7,Emilia Romagna Grand Prix,Alpine,COL,GAS,43,1.0,20,68,0.351144957948798,,0.37305336566802366,,True
+7,Emilia Romagna Grand Prix,Alpine,COL,GAS,43,2.0,16,72,0.7323500004833123,,0.7197994182772645,,True
+7,Emilia Romagna Grand Prix,Alpine,COL,GAS,43,3.0,9,79,0.4109997410599138,,0.39332582583751396,,True
+7,Emilia Romagna Grand Prix,Aston Martin,ALO,STR,14,1.0,10,78,0.46804202388601795,,0.4297048262259239,,True
+7,Emilia Romagna Grand Prix,Aston Martin,ALO,STR,14,2.0,25,63,0.427135025279826,,0.403023765713927,,True
+7,Emilia Romagna Grand Prix,Aston Martin,ALO,STR,14,3.0,9,79,0.5043194452641918,,0.5715765299883534,,True
+7,Emilia Romagna Grand Prix,Aston Martin,ALO,STR,18,1.0,12,76,0.4710008987353085,,0.5063141022499522,,True
+7,Emilia Romagna Grand Prix,Aston Martin,ALO,STR,18,2.0,23,65,0.35103737425397324,,0.2956812374891917,,True
+7,Emilia Romagna Grand Prix,Aston Martin,ALO,STR,18,3.0,9,79,0.34432422187223705,,0.4265731255363363,,True
+7,Emilia Romagna Grand Prix,Ferrari,HAM,LEC,16,1.0,8,85,0.39877611151460535,,0.33866481153596695,,True
+7,Emilia Romagna Grand Prix,Ferrari,HAM,LEC,16,2.0,16,77,0.5192683631514408,,0.5528875987256754,,True
+7,Emilia Romagna Grand Prix,Ferrari,HAM,LEC,16,3.0,21,72,0.48502290938941023,,0.5544604335310461,,True
+7,Emilia Romagna Grand Prix,Ferrari,HAM,LEC,44,1.0,27,66,0.41664175706198453,,0.7080986104635187,,True
+7,Emilia Romagna Grand Prix,Ferrari,HAM,LEC,44,2.0,12,81,0.3390020621271172,,0.5217110198420691,,True
+7,Emilia Romagna Grand Prix,Ferrari,HAM,LEC,44,3.0,9,84,0.6302600692803979,,0.6777970881401908,,True
+7,Emilia Romagna Grand Prix,Haas F1 Team,BEA,OCO,31,2.0,24,46,,strategy_confounded,,strategy_confounded,False
+7,Emilia Romagna Grand Prix,Haas F1 Team,BEA,OCO,87,1.0,26,44,,effects_not_identifiable,,effects_not_identifiable,False
+7,Emilia Romagna Grand Prix,Haas F1 Team,BEA,OCO,87,3.0,20,50,,effects_not_identifiable,,effects_not_identifiable,False
+7,Emilia Romagna Grand Prix,Kick Sauber,BOR,HUL,27,1.0,26,66,0.5758356314918339,,1.131343463389392,,True
+7,Emilia Romagna Grand Prix,Kick Sauber,BOR,HUL,27,2.0,21,71,0.8339041489308373,,1.0452750689835182,,True
+7,Emilia Romagna Grand Prix,Kick Sauber,BOR,HUL,5,1.0,10,82,1.4290465910611971,,1.670173078819137,,True
+7,Emilia Romagna Grand Prix,Kick Sauber,BOR,HUL,5,2.0,13,79,0.27280038506677984,,0.2387012380270138,,True
+7,Emilia Romagna Grand Prix,Kick Sauber,BOR,HUL,5,3.0,13,79,0.8319468008547145,,0.8593225220266316,,True
+7,Emilia Romagna Grand Prix,Kick Sauber,BOR,HUL,5,4.0,9,83,0.5911191359686414,,1.121815520250681,,True
+7,Emilia Romagna Grand Prix,McLaren,NOR,PIA,4,1.0,26,68,0.3958931791353788,,0.5018364391927517,,True
+7,Emilia Romagna Grand Prix,McLaren,NOR,PIA,4,2.0,13,81,0.4778975749623052,,0.4418022271340061,,True
+7,Emilia Romagna Grand Prix,McLaren,NOR,PIA,4,3.0,9,85,0.4024375459213366,,0.29953963700620534,,True
+7,Emilia Romagna Grand Prix,McLaren,NOR,PIA,81,1.0,11,83,0.39695722891387414,,0.4767231177740802,,True
+7,Emilia Romagna Grand Prix,McLaren,NOR,PIA,81,2.0,13,81,0.502820313846396,,0.4589905349758702,,True
+7,Emilia Romagna Grand Prix,McLaren,NOR,PIA,81,3.0,22,72,0.35456281149090524,,0.36691056814428824,,True
+7,Emilia Romagna Grand Prix,Mercedes,ANT,RUS,12,1.0,27,57,0.8980257823343467,,1.0237232583306164,,True
+7,Emilia Romagna Grand Prix,Mercedes,ANT,RUS,12,2.0,12,72,1.3064277070477093,,0.3262433322499187,,True
+7,Emilia Romagna Grand Prix,Mercedes,ANT,RUS,63,1.0,9,75,1.2417640988058105,,0.5134232599851395,,True
+7,Emilia Romagna Grand Prix,Mercedes,ANT,RUS,63,2.0,14,70,0.3787338797950314,,0.27028649684165224,,True
+7,Emilia Romagna Grand Prix,Mercedes,ANT,RUS,63,3.0,22,62,1.0503890850423752,,0.692620964309948,,True
+7,Emilia Romagna Grand Prix,Racing Bulls,HAD,LAW,30,1.0,8,85,0.47446020155635615,,0.5469321657157824,,True
+7,Emilia Romagna Grand Prix,Racing Bulls,HAD,LAW,30,2.0,15,78,0.2823485618343549,,0.3451942814803137,,True
+7,Emilia Romagna Grand Prix,Racing Bulls,HAD,LAW,30,3.0,22,71,0.5644810350045701,,0.6303510952887276,,True
+7,Emilia Romagna Grand Prix,Racing Bulls,HAD,LAW,6,1.0,27,66,0.46590631406157,,0.3574496576162589,,True
+7,Emilia Romagna Grand Prix,Racing Bulls,HAD,LAW,6,2.0,12,81,0.4228192459736526,,0.4125386799404242,,True
+7,Emilia Romagna Grand Prix,Racing Bulls,HAD,LAW,6,3.0,9,84,0.3596235415707396,,0.3918753198021092,,True
+7,Emilia Romagna Grand Prix,Red Bull Racing,TSU,VER,1,1.0,27,69,2.119494179887087,,0.6401954764865162,,True
+7,Emilia Romagna Grand Prix,Red Bull Racing,TSU,VER,1,2.0,13,83,0.5036862338584422,,0.2097375703559539,,True
+7,Emilia Romagna Grand Prix,Red Bull Racing,TSU,VER,1,3.0,9,87,0.6452523575338032,,0.35346234640903007,,True
+7,Emilia Romagna Grand Prix,Red Bull Racing,TSU,VER,22,1.0,25,71,2.0381081975108013,,0.3741407106582704,,True
+7,Emilia Romagna Grand Prix,Red Bull Racing,TSU,VER,22,2.0,22,74,2.5771610559017386,,1.6826867536305221,,True
+7,Emilia Romagna Grand Prix,Williams,ALB,SAI,23,1.0,27,65,0.5517151828428389,,0.3005725523343938,,True
+7,Emilia Romagna Grand Prix,Williams,ALB,SAI,23,2.0,12,80,0.2991463176689457,,0.3710454140543907,,True
+7,Emilia Romagna Grand Prix,Williams,ALB,SAI,23,3.0,8,84,0.6963964362676602,,0.8092076695427384,,True
+7,Emilia Romagna Grand Prix,Williams,ALB,SAI,55,1.0,9,83,0.46677263601416047,,0.39859768142445123,,True
+7,Emilia Romagna Grand Prix,Williams,ALB,SAI,55,2.0,14,78,0.4655472309284952,,0.4922993993388981,,True
+7,Emilia Romagna Grand Prix,Williams,ALB,SAI,55,3.0,22,70,0.6933368681627314,,0.5522841878486876,,True
+8,Monaco Grand Prix,Aston Martin,ALO,STR,14,1.0,6,77,2.049559193318293,,1.8702647005915718,,True
+8,Monaco Grand Prix,Aston Martin,ALO,STR,14,2.0,18,65,,strategy_confounded,,strategy_confounded,False
+8,Monaco Grand Prix,Aston Martin,ALO,STR,18,1.0,7,76,0.8786699578221706,,0.8950466073420387,,True
+8,Monaco Grand Prix,Aston Martin,ALO,STR,18,2.0,43,40,,strategy_confounded,,strategy_confounded,False
+8,Monaco Grand Prix,Aston Martin,ALO,STR,18,3.0,9,74,,unseen_compound,,unseen_compound,False
+8,Monaco Grand Prix,Ferrari,HAM,LEC,16,1.0,11,111,3.129178858031706,,1.8704729784961918,,True
+8,Monaco Grand Prix,Ferrari,HAM,LEC,16,2.0,23,99,0.7858538015265399,,0.9363634169211382,,True
+8,Monaco Grand Prix,Ferrari,HAM,LEC,16,3.0,27,95,1.0363519028095667,,0.6382753584202868,,True
+8,Monaco Grand Prix,Ferrari,HAM,LEC,44,1.0,8,114,1.6934507147310356,,1.2798257357882736,,True
+8,Monaco Grand Prix,Ferrari,HAM,LEC,44,2.0,33,89,0.8193289279030697,,1.7271836840257386,,True
+8,Monaco Grand Prix,Ferrari,HAM,LEC,44,3.0,20,102,0.8581127204673606,,0.9530366405012017,,True
+8,Monaco Grand Prix,Haas F1 Team,BEA,OCO,31,1.0,6,116,1.3382868718008492,,1.9868926712700556,,True
+8,Monaco Grand Prix,Haas F1 Team,BEA,OCO,31,2.0,9,113,,strategy_confounded,,strategy_confounded,False
+8,Monaco Grand Prix,Haas F1 Team,BEA,OCO,31,3.0,46,76,2.661687648057063,,0.9430428257515399,,True
+8,Monaco Grand Prix,Haas F1 Team,BEA,OCO,87,2.0,7,115,2.2555507357225832,,1.5043561839231623,,True
+8,Monaco Grand Prix,Haas F1 Team,BEA,OCO,87,3.0,54,68,,strategy_confounded,,strategy_confounded,False
+8,Monaco Grand Prix,Kick Sauber,BOR,HUL,27,1.0,2,117,1.9379084891228757,,5.478534897666378,,True
+8,Monaco Grand Prix,Kick Sauber,BOR,HUL,27,2.0,28,91,,strategy_confounded,,strategy_confounded,False
+8,Monaco Grand Prix,Kick Sauber,BOR,HUL,27,3.0,28,91,1.2011422688207927,,3.0112870754891428,,True
+8,Monaco Grand Prix,Kick Sauber,BOR,HUL,5,2.0,16,103,,strategy_confounded,,strategy_confounded,False
+8,Monaco Grand Prix,Kick Sauber,BOR,HUL,5,3.0,6,113,1.5341084636027678,,1.5864946699739544,,True
+8,Monaco Grand Prix,Kick Sauber,BOR,HUL,5,4.0,39,80,1.783565332726371,,2.287488448436893,,True
+8,Monaco Grand Prix,McLaren,NOR,PIA,4,1.0,9,115,1.319538933524176,,0.9245258813445913,,True
+8,Monaco Grand Prix,McLaren,NOR,PIA,4,2.0,27,97,0.8403508472680983,,0.923027118454859,,True
+8,Monaco Grand Prix,McLaren,NOR,PIA,4,3.0,26,98,0.7896895022897161,,0.9610286044881841,,True
+8,Monaco Grand Prix,McLaren,NOR,PIA,81,1.0,10,114,1.2886534184986118,,0.8703840598566288,,True
+8,Monaco Grand Prix,McLaren,NOR,PIA,81,2.0,24,100,0.6302098264193005,,0.6643776630435537,,True
+8,Monaco Grand Prix,McLaren,NOR,PIA,81,3.0,28,96,0.9696541620306317,,0.6575955004808064,,True
+8,Monaco Grand Prix,Mercedes,ANT,RUS,12,1.0,56,57,,strategy_confounded,,strategy_confounded,False
+8,Monaco Grand Prix,Mercedes,ANT,RUS,12,3.0,2,111,0.678440018640444,,0.8486999660706331,,True
+8,Monaco Grand Prix,Mercedes,ANT,RUS,63,1.0,40,73,,strategy_confounded,,strategy_confounded,False
+8,Monaco Grand Prix,Mercedes,ANT,RUS,63,2.0,9,104,,unseen_compound,,unseen_compound,False
+8,Monaco Grand Prix,Mercedes,ANT,RUS,63,3.0,6,107,0.29526472634336426,,0.7322066626079172,,True
+8,Monaco Grand Prix,Racing Bulls,HAD,LAW,30,1.0,21,101,3.570694389733905,,5.74813193648567,,True
+8,Monaco Grand Prix,Racing Bulls,HAD,LAW,30,2.0,5,117,1.0225258392783587,,2.4913956226255833,,True
+8,Monaco Grand Prix,Racing Bulls,HAD,LAW,30,3.0,35,87,,strategy_confounded,,strategy_confounded,False
+8,Monaco Grand Prix,Racing Bulls,HAD,LAW,6,1.0,4,118,4.091858402456332,,12.660939470867742,,True
+8,Monaco Grand Prix,Racing Bulls,HAD,LAW,6,2.0,2,120,0.7866430512127565,,2.4890005933351276,,True
+8,Monaco Grand Prix,Racing Bulls,HAD,LAW,6,3.0,55,67,,strategy_confounded,,strategy_confounded,False
+8,Monaco Grand Prix,Red Bull Racing,TSU,VER,1,1.0,18,107,,strategy_confounded,,strategy_confounded,False
+8,Monaco Grand Prix,Red Bull Racing,TSU,VER,1,2.0,44,81,,effects_not_identifiable,,effects_not_identifiable,False
+8,Monaco Grand Prix,Red Bull Racing,TSU,VER,22,2.0,62,63,,strategy_confounded,,strategy_confounded,False
+8,Monaco Grand Prix,Red Bull Racing,TSU,VER,22,3.0,1,124,,effects_not_identifiable,,effects_not_identifiable,False
+8,Monaco Grand Prix,Williams,ALB,SAI,23,1.0,22,98,2.8760576276268037,,3.2204106134435038,,True
+8,Monaco Grand Prix,Williams,ALB,SAI,23,2.0,4,116,2.133918753642323,,2.1259273170342254,,True
+8,Monaco Grand Prix,Williams,ALB,SAI,23,3.0,34,86,6.871962588578875,,3.9581985112178537,,True
+8,Monaco Grand Prix,Williams,ALB,SAI,55,1.0,37,83,7.904426825227015,,6.417828673505618,,True
+8,Monaco Grand Prix,Williams,ALB,SAI,55,2.0,2,118,3.3448241210697205,,3.439674013184103,,True
+8,Monaco Grand Prix,Williams,ALB,SAI,55,3.0,21,99,4.076594067641123,,4.703286661876804,,True
+9,Spanish Grand Prix,Alpine,COL,GAS,10,1.0,8,92,0.5969908997776141,,0.35857555313138967,,True
+9,Spanish Grand Prix,Alpine,COL,GAS,10,2.0,18,82,0.7030734860919026,,0.3976707264757885,,True
+9,Spanish Grand Prix,Alpine,COL,GAS,10,3.0,20,80,0.8454285922683127,,0.7441682246971972,,True
+9,Spanish Grand Prix,Alpine,COL,GAS,10,4.0,5,95,0.775440189757694,,0.4192103682661184,,True
+9,Spanish Grand Prix,Alpine,COL,GAS,43,1.0,11,89,0.43263379636948296,,0.4622803896642386,,True
+9,Spanish Grand Prix,Alpine,COL,GAS,43,2.0,22,78,0.6657704950706583,,0.6457739586976323,,True
+9,Spanish Grand Prix,Alpine,COL,GAS,43,3.0,11,89,0.6660683054816988,,1.08355561945491,,True
+9,Spanish Grand Prix,Alpine,COL,GAS,43,4.0,5,95,0.46542648943353415,,1.1348539821108345,,True
+9,Spanish Grand Prix,Ferrari,HAM,LEC,16,1.0,15,89,0.32538540555726364,,0.3552514304091943,,True
+9,Spanish Grand Prix,Ferrari,HAM,LEC,16,2.0,20,84,0.5544562283876978,,0.5495395643824672,,True
+9,Spanish Grand Prix,Ferrari,HAM,LEC,16,3.0,12,92,0.9069976610374321,,0.8888052056357445,,True
+9,Spanish Grand Prix,Ferrari,HAM,LEC,16,4.0,5,99,0.7369934354128589,,0.791174197412235,,True
+9,Spanish Grand Prix,Ferrari,HAM,LEC,44,1.0,14,90,0.5199872927882956,,0.5746911960300268,,True
+9,Spanish Grand Prix,Ferrari,HAM,LEC,44,2.0,27,77,0.4578257907895041,,0.6155058467658974,,True
+9,Spanish Grand Prix,Ferrari,HAM,LEC,44,3.0,6,98,0.3443975531712435,,0.31877860421054766,,True
+9,Spanish Grand Prix,Ferrari,HAM,LEC,44,4.0,5,99,0.6514286955117058,,0.6161005851614363,,True
+9,Spanish Grand Prix,Haas F1 Team,BEA,OCO,31,1.0,18,82,0.5098867195559357,,0.5952659852056309,,True
+9,Spanish Grand Prix,Haas F1 Team,BEA,OCO,31,2.0,20,80,0.5325719140361109,,0.5002268321499201,,True
+9,Spanish Grand Prix,Haas F1 Team,BEA,OCO,31,3.0,13,87,0.7367165748307033,,0.72232529380254,,True
+9,Spanish Grand Prix,Haas F1 Team,BEA,OCO,87,1.0,6,94,0.4610316060424869,,0.4910629477422172,,True
+9,Spanish Grand Prix,Haas F1 Team,BEA,OCO,87,2.0,23,77,0.868378929683637,,0.9693138992616485,,True
+9,Spanish Grand Prix,Haas F1 Team,BEA,OCO,87,3.0,15,85,0.600702639728262,,0.776682837344157,,True
+9,Spanish Grand Prix,Haas F1 Team,BEA,OCO,87,4.0,5,95,0.8611670942202408,,0.8923657451775171,,True
+9,Spanish Grand Prix,Kick Sauber,BOR,HUL,27,1.0,7,95,0.40733933329664346,,0.33995836388207373,,True
+9,Spanish Grand Prix,Kick Sauber,BOR,HUL,27,2.0,33,69,0.7619021940859177,,0.9700394959867072,,True
+9,Spanish Grand Prix,Kick Sauber,BOR,HUL,27,3.0,6,96,1.2296796645138741,,1.6082833157959702,,True
+9,Spanish Grand Prix,Kick Sauber,BOR,HUL,27,4.0,5,97,1.2056341652494722,,1.1435130305981658,,True
+9,Spanish Grand Prix,Kick Sauber,BOR,HUL,5,1.0,17,85,0.5614057303037804,,0.5194413616624528,,True
+9,Spanish Grand Prix,Kick Sauber,BOR,HUL,5,2.0,27,75,0.627078809089282,,0.7400402061077379,,True
+9,Spanish Grand Prix,Kick Sauber,BOR,HUL,5,3.0,7,95,0.37052417127066967,,0.697099701272545,,True
+9,Spanish Grand Prix,McLaren,NOR,PIA,4,1.0,19,85,0.17634104199272752,,0.30105098638780403,,True
+9,Spanish Grand Prix,McLaren,NOR,PIA,4,2.0,24,80,0.2817414277967322,,0.34721382910947024,,True
+9,Spanish Grand Prix,McLaren,NOR,PIA,4,3.0,4,100,0.9306782090507077,,0.5473047219025418,,True
+9,Spanish Grand Prix,McLaren,NOR,PIA,4,4.0,5,99,0.5335035092509515,,0.5499301708113193,,True
+9,Spanish Grand Prix,McLaren,NOR,PIA,81,1.0,20,84,0.29192449653044433,,0.24447176751013872,,True
+9,Spanish Grand Prix,McLaren,NOR,PIA,81,2.0,24,80,0.37812554860552794,,0.33771827079991174,,True
+9,Spanish Grand Prix,McLaren,NOR,PIA,81,3.0,3,101,0.7262126629351258,,0.3265957728665967,,True
+9,Spanish Grand Prix,McLaren,NOR,PIA,81,4.0,5,99,0.7971642986047044,,0.6226697378060806,,True
+9,Spanish Grand Prix,Mercedes,ANT,RUS,12,1.0,18,78,0.2156989829016693,,0.1905945366854564,,True
+9,Spanish Grand Prix,Mercedes,ANT,RUS,12,2.0,24,72,0.25288542658094454,,0.22700061444845096,,True
+9,Spanish Grand Prix,Mercedes,ANT,RUS,12,3.0,2,94,0.3802304694113303,,0.4000543242041985,,True
+9,Spanish Grand Prix,Mercedes,ANT,RUS,63,1.0,18,78,0.3249993083106612,,0.30806290953323173,,True
+9,Spanish Grand Prix,Mercedes,ANT,RUS,63,2.0,18,78,0.19113997665003207,,0.2086471047567255,,True
+9,Spanish Grand Prix,Mercedes,ANT,RUS,63,3.0,11,85,0.6456602877315253,,0.4360983548980654,,True
+9,Spanish Grand Prix,Mercedes,ANT,RUS,63,4.0,5,91,0.7733943920364765,,0.6314783427852717,,True
+9,Spanish Grand Prix,Racing Bulls,HAD,LAW,30,1.0,16,85,0.3687067127364667,,0.388890684310117,,True
+9,Spanish Grand Prix,Racing Bulls,HAD,LAW,30,2.0,23,78,0.5778296496958507,,0.4919756123493691,,True
+9,Spanish Grand Prix,Racing Bulls,HAD,LAW,30,3.0,11,90,0.7918253943338297,,0.7951770522881855,,True
+9,Spanish Grand Prix,Racing Bulls,HAD,LAW,6,1.0,17,84,0.3178597865789733,,0.265709083930955,,True
+9,Spanish Grand Prix,Racing Bulls,HAD,LAW,6,2.0,26,75,0.3054456903852106,,0.26216464306320064,,True
+9,Spanish Grand Prix,Racing Bulls,HAD,LAW,6,3.0,3,98,0.17633775559087894,,0.24434240424685072,,True
+9,Spanish Grand Prix,Racing Bulls,HAD,LAW,6,4.0,5,96,0.9591854871158404,,0.6322726490393166,,True
+9,Spanish Grand Prix,Red Bull Racing,TSU,VER,1,1.0,11,85,0.19222431535732587,,0.38724907616284165,,True
+9,Spanish Grand Prix,Red Bull Racing,TSU,VER,1,2.0,13,83,0.18179419813389386,,0.223695289500984,,True
+9,Spanish Grand Prix,Red Bull Racing,TSU,VER,1,3.0,15,81,0.6791174896944038,,0.6749292437301458,,True
+9,Spanish Grand Prix,Red Bull Racing,TSU,VER,1,4.0,5,91,0.4955425288203571,,0.4665133884765538,,True
+9,Spanish Grand Prix,Red Bull Racing,TSU,VER,1,5.0,5,91,,unseen_compound,,unseen_compound,False
+9,Spanish Grand Prix,Red Bull Racing,TSU,VER,22,1.0,5,91,0.7225557563587216,,0.7154531296562368,,True
+9,Spanish Grand Prix,Red Bull Racing,TSU,VER,22,2.0,13,83,0.2307769923239271,,0.22848081380477717,,True
+9,Spanish Grand Prix,Red Bull Racing,TSU,VER,22,3.0,17,79,0.4757958557732364,,0.4421829302465897,,True
+9,Spanish Grand Prix,Red Bull Racing,TSU,VER,22,4.0,7,89,0.34090711452742134,,0.3411801609752132,,True
+9,Spanish Grand Prix,Red Bull Racing,TSU,VER,22,5.0,5,91,0.3140541425773506,,0.4215697607777287,,True
+9,Spanish Grand Prix,Williams,ALB,SAI,23,1.0,4,67,0.5156135177676511,,0.4218698615637706,,True
+9,Spanish Grand Prix,Williams,ALB,SAI,23,2.0,16,55,,strategy_confounded,,strategy_confounded,False
+9,Spanish Grand Prix,Williams,ALB,SAI,55,1.0,7,64,1.0825692136751062,,1.1969957483286464,,True
+9,Spanish Grand Prix,Williams,ALB,SAI,55,2.0,22,49,1.055563943962126,,1.4328506973794994,,True
+9,Spanish Grand Prix,Williams,ALB,SAI,55,3.0,17,54,,unseen_compound,,unseen_compound,False
+9,Spanish Grand Prix,Williams,ALB,SAI,55,4.0,5,66,4.747117291992714,,10.228324654684565,,True
+10,Canadian Grand Prix,Alpine,COL,GAS,10,1.0,48,68,,too_few_clean_laps,,too_few_clean_laps,False
+10,Canadian Grand Prix,Alpine,COL,GAS,10,2.0,9,107,,effects_not_identifiable,,effects_not_identifiable,False
+10,Canadian Grand Prix,Alpine,COL,GAS,43,1.0,12,104,,effects_not_identifiable,,effects_not_identifiable,False
+10,Canadian Grand Prix,Alpine,COL,GAS,43,2.0,47,69,,effects_not_identifiable,,effects_not_identifiable,False
+10,Canadian Grand Prix,Aston Martin,ALO,STR,14,1.0,13,100,0.7613435902692334,,0.7739523423700683,,True
+10,Canadian Grand Prix,Aston Martin,ALO,STR,14,2.0,31,82,0.6762544063397784,,0.8290410315762167,,True
+10,Canadian Grand Prix,Aston Martin,ALO,STR,14,3.0,13,100,0.4785023434167204,,0.4401262866920632,,True
+10,Canadian Grand Prix,Aston Martin,ALO,STR,18,1.0,22,91,0.4604827837402093,,0.47574695969342945,,True
+10,Canadian Grand Prix,Aston Martin,ALO,STR,18,2.0,23,90,0.5351503944371937,,0.525090492419601,,True
+10,Canadian Grand Prix,Aston Martin,ALO,STR,18,3.0,11,102,0.38685504308649854,,0.24841275307020344,,True
+10,Canadian Grand Prix,Ferrari,HAM,LEC,16,1.0,26,86,0.51495524299014,,0.5032423376658118,,True
+10,Canadian Grand Prix,Ferrari,HAM,LEC,16,2.0,20,92,0.5060564142497206,,0.36385482620167336,,True
+10,Canadian Grand Prix,Ferrari,HAM,LEC,16,3.0,9,103,0.8020406638506457,,0.6996552145635143,,True
+10,Canadian Grand Prix,Ferrari,HAM,LEC,44,1.0,13,99,0.8096998772496562,,0.8271900114246216,,True
+10,Canadian Grand Prix,Ferrari,HAM,LEC,44,2.0,27,85,0.30784793233770075,,0.38272298209704486,,True
+10,Canadian Grand Prix,Ferrari,HAM,LEC,44,3.0,17,95,0.21575029723827885,,0.6839975225393665,,True
+10,Canadian Grand Prix,Haas F1 Team,BEA,OCO,31,1.0,54,61,,strategy_confounded,,strategy_confounded,False
+10,Canadian Grand Prix,Haas F1 Team,BEA,OCO,31,2.0,5,110,,effects_not_identifiable,,effects_not_identifiable,False
+10,Canadian Grand Prix,Haas F1 Team,BEA,OCO,87,1.0,16,99,,effects_not_identifiable,,effects_not_identifiable,False
+10,Canadian Grand Prix,Haas F1 Team,BEA,OCO,87,2.0,40,75,,strategy_confounded,,strategy_confounded,False
+10,Canadian Grand Prix,Kick Sauber,BOR,HUL,27,1.0,17,102,,effects_not_identifiable,,effects_not_identifiable,False
+10,Canadian Grand Prix,Kick Sauber,BOR,HUL,27,2.0,43,76,,effects_not_identifiable,,effects_not_identifiable,False
+10,Canadian Grand Prix,Kick Sauber,BOR,HUL,5,1.0,46,73,,effects_not_identifiable,,effects_not_identifiable,False
+10,Canadian Grand Prix,Kick Sauber,BOR,HUL,5,2.0,13,106,,effects_not_identifiable,,effects_not_identifiable,False
+10,Canadian Grand Prix,McLaren,NOR,PIA,4,1.0,27,89,0.610578179113464,,0.4141508524087706,,True
+10,Canadian Grand Prix,McLaren,NOR,PIA,4,2.0,15,101,0.4006865464929518,,0.2999238590311866,,True
+10,Canadian Grand Prix,McLaren,NOR,PIA,4,3.0,17,99,0.20757105406565468,,0.29627902154604074,,True
+10,Canadian Grand Prix,McLaren,NOR,PIA,81,1.0,14,102,0.37210806048095435,,0.5439530707395112,,True
+10,Canadian Grand Prix,McLaren,NOR,PIA,81,2.0,26,90,0.39435098462719126,,0.22652207730834725,,True
+10,Canadian Grand Prix,McLaren,NOR,PIA,81,3.0,17,99,0.36342850416741695,,0.3255607317081638,,True
+10,Canadian Grand Prix,Mercedes,ANT,RUS,12,1.0,11,102,0.34603509064052934,,0.3002978756086014,,True
+10,Canadian Grand Prix,Mercedes,ANT,RUS,12,2.0,21,92,0.19856890886239176,,0.25657190820013215,,True
+10,Canadian Grand Prix,Mercedes,ANT,RUS,12,3.0,24,89,0.15594929652844472,,0.19545172209046058,,True
+10,Canadian Grand Prix,Mercedes,ANT,RUS,63,1.0,11,102,0.3474539188093282,,0.3020265614238504,,True
+10,Canadian Grand Prix,Mercedes,ANT,RUS,63,2.0,26,87,0.23252578562549403,,0.13612717171752892,,True
+10,Canadian Grand Prix,Mercedes,ANT,RUS,63,3.0,20,93,0.26352321795969685,,0.18742398545376773,,True
+10,Canadian Grand Prix,Racing Bulls,HAD,LAW,30,1.0,35,68,,effects_not_identifiable,,effects_not_identifiable,False
+10,Canadian Grand Prix,Racing Bulls,HAD,LAW,30,2.0,11,92,,effects_not_identifiable,,effects_not_identifiable,False
+10,Canadian Grand Prix,Racing Bulls,HAD,LAW,6,1.0,11,92,,effects_not_identifiable,,effects_not_identifiable,False
+10,Canadian Grand Prix,Racing Bulls,HAD,LAW,6,2.0,46,57,,effects_not_identifiable,,effects_not_identifiable,False
+10,Canadian Grand Prix,Red Bull Racing,TSU,VER,1,1.0,10,106,0.5433778958043248,,0.34668783044684803,,True
+10,Canadian Grand Prix,Red Bull Racing,TSU,VER,1,2.0,22,94,0.25272698083620976,,0.2562978604219433,,True
+10,Canadian Grand Prix,Red Bull Racing,TSU,VER,1,3.0,25,91,0.23241959535214562,,0.8907938210221267,,True
+10,Canadian Grand Prix,Red Bull Racing,TSU,VER,22,1.0,53,63,,strategy_confounded,,strategy_confounded,False
+10,Canadian Grand Prix,Red Bull Racing,TSU,VER,22,2.0,6,110,0.760645265299028,,0.688147784357921,,True
+10,Canadian Grand Prix,Williams,ALB,SAI,23,1.0,21,79,,effects_not_identifiable,,effects_not_identifiable,False
+10,Canadian Grand Prix,Williams,ALB,SAI,23,2.0,21,79,,strategy_confounded,,strategy_confounded,False
+10,Canadian Grand Prix,Williams,ALB,SAI,55,1.0,53,47,,strategy_confounded,,strategy_confounded,False
+10,Canadian Grand Prix,Williams,ALB,SAI,55,2.0,5,95,,effects_not_identifiable,,effects_not_identifiable,False
+11,Austrian Grand Prix,Alpine,COL,GAS,10,1.0,7,108,0.6068075747252623,,0.6482116639007894,,True
+11,Austrian Grand Prix,Alpine,COL,GAS,10,2.0,22,93,0.9728733113106339,,1.09884387323956,,True
+11,Austrian Grand Prix,Alpine,COL,GAS,10,3.0,29,86,1.1699552296181448,,1.3961511022811213,,True
+11,Austrian Grand Prix,Alpine,COL,GAS,43,1.0,8,107,0.5512881237068825,,0.6077244067341283,,True
+11,Austrian Grand Prix,Alpine,COL,GAS,43,2.0,21,94,1.1292159700749909,,1.3036672232143427,,True
+11,Austrian Grand Prix,Alpine,COL,GAS,43,3.0,28,87,1.1128673516233474,,1.1672676329095109,,True
+11,Austrian Grand Prix,Aston Martin,ALO,STR,14,1.0,26,91,,effects_not_identifiable,,effects_not_identifiable,False
+11,Austrian Grand Prix,Aston Martin,ALO,STR,14,2.0,34,83,,effects_not_identifiable,,effects_not_identifiable,False
+11,Austrian Grand Prix,Aston Martin,ALO,STR,18,1.0,20,97,,effects_not_identifiable,,effects_not_identifiable,False
+11,Austrian Grand Prix,Aston Martin,ALO,STR,18,2.0,23,94,,effects_not_identifiable,,effects_not_identifiable,False
+11,Austrian Grand Prix,Aston Martin,ALO,STR,18,3.0,14,103,,unseen_compound,,unseen_compound,False
+11,Austrian Grand Prix,Ferrari,HAM,LEC,16,1.0,19,97,0.32112615370602715,,0.3277951609994925,,True
+11,Austrian Grand Prix,Ferrari,HAM,LEC,16,2.0,20,96,0.3719309664838974,,0.34644861919948367,,True
+11,Austrian Grand Prix,Ferrari,HAM,LEC,16,3.0,19,97,0.22401443293391834,,0.20460162296145176,,True
+11,Austrian Grand Prix,Ferrari,HAM,LEC,44,1.0,21,95,0.22729362995401373,,0.22585531627595062,,True
+11,Austrian Grand Prix,Ferrari,HAM,LEC,44,2.0,19,97,0.26932170273980877,,0.24833189305752063,,True
+11,Austrian Grand Prix,Ferrari,HAM,LEC,44,3.0,18,98,0.16317796375739294,,0.27859806964345624,,True
+11,Austrian Grand Prix,Haas F1 Team,BEA,OCO,31,1.0,14,100,0.674893867978093,,0.3877645371324202,,True
+11,Austrian Grand Prix,Haas F1 Team,BEA,OCO,31,2.0,26,88,0.366771593764455,,0.1717246029686909,,True
+11,Austrian Grand Prix,Haas F1 Team,BEA,OCO,31,3.0,17,97,0.4364847357902131,,0.4729296545544519,,True
+11,Austrian Grand Prix,Haas F1 Team,BEA,OCO,87,1.0,6,108,,unseen_compound,,unseen_compound,False
+11,Austrian Grand Prix,Haas F1 Team,BEA,OCO,87,2.0,23,91,0.8051635327635382,,0.24601162169574556,,True
+11,Austrian Grand Prix,Haas F1 Team,BEA,OCO,87,3.0,28,86,0.7501198332823437,,0.44224791731855007,,True
+11,Austrian Grand Prix,Kick Sauber,BOR,HUL,27,1.0,7,109,,unseen_compound,,unseen_compound,False
+11,Austrian Grand Prix,Kick Sauber,BOR,HUL,27,2.0,26,90,0.2940971467722126,,0.4967910805383254,,True
+11,Austrian Grand Prix,Kick Sauber,BOR,HUL,27,3.0,25,91,0.44674109557519787,,0.7093504152362436,,True
+11,Austrian Grand Prix,Kick Sauber,BOR,HUL,5,1.0,16,100,0.22781590490995463,,0.2760297021043332,,True
+11,Austrian Grand Prix,Kick Sauber,BOR,HUL,5,2.0,24,92,0.20762846454873043,,0.20017232879542313,,True
+11,Austrian Grand Prix,Kick Sauber,BOR,HUL,5,3.0,18,98,,unseen_compound,,unseen_compound,False
+11,Austrian Grand Prix,McLaren,NOR,PIA,4,1.0,14,101,0.49439545627244286,,0.46238119654745446,,True
+11,Austrian Grand Prix,McLaren,NOR,PIA,4,2.0,28,87,0.4213061003762252,,0.3993892872903067,,True
+11,Austrian Grand Prix,McLaren,NOR,PIA,4,3.0,16,99,0.2940906191244492,,0.32512669107215775,,True
+11,Austrian Grand Prix,McLaren,NOR,PIA,81,1.0,19,96,0.49529556062900254,,0.5052957211782667,,True
+11,Austrian Grand Prix,McLaren,NOR,PIA,81,2.0,24,91,0.2023856449577733,,0.2160406014722008,,True
+11,Austrian Grand Prix,McLaren,NOR,PIA,81,3.0,14,101,0.3275969532644396,,0.42528907151165946,,True
+11,Austrian Grand Prix,Racing Bulls,HAD,LAW,30,1.0,26,98,,effects_not_identifiable,,effects_not_identifiable,False
+11,Austrian Grand Prix,Racing Bulls,HAD,LAW,30,2.0,36,88,,effects_not_identifiable,,effects_not_identifiable,False
+11,Austrian Grand Prix,Racing Bulls,HAD,LAW,6,2.0,23,101,,effects_not_identifiable,,effects_not_identifiable,False
+11,Austrian Grand Prix,Racing Bulls,HAD,LAW,6,3.0,39,85,,effects_not_identifiable,,effects_not_identifiable,False
+14,Hungarian Grand Prix,Alpine,COL,GAS,10,1.0,29,94,1.7576628903241893,,3.802550199016453,,True
+14,Hungarian Grand Prix,Alpine,COL,GAS,10,2.0,34,89,1.8775638772426424,,2.4032522515607813,,True
+14,Hungarian Grand Prix,Alpine,COL,GAS,43,1.0,11,112,1.762623195323764,,2.0193038570402084,,True
+14,Hungarian Grand Prix,Alpine,COL,GAS,43,2.0,18,105,0.7964674465198122,,0.8988898197412567,,True
+14,Hungarian Grand Prix,Alpine,COL,GAS,43,3.0,31,92,0.8247960077011499,,0.6933396028253556,,True
+14,Hungarian Grand Prix,Aston Martin,ALO,STR,14,1.0,37,95,,effects_not_identifiable,,effects_not_identifiable,False
+14,Hungarian Grand Prix,Aston Martin,ALO,STR,14,2.0,29,103,,effects_not_identifiable,,effects_not_identifiable,False
+14,Hungarian Grand Prix,Aston Martin,ALO,STR,18,1.0,34,98,,effects_not_identifiable,,effects_not_identifiable,False
+14,Hungarian Grand Prix,Aston Martin,ALO,STR,18,2.0,32,100,,effects_not_identifiable,,effects_not_identifiable,False
+14,Hungarian Grand Prix,Ferrari,HAM,LEC,16,1.0,17,110,3.7762583354255033,,1.368352869977472,,True
+14,Hungarian Grand Prix,Ferrari,HAM,LEC,16,2.0,18,109,0.9794976520674084,,0.3563189291027413,,True
+14,Hungarian Grand Prix,Ferrari,HAM,LEC,16,3.0,28,99,1.4213242439806437,,0.5217805994764869,,True
+14,Hungarian Grand Prix,Ferrari,HAM,LEC,44,1.0,39,88,2.723486106667264,,1.8909844051532019,,True
+14,Hungarian Grand Prix,Ferrari,HAM,LEC,44,2.0,25,102,4.018746917213304,,1.4783570517891236,,True
+14,Hungarian Grand Prix,Haas F1 Team,BEA,OCO,31,1.0,12,95,,effects_not_identifiable,,effects_not_identifiable,False
+14,Hungarian Grand Prix,Haas F1 Team,BEA,OCO,31,2.0,53,54,,effects_not_identifiable,,effects_not_identifiable,False
+14,Hungarian Grand Prix,Haas F1 Team,BEA,OCO,87,1.0,27,80,,effects_not_identifiable,,effects_not_identifiable,False
+14,Hungarian Grand Prix,Haas F1 Team,BEA,OCO,87,2.0,15,92,,effects_not_identifiable,,effects_not_identifiable,False
+14,Hungarian Grand Prix,Kick Sauber,BOR,HUL,27,1.0,2,123,,unseen_compound,,unseen_compound,False
+14,Hungarian Grand Prix,Kick Sauber,BOR,HUL,27,2.0,32,93,,effects_not_identifiable,,effects_not_identifiable,False
+14,Hungarian Grand Prix,Kick Sauber,BOR,HUL,27,3.0,25,100,,effects_not_identifiable,,effects_not_identifiable,False
+14,Hungarian Grand Prix,Kick Sauber,BOR,HUL,5,1.0,38,87,,strategy_confounded,,strategy_confounded,False
+14,Hungarian Grand Prix,Kick Sauber,BOR,HUL,5,2.0,28,97,,unseen_compound,,unseen_compound,False
+14,Hungarian Grand Prix,McLaren,NOR,PIA,4,1.0,28,100,0.3467197047700234,,0.519769993853601,,True
+14,Hungarian Grand Prix,McLaren,NOR,PIA,4,2.0,37,91,0.3293386960078886,,0.9452653351162491,,True
+14,Hungarian Grand Prix,McLaren,NOR,PIA,81,1.0,16,112,0.4573976949324292,,0.44748971423802875,,True
+14,Hungarian Grand Prix,McLaren,NOR,PIA,81,2.0,24,104,0.42281776502268187,,0.7923510391573844,,True
+14,Hungarian Grand Prix,McLaren,NOR,PIA,81,3.0,23,105,0.5069873547885654,,0.806939150895171,,True
+14,Hungarian Grand Prix,Mercedes,ANT,RUS,12,1.0,19,107,0.45292052636028385,,0.43967005627615663,,True
+14,Hungarian Grand Prix,Mercedes,ANT,RUS,12,2.0,45,81,1.0457227294387328,,0.8776443052173325,,True
+14,Hungarian Grand Prix,Mercedes,ANT,RUS,63,1.0,17,109,0.5646616262364299,,0.4511652865528019,,True
+14,Hungarian Grand Prix,Mercedes,ANT,RUS,63,2.0,20,106,0.44629803826156833,,0.4365764662649944,,True
+14,Hungarian Grand Prix,Mercedes,ANT,RUS,63,3.0,25,101,3.9802454390139403,,4.5620606241794714,,True
+14,Hungarian Grand Prix,Racing Bulls,HAD,LAW,30,1.0,38,93,,effects_not_identifiable,,effects_not_identifiable,False
+14,Hungarian Grand Prix,Racing Bulls,HAD,LAW,30,2.0,28,103,,effects_not_identifiable,,effects_not_identifiable,False
+14,Hungarian Grand Prix,Racing Bulls,HAD,LAW,6,1.0,31,100,,effects_not_identifiable,,effects_not_identifiable,False
+14,Hungarian Grand Prix,Racing Bulls,HAD,LAW,6,2.0,34,97,,effects_not_identifiable,,effects_not_identifiable,False
+14,Hungarian Grand Prix,Red Bull Racing,TSU,VER,1,1.0,15,109,0.4148298247503372,,0.5150534967403757,,True
+14,Hungarian Grand Prix,Red Bull Racing,TSU,VER,1,2.0,28,96,1.303199018834547,,1.4281127522574337,,True
+14,Hungarian Grand Prix,Red Bull Racing,TSU,VER,1,3.0,20,104,0.7786805810052243,,0.7891136336027074,,True
+14,Hungarian Grand Prix,Red Bull Racing,TSU,VER,22,1.0,17,107,0.4421935662521259,,0.5232318805279615,,True
+14,Hungarian Grand Prix,Red Bull Racing,TSU,VER,22,2.0,14,110,,unseen_compound,,unseen_compound,False
+14,Hungarian Grand Prix,Red Bull Racing,TSU,VER,22,3.0,30,94,0.7316114521504355,,0.7519546592247475,,True
+14,Hungarian Grand Prix,Williams,ALB,SAI,23,1.0,12,110,0.42423299364115863,,0.6320025490953197,,True
+14,Hungarian Grand Prix,Williams,ALB,SAI,23,2.0,20,102,0.49523864455139444,,0.5181874250216196,,True
+14,Hungarian Grand Prix,Williams,ALB,SAI,23,3.0,29,93,0.6981817097299414,,0.6141710033127932,,True
+14,Hungarian Grand Prix,Williams,ALB,SAI,55,1.0,13,109,0.4119972691573001,,0.6758449298140433,,True
+14,Hungarian Grand Prix,Williams,ALB,SAI,55,2.0,33,89,0.5686121761239624,,0.5321903698883016,,True
+14,Hungarian Grand Prix,Williams,ALB,SAI,55,3.0,15,107,0.6706863765934571,,0.7064620051881206,,True
+15,Dutch Grand Prix,Alpine,COL,GAS,10,1.0,20,74,0.5676797857315534,,0.34234282869316957,,True
+15,Dutch Grand Prix,Alpine,COL,GAS,10,2.0,29,65,,strategy_confounded,,strategy_confounded,False
+15,Dutch Grand Prix,Alpine,COL,GAS,43,1.0,17,77,0.6244667117145535,,0.29012586265144463,,True
+15,Dutch Grand Prix,Alpine,COL,GAS,43,2.0,19,75,,strategy_confounded,,strategy_confounded,False
+15,Dutch Grand Prix,Alpine,COL,GAS,43,3.0,6,88,0.6308320007992781,,0.4760223144073213,,True
+15,Dutch Grand Prix,Alpine,COL,GAS,43,4.0,3,91,1.9890047144214595,,1.7421407317060489,,True
+15,Dutch Grand Prix,Aston Martin,ALO,STR,14,1.0,16,73,0.4204370951202714,,0.48473243684420364,,True
+15,Dutch Grand Prix,Aston Martin,ALO,STR,14,2.0,9,80,0.27232960249700966,,0.2814229629188579,,True
+15,Dutch Grand Prix,Aston Martin,ALO,STR,14,3.0,18,71,0.6784187964023063,,0.8484213646669948,,True
+15,Dutch Grand Prix,Aston Martin,ALO,STR,18,1.0,6,83,0.5047772186776219,,0.5075437859637807,,True
+15,Dutch Grand Prix,Aston Martin,ALO,STR,18,2.0,31,58,0.46092573825972655,,0.7933884365799397,,True
+15,Dutch Grand Prix,Aston Martin,ALO,STR,18,3.0,9,80,0.6602614616956212,,0.6171199493464962,,True
+15,Dutch Grand Prix,Haas F1 Team,BEA,OCO,31,1.0,40,57,,too_few_clean_laps,,too_few_clean_laps,False
+15,Dutch Grand Prix,Haas F1 Team,BEA,OCO,31,2.0,9,88,,effects_not_identifiable,,effects_not_identifiable,False
+15,Dutch Grand Prix,Haas F1 Team,BEA,OCO,87,1.0,39,58,,too_few_clean_laps,,too_few_clean_laps,False
+15,Dutch Grand Prix,Haas F1 Team,BEA,OCO,87,2.0,9,88,,effects_not_identifiable,,effects_not_identifiable,False
+15,Dutch Grand Prix,Kick Sauber,BOR,HUL,27,1.0,17,72,0.40831999530926355,,0.3564637361850002,,True
+15,Dutch Grand Prix,Kick Sauber,BOR,HUL,27,2.0,19,70,0.7075583591282978,,0.7071134696555674,,True
+15,Dutch Grand Prix,Kick Sauber,BOR,HUL,27,3.0,9,80,0.6708797762327678,,0.5931635819740804,,True
+15,Dutch Grand Prix,Kick Sauber,BOR,HUL,5,1.0,20,69,0.4416665044331104,,0.44748981408258787,,True
+15,Dutch Grand Prix,Kick Sauber,BOR,HUL,5,2.0,20,69,0.3565535537368504,,0.3572377561812111,,True
+15,Dutch Grand Prix,Kick Sauber,BOR,HUL,5,3.0,4,85,1.2372860713198612,,1.2976838103078627,,True
+15,Dutch Grand Prix,McLaren,NOR,PIA,4,1.0,21,78,0.37091733460988235,,0.3339657522876915,,True
+15,Dutch Grand Prix,McLaren,NOR,PIA,4,2.0,21,78,0.32832543412570947,,0.33186340442061296,,True
+15,Dutch Grand Prix,McLaren,NOR,PIA,4,3.0,6,93,0.14275928856217726,,0.18594580207462266,,True
+15,Dutch Grand Prix,McLaren,NOR,PIA,81,1.0,21,78,0.21619571135098054,,0.297228916079034,,True
+15,Dutch Grand Prix,McLaren,NOR,PIA,81,2.0,21,78,0.31474953178232773,,0.30294722824414355,,True
+15,Dutch Grand Prix,McLaren,NOR,PIA,81,3.0,9,90,0.28320369994802913,,0.5767590681640655,,True
+15,Dutch Grand Prix,Racing Bulls,HAD,LAW,30,1.0,21,78,0.47323056867904256,,0.4797349292858102,,True
+15,Dutch Grand Prix,Racing Bulls,HAD,LAW,30,3.0,18,81,5.46220528424368,,5.61872178169074,,True
+15,Dutch Grand Prix,Racing Bulls,HAD,LAW,30,4.0,9,90,0.4820272046184897,,0.6375628267745443,,True
+15,Dutch Grand Prix,Racing Bulls,HAD,LAW,6,1.0,21,78,0.4575074154583999,,0.46802801810407246,,True
+15,Dutch Grand Prix,Racing Bulls,HAD,LAW,6,2.0,21,78,,unseen_compound,,unseen_compound,False
+15,Dutch Grand Prix,Racing Bulls,HAD,LAW,6,3.0,9,90,0.42830670269546545,,0.4286922495805325,,True
+15,Dutch Grand Prix,Red Bull Racing,TSU,VER,1,1.0,21,76,1.2301527261947558,,1.180076883642006,,True
+15,Dutch Grand Prix,Red Bull Racing,TSU,VER,1,2.0,21,76,,unseen_compound,,unseen_compound,False
+15,Dutch Grand Prix,Red Bull Racing,TSU,VER,1,3.0,9,88,1.2117523444300042,,1.153663188530547,,True
+15,Dutch Grand Prix,Red Bull Racing,TSU,VER,22,1.0,17,80,1.216261396787165,,1.1567194124309044,,True
+15,Dutch Grand Prix,Red Bull Racing,TSU,VER,22,2.0,20,77,,unseen_compound,,unseen_compound,False
+15,Dutch Grand Prix,Red Bull Racing,TSU,VER,22,3.0,9,88,1.2065379234859281,,1.1657219938293604,,True
+15,Dutch Grand Prix,Williams,ALB,SAI,23,1.0,21,77,0.9810148046286822,,1.0001535747939556,,True
+15,Dutch Grand Prix,Williams,ALB,SAI,23,2.0,21,77,,unseen_compound,,unseen_compound,False
+15,Dutch Grand Prix,Williams,ALB,SAI,23,3.0,9,89,0.9814553053693168,,1.007219256581632,,True
+15,Dutch Grand Prix,Williams,ALB,SAI,55,1.0,21,77,0.9816278676039305,,0.9918525048412564,,True
+15,Dutch Grand Prix,Williams,ALB,SAI,55,3.0,17,81,2.9922451810832578,,2.960387769763444,,True
+15,Dutch Grand Prix,Williams,ALB,SAI,55,4.0,6,92,0.389692749641308,,0.3645339496067616,,True
+15,Dutch Grand Prix,Williams,ALB,SAI,55,5.0,3,95,1.8297169155657542,,1.7974149847564196,,True
+16,Italian Grand Prix,Ferrari,HAM,LEC,16,1.0,30,66,,effects_not_identifiable,,effects_not_identifiable,False
+16,Italian Grand Prix,Ferrari,HAM,LEC,16,2.0,17,79,,effects_not_identifiable,,effects_not_identifiable,False
+16,Italian Grand Prix,Ferrari,HAM,LEC,44,1.0,36,60,,effects_not_identifiable,,effects_not_identifiable,False
+16,Italian Grand Prix,Ferrari,HAM,LEC,44,2.0,13,83,,effects_not_identifiable,,effects_not_identifiable,False
+16,Italian Grand Prix,McLaren,NOR,PIA,4,1.0,43,53,,strategy_confounded,,strategy_confounded,False
+16,Italian Grand Prix,McLaren,NOR,PIA,4,2.0,5,91,,effects_not_identifiable,,effects_not_identifiable,False
+16,Italian Grand Prix,McLaren,NOR,PIA,81,1.0,42,54,,strategy_confounded,,strategy_confounded,False
+16,Italian Grand Prix,McLaren,NOR,PIA,81,2.0,6,90,,effects_not_identifiable,,effects_not_identifiable,False
+16,Italian Grand Prix,Mercedes,ANT,RUS,12,1.0,23,69,,effects_not_identifiable,,effects_not_identifiable,False
+16,Italian Grand Prix,Mercedes,ANT,RUS,12,2.0,22,70,,effects_not_identifiable,,effects_not_identifiable,False
+16,Italian Grand Prix,Mercedes,ANT,RUS,63,1.0,25,67,,effects_not_identifiable,,effects_not_identifiable,False
+16,Italian Grand Prix,Mercedes,ANT,RUS,63,2.0,22,70,,effects_not_identifiable,,effects_not_identifiable,False
+16,Italian Grand Prix,Red Bull Racing,TSU,VER,1,1.0,35,59,,effects_not_identifiable,,effects_not_identifiable,False
+16,Italian Grand Prix,Red Bull Racing,TSU,VER,1,2.0,12,82,,effects_not_identifiable,,effects_not_identifiable,False
+16,Italian Grand Prix,Red Bull Racing,TSU,VER,22,1.0,17,77,,effects_not_identifiable,,effects_not_identifiable,False
+16,Italian Grand Prix,Red Bull Racing,TSU,VER,22,2.0,30,64,,effects_not_identifiable,,effects_not_identifiable,False
+16,Italian Grand Prix,Williams,ALB,SAI,23,1.0,37,56,,effects_not_identifiable,,effects_not_identifiable,False
+16,Italian Grand Prix,Williams,ALB,SAI,23,2.0,10,83,,effects_not_identifiable,,effects_not_identifiable,False
+16,Italian Grand Prix,Williams,ALB,SAI,55,1.0,26,67,,effects_not_identifiable,,effects_not_identifiable,False
+16,Italian Grand Prix,Williams,ALB,SAI,55,2.0,20,73,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Alpine,COL,GAS,10,1.0,26,54,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Alpine,COL,GAS,10,2.0,13,67,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Alpine,COL,GAS,43,1.0,9,71,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Alpine,COL,GAS,43,2.0,32,48,,too_few_clean_laps,,too_few_clean_laps,False
+17,Azerbaijan Grand Prix,Aston Martin,ALO,STR,14,1.0,12,68,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Aston Martin,ALO,STR,14,2.0,28,52,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Aston Martin,ALO,STR,18,1.0,28,52,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Aston Martin,ALO,STR,18,2.0,12,68,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Ferrari,HAM,LEC,16,1.0,10,70,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Ferrari,HAM,LEC,16,2.0,30,50,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Ferrari,HAM,LEC,44,1.0,27,53,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Ferrari,HAM,LEC,44,2.0,13,67,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Kick Sauber,BOR,HUL,27,1.0,27,53,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Kick Sauber,BOR,HUL,27,2.0,13,67,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Kick Sauber,BOR,HUL,5,1.0,17,63,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Kick Sauber,BOR,HUL,5,2.0,23,57,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Mercedes,ANT,RUS,12,1.0,10,70,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Mercedes,ANT,RUS,12,2.0,31,49,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Mercedes,ANT,RUS,63,1.0,29,51,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Mercedes,ANT,RUS,63,2.0,10,70,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Racing Bulls,HAD,LAW,30,1.0,10,69,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Racing Bulls,HAD,LAW,30,2.0,29,50,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Racing Bulls,HAD,LAW,6,1.0,20,59,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Racing Bulls,HAD,LAW,6,2.0,20,59,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Red Bull Racing,TSU,VER,1,1.0,31,48,,too_few_clean_laps,,too_few_clean_laps,False
+17,Azerbaijan Grand Prix,Red Bull Racing,TSU,VER,1,2.0,9,70,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Red Bull Racing,TSU,VER,22,1.0,28,51,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Red Bull Racing,TSU,VER,22,2.0,11,68,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Williams,ALB,SAI,23,2.0,8,72,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Williams,ALB,SAI,23,3.0,33,47,,too_few_clean_laps,,too_few_clean_laps,False
+17,Azerbaijan Grand Prix,Williams,ALB,SAI,55,1.0,17,63,,effects_not_identifiable,,effects_not_identifiable,False
+17,Azerbaijan Grand Prix,Williams,ALB,SAI,55,2.0,22,58,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Alpine,COL,GAS,10,1.0,20,83,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Alpine,COL,GAS,10,2.0,22,81,,unseen_compound,,unseen_compound,False
+18,Singapore Grand Prix,Alpine,COL,GAS,10,3.0,8,95,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Alpine,COL,GAS,43,1.0,11,92,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Alpine,COL,GAS,43,2.0,42,61,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Aston Martin,ALO,STR,14,1.0,24,86,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Aston Martin,ALO,STR,14,2.0,32,78,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Aston Martin,ALO,STR,18,1.0,35,75,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Aston Martin,ALO,STR,18,2.0,19,91,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Ferrari,HAM,LEC,16,1.0,18,88,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Ferrari,HAM,LEC,16,2.0,37,69,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Ferrari,HAM,LEC,44,1.0,21,85,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Ferrari,HAM,LEC,44,2.0,18,88,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Ferrari,HAM,LEC,44,3.0,12,94,,unseen_compound,,unseen_compound,False
+18,Singapore Grand Prix,Haas F1 Team,BEA,OCO,31,1.0,27,80,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Haas F1 Team,BEA,OCO,31,2.0,26,81,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Haas F1 Team,BEA,OCO,87,1.0,19,88,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Haas F1 Team,BEA,OCO,87,2.0,35,72,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Kick Sauber,BOR,HUL,27,1.0,22,86,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Kick Sauber,BOR,HUL,27,2.0,16,92,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Kick Sauber,BOR,HUL,27,3.0,15,93,,unseen_compound,,unseen_compound,False
+18,Singapore Grand Prix,Kick Sauber,BOR,HUL,5,1.0,10,98,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Kick Sauber,BOR,HUL,5,2.0,45,63,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,McLaren,NOR,PIA,4,1.0,23,88,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,McLaren,NOR,PIA,4,2.0,32,79,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,McLaren,NOR,PIA,81,1.0,24,87,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,McLaren,NOR,PIA,81,2.0,32,79,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Red Bull Racing,TSU,VER,1,1.0,16,93,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Red Bull Racing,TSU,VER,1,2.0,38,71,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Red Bull Racing,TSU,VER,22,1.0,10,99,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Red Bull Racing,TSU,VER,22,2.0,45,64,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Williams,ALB,SAI,23,1.0,38,70,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Williams,ALB,SAI,23,2.0,16,92,,effects_not_identifiable,,effects_not_identifiable,False
+18,Singapore Grand Prix,Williams,ALB,SAI,55,1.0,45,63,,too_few_clean_laps,,too_few_clean_laps,False
+18,Singapore Grand Prix,Williams,ALB,SAI,55,2.0,9,99,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,Alpine,COL,GAS,10,1.0,21,70,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,Alpine,COL,GAS,10,2.0,24,67,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,Alpine,COL,GAS,43,1.0,25,66,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,Alpine,COL,GAS,43,2.0,21,70,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,Aston Martin,ALO,STR,14,1.0,23,69,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,Aston Martin,ALO,STR,14,2.0,23,69,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,Aston Martin,ALO,STR,18,1.0,22,70,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,Aston Martin,ALO,STR,18,2.0,24,68,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,Ferrari,HAM,LEC,16,1.0,14,73,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,Ferrari,HAM,LEC,16,2.0,31,56,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,Ferrari,HAM,LEC,44,1.0,23,64,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,Ferrari,HAM,LEC,44,2.0,19,68,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,Kick Sauber,BOR,HUL,27,1.0,27,61,0.4882710382292025,,0.7980650848939553,,True
+19,United States Grand Prix,Kick Sauber,BOR,HUL,27,2.0,21,67,0.4747904082207135,,1.0706047649560386,,True
+19,United States Grand Prix,Kick Sauber,BOR,HUL,5,1.0,7,81,0.3475222538792642,,0.3856857282109587,,True
+19,United States Grand Prix,Kick Sauber,BOR,HUL,5,2.0,16,72,0.47269154918178113,,0.471648187837153,,True
+19,United States Grand Prix,Kick Sauber,BOR,HUL,5,3.0,17,71,0.5932273256390195,,0.6258824881868705,,True
+19,United States Grand Prix,McLaren,NOR,PIA,4,1.0,22,64,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,McLaren,NOR,PIA,4,2.0,21,65,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,McLaren,NOR,PIA,81,1.0,20,66,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,McLaren,NOR,PIA,81,2.0,23,63,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,Mercedes,ANT,RUS,12,1.0,23,68,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,Mercedes,ANT,RUS,12,2.0,21,70,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,Mercedes,ANT,RUS,63,1.0,26,65,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,Mercedes,ANT,RUS,63,2.0,21,70,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,Red Bull Racing,TSU,VER,1,1.0,26,67,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,Red Bull Racing,TSU,VER,1,2.0,21,72,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,Red Bull Racing,TSU,VER,22,1.0,23,70,,effects_not_identifiable,,effects_not_identifiable,False
+19,United States Grand Prix,Red Bull Racing,TSU,VER,22,2.0,23,70,,effects_not_identifiable,,effects_not_identifiable,False
+20,Mexico City Grand Prix,Aston Martin,ALO,STR,14,1.0,16,70,0.5901456337186621,,0.5979411428924557,,True
+20,Mexico City Grand Prix,Aston Martin,ALO,STR,14,2.0,11,75,0.496806294077792,,0.5295298417437935,,True
+20,Mexico City Grand Prix,Aston Martin,ALO,STR,18,1.0,22,64,0.5548255939000225,,0.581443379256654,,True
+20,Mexico City Grand Prix,Aston Martin,ALO,STR,18,2.0,14,72,0.42190694980863597,,0.48002586346108905,,True
+20,Mexico City Grand Prix,Aston Martin,ALO,STR,18,3.0,23,63,2.6406853257366425,,2.95027960481523,,True
+20,Mexico City Grand Prix,Ferrari,HAM,LEC,16,1.0,27,93,0.37649705358765256,,0.34783950953651666,,True
+20,Mexico City Grand Prix,Ferrari,HAM,LEC,16,2.0,35,85,0.5637014414396662,,0.725955394437035,,True
+20,Mexico City Grand Prix,Ferrari,HAM,LEC,44,1.0,19,101,0.4260896624135253,,0.3463356019765694,,True
+20,Mexico City Grand Prix,Ferrari,HAM,LEC,44,2.0,21,99,0.3987162225320372,,0.32035832566090844,,True
+20,Mexico City Grand Prix,Ferrari,HAM,LEC,44,3.0,18,102,3.283969733283118,,0.5427848568634235,,True
+20,Mexico City Grand Prix,Haas F1 Team,BEA,OCO,31,1.0,23,98,0.4285084004525949,,0.3913346499759048,,True
+20,Mexico City Grand Prix,Haas F1 Team,BEA,OCO,31,2.0,39,82,0.8643516403680346,,0.9314250333772932,,True
+20,Mexico City Grand Prix,Haas F1 Team,BEA,OCO,87,1.0,20,101,0.38692076660782104,,0.36762557000315255,,True
+20,Mexico City Grand Prix,Haas F1 Team,BEA,OCO,87,2.0,21,100,0.427912029767801,,0.36990917448904426,,True
+20,Mexico City Grand Prix,Haas F1 Team,BEA,OCO,87,3.0,18,103,,effects_not_identifiable,,effects_not_identifiable,False
+20,Mexico City Grand Prix,McLaren,NOR,PIA,4,1.0,30,92,0.3413781149332327,,0.3141466520796551,,True
+20,Mexico City Grand Prix,McLaren,NOR,PIA,4,2.0,33,89,0.2984202497789232,,0.38484955925810715,,True
+20,Mexico City Grand Prix,McLaren,NOR,PIA,81,1.0,20,102,0.287265380069271,,0.2848864943125804,,True
+20,Mexico City Grand Prix,McLaren,NOR,PIA,81,2.0,20,102,0.4707816813331995,,0.47563648379837103,,True
+20,Mexico City Grand Prix,McLaren,NOR,PIA,81,3.0,19,103,1.8081152647257448,,2.0781765503289895,,True
+20,Mexico City Grand Prix,Mercedes,ANT,RUS,12,1.0,18,98,0.2118751753236852,,0.21406134640772084,,True
+20,Mexico City Grand Prix,Mercedes,ANT,RUS,12,2.0,22,94,0.3335275805520071,,0.3457034792584582,,True
+20,Mexico City Grand Prix,Mercedes,ANT,RUS,12,3.0,17,99,0.4904969127983567,,0.46458123196417905,,True
+20,Mexico City Grand Prix,Mercedes,ANT,RUS,63,1.0,21,95,0.2424373506942858,,0.23207845407960784,,True
+20,Mexico City Grand Prix,Mercedes,ANT,RUS,63,2.0,20,96,0.3246910119305369,,0.3453139376048199,,True
+20,Mexico City Grand Prix,Mercedes,ANT,RUS,63,3.0,18,98,0.5807704289520123,,0.5699641607440427,,True
+20,Mexico City Grand Prix,Red Bull Racing,TSU,VER,1,1.0,33,91,,effects_not_identifiable,,effects_not_identifiable,False
+20,Mexico City Grand Prix,Red Bull Racing,TSU,VER,1,2.0,29,95,,effects_not_identifiable,,effects_not_identifiable,False
+20,Mexico City Grand Prix,Red Bull Racing,TSU,VER,22,1.0,32,92,,effects_not_identifiable,,effects_not_identifiable,False
+20,Mexico City Grand Prix,Red Bull Racing,TSU,VER,22,2.0,30,94,,effects_not_identifiable,,effects_not_identifiable,False
+20,Mexico City Grand Prix,Williams,ALB,SAI,23,1.0,37,80,,unseen_compound,,unseen_compound,False
+20,Mexico City Grand Prix,Williams,ALB,SAI,23,2.0,25,92,,strategy_confounded,,strategy_confounded,False
+20,Mexico City Grand Prix,Williams,ALB,SAI,55,1.0,13,104,,unseen_compound,,unseen_compound,False
+20,Mexico City Grand Prix,Williams,ALB,SAI,55,2.0,26,91,,effects_not_identifiable,,effects_not_identifiable,False
+20,Mexico City Grand Prix,Williams,ALB,SAI,55,3.0,7,110,0.45426616657537366,,0.2274524606142267,,True
+20,Mexico City Grand Prix,Williams,ALB,SAI,55,4.0,9,108,0.4328233598833751,,0.23559347334805616,,True
+21,São Paulo Grand Prix,Alpine,COL,GAS,10,1.0,8,104,0.8622434133105337,,0.7626320239265016,,True
+21,São Paulo Grand Prix,Alpine,COL,GAS,10,2.0,18,94,0.43548826908391663,,0.37213792868422346,,True
+21,São Paulo Grand Prix,Alpine,COL,GAS,10,3.0,30,82,0.3731954212756278,,0.4716382747103689,,True
+21,São Paulo Grand Prix,Alpine,COL,GAS,43,1.0,19,93,0.27007369951381727,,1.0110253495420582,,True
+21,São Paulo Grand Prix,Alpine,COL,GAS,43,2.0,11,101,0.8589567696197158,,0.603638701031156,,True
+21,São Paulo Grand Prix,Alpine,COL,GAS,43,3.0,26,86,0.4746383066304586,,0.27420960369936753,,True
+21,São Paulo Grand Prix,Aston Martin,ALO,STR,14,1.0,18,94,0.2773311153429863,,0.28159847409505784,,True
+21,São Paulo Grand Prix,Aston Martin,ALO,STR,14,2.0,15,97,0.36571833420435385,,0.35885560288874674,,True
+21,São Paulo Grand Prix,Aston Martin,ALO,STR,14,3.0,23,89,0.3777528569184872,,0.5038464769703962,,True
+21,São Paulo Grand Prix,Aston Martin,ALO,STR,18,1.0,19,93,0.24148786340773062,,0.23647383713717537,,True
+21,São Paulo Grand Prix,Aston Martin,ALO,STR,18,2.0,22,90,0.3342524060486864,,0.33340191456177914,,True
+21,São Paulo Grand Prix,Aston Martin,ALO,STR,18,3.0,15,97,0.33854416332015946,,0.4311519957523113,,True
+21,São Paulo Grand Prix,Haas F1 Team,BEA,OCO,31,2.0,36,78,1.357028508786975,,0.7999931702879712,,True
+21,São Paulo Grand Prix,Haas F1 Team,BEA,OCO,31,3.0,22,92,0.6655149484827454,,0.7270207486965661,,True
+21,São Paulo Grand Prix,Haas F1 Team,BEA,OCO,87,1.0,7,107,,unseen_compound,,unseen_compound,False
+21,São Paulo Grand Prix,Haas F1 Team,BEA,OCO,87,2.0,22,92,0.4921075695647439,,0.5760881350526749,,True
+21,São Paulo Grand Prix,Haas F1 Team,BEA,OCO,87,3.0,27,87,0.564991612988254,,0.6983741710253424,,True
+21,São Paulo Grand Prix,McLaren,NOR,PIA,4,1.0,20,92,0.4161348504595715,,0.4069602783497054,,True
+21,São Paulo Grand Prix,McLaren,NOR,PIA,4,2.0,17,95,0.45249693519206813,,0.3957178770078291,,True
+21,São Paulo Grand Prix,McLaren,NOR,PIA,4,3.0,19,93,0.26371939560332697,,0.30042328240273636,,True
+21,São Paulo Grand Prix,McLaren,NOR,PIA,81,1.0,28,84,0.4152830924006286,,0.43688581878193894,,True
+21,São Paulo Grand Prix,McLaren,NOR,PIA,81,2.0,10,102,0.4606930916379014,,0.4379286928988179,,True
+21,São Paulo Grand Prix,McLaren,NOR,PIA,81,3.0,18,94,0.28408761823428663,,0.3767037986982476,,True
+21,São Paulo Grand Prix,Mercedes,ANT,RUS,12,1.0,11,101,0.25683144143434206,,0.2639237311485258,,True
+21,São Paulo Grand Prix,Mercedes,ANT,RUS,12,2.0,23,89,0.5432031983328038,,0.5919087551113663,,True
+21,São Paulo Grand Prix,Mercedes,ANT,RUS,12,3.0,22,90,0.47127049042076086,,0.3933762064328399,,True
+21,São Paulo Grand Prix,Mercedes,ANT,RUS,63,1.0,24,88,0.7924739934240458,,0.859633484599066,,True
+21,São Paulo Grand Prix,Mercedes,ANT,RUS,63,2.0,11,101,0.2690341281523752,,0.3020005774288434,,True
+21,São Paulo Grand Prix,Mercedes,ANT,RUS,63,3.0,21,91,0.24449731600016514,,0.36696097918132253,,True
+21,São Paulo Grand Prix,Racing Bulls,HAD,LAW,30,1.0,9,106,0.47925539163121456,,0.51129857884807,,True
+21,São Paulo Grand Prix,Racing Bulls,HAD,LAW,30,2.0,50,65,,too_few_clean_laps,,too_few_clean_laps,False
+21,São Paulo Grand Prix,Racing Bulls,HAD,LAW,6,1.0,8,107,0.48449311343748924,,0.5368078798366831,,True
+21,São Paulo Grand Prix,Racing Bulls,HAD,LAW,6,2.0,16,99,0.27660380639984794,,0.30764425521009997,,True
+21,São Paulo Grand Prix,Racing Bulls,HAD,LAW,6,3.0,32,83,0.3885793351641391,,2.0505435284876077,,True
+21,São Paulo Grand Prix,Red Bull Racing,TSU,VER,1,2.0,24,88,0.43649817004954744,,0.4530518030236266,,True
+21,São Paulo Grand Prix,Red Bull Racing,TSU,VER,1,3.0,17,95,0.2030937924650051,,0.22252156585741498,,True
+21,São Paulo Grand Prix,Red Bull Racing,TSU,VER,1,4.0,15,97,,unseen_compound,,unseen_compound,False
+21,São Paulo Grand Prix,Red Bull Racing,TSU,VER,22,2.0,14,98,0.3065601357003039,,0.3057328933502999,,True
+21,São Paulo Grand Prix,Red Bull Racing,TSU,VER,22,3.0,20,92,0.3476892840480154,,0.28712207235615067,,True
+21,São Paulo Grand Prix,Red Bull Racing,TSU,VER,22,4.0,22,90,0.360081312878525,,0.15083545882995575,,True
+21,São Paulo Grand Prix,Williams,ALB,SAI,23,1.0,25,87,1.1147627823257023,,0.5431442185891648,,True
+21,São Paulo Grand Prix,Williams,ALB,SAI,23,2.0,17,95,0.21947078640818146,,0.22472240329602922,,True
+21,São Paulo Grand Prix,Williams,ALB,SAI,23,3.0,14,98,0.7279147072141957,,0.7130376861513282,,True
+21,São Paulo Grand Prix,Williams,ALB,SAI,55,1.0,7,105,0.43794710409354465,,0.4055946803494034,,True
+21,São Paulo Grand Prix,Williams,ALB,SAI,55,2.0,18,94,0.26350043510429405,,0.3045569827126897,,True
+21,São Paulo Grand Prix,Williams,ALB,SAI,55,3.0,31,81,0.6843733792768741,,0.792925320942803,,True
+22,Las Vegas Grand Prix,Ferrari,HAM,LEC,16,1.0,16,64,,effects_not_identifiable,,effects_not_identifiable,False
+22,Las Vegas Grand Prix,Ferrari,HAM,LEC,16,2.0,24,56,,effects_not_identifiable,,effects_not_identifiable,False
+22,Las Vegas Grand Prix,Ferrari,HAM,LEC,44,1.0,21,59,,effects_not_identifiable,,effects_not_identifiable,False
+22,Las Vegas Grand Prix,Ferrari,HAM,LEC,44,2.0,19,61,,effects_not_identifiable,,effects_not_identifiable,False
+22,Las Vegas Grand Prix,Haas F1 Team,BEA,OCO,31,1.0,18,62,,effects_not_identifiable,,effects_not_identifiable,False
+22,Las Vegas Grand Prix,Haas F1 Team,BEA,OCO,31,2.0,21,59,,effects_not_identifiable,,effects_not_identifiable,False
+22,Las Vegas Grand Prix,Haas F1 Team,BEA,OCO,87,1.0,10,70,,effects_not_identifiable,,effects_not_identifiable,False
+22,Las Vegas Grand Prix,Haas F1 Team,BEA,OCO,87,2.0,31,49,,effects_not_identifiable,,effects_not_identifiable,False
+22,Las Vegas Grand Prix,Racing Bulls,HAD,LAW,30,2.0,20,59,,effects_not_identifiable,,effects_not_identifiable,False
+22,Las Vegas Grand Prix,Racing Bulls,HAD,LAW,30,3.0,19,60,,effects_not_identifiable,,effects_not_identifiable,False
+22,Las Vegas Grand Prix,Racing Bulls,HAD,LAW,6,1.0,12,67,,unseen_compound,,unseen_compound,False
+22,Las Vegas Grand Prix,Racing Bulls,HAD,LAW,6,2.0,28,51,,strategy_confounded,,strategy_confounded,False
+22,Las Vegas Grand Prix,Red Bull Racing,TSU,VER,1,1.0,17,63,,effects_not_identifiable,,effects_not_identifiable,False
+22,Las Vegas Grand Prix,Red Bull Racing,TSU,VER,1,2.0,23,57,,effects_not_identifiable,,effects_not_identifiable,False
+22,Las Vegas Grand Prix,Red Bull Racing,TSU,VER,22,2.0,19,61,,effects_not_identifiable,,effects_not_identifiable,False
+22,Las Vegas Grand Prix,Red Bull Racing,TSU,VER,22,3.0,21,59,,effects_not_identifiable,,effects_not_identifiable,False
+22,Las Vegas Grand Prix,Williams,ALB,SAI,23,1.0,8,57,,effects_not_identifiable,,effects_not_identifiable,False
+22,Las Vegas Grand Prix,Williams,ALB,SAI,23,3.0,17,48,,too_few_clean_laps,,too_few_clean_laps,False
+22,Las Vegas Grand Prix,Williams,ALB,SAI,55,1.0,14,51,,unseen_compound,,unseen_compound,False
+22,Las Vegas Grand Prix,Williams,ALB,SAI,55,2.0,26,39,,strategy_confounded,,strategy_confounded,False
+23,Qatar Grand Prix,Alpine,COL,GAS,10,1.0,4,87,0.13789416135750443,,0.5589227530229692,,True
+23,Qatar Grand Prix,Alpine,COL,GAS,10,2.0,20,71,0.3271925600210913,,0.5200250144956258,,True
+23,Qatar Grand Prix,Alpine,COL,GAS,10,3.0,22,69,,strategy_confounded,,strategy_confounded,False
+23,Qatar Grand Prix,Alpine,COL,GAS,43,1.0,4,87,0.09838824382749323,,0.7533902130056482,,True
+23,Qatar Grand Prix,Alpine,COL,GAS,43,2.0,20,71,0.31846314178404994,,0.5649694326282806,,True
+23,Qatar Grand Prix,Alpine,COL,GAS,43,3.0,21,70,0.26447579467819626,,0.25859753489207005,,True
+23,Qatar Grand Prix,Aston Martin,ALO,STR,14,1.0,5,85,0.594312325514224,,0.545699713255965,,True
+23,Qatar Grand Prix,Aston Martin,ALO,STR,14,2.0,20,70,,strategy_confounded,,strategy_confounded,False
+23,Qatar Grand Prix,Aston Martin,ALO,STR,14,3.0,23,67,,unseen_compound,,unseen_compound,False
+23,Qatar Grand Prix,Aston Martin,ALO,STR,18,1.0,5,85,0.22210714952204,,0.39408161752553494,,True
+23,Qatar Grand Prix,Aston Martin,ALO,STR,18,2.0,12,78,0.19682479474076212,,0.17387360832698442,,True
+23,Qatar Grand Prix,Aston Martin,ALO,STR,18,3.0,22,68,1.1663285128066305,,0.7691295944738069,,True
+23,Qatar Grand Prix,Aston Martin,ALO,STR,18,4.0,3,87,,unseen_compound,,unseen_compound,False
+23,Qatar Grand Prix,Ferrari,HAM,LEC,16,1.0,5,90,0.37919791731989105,,0.39307581698426475,,True
+23,Qatar Grand Prix,Ferrari,HAM,LEC,16,2.0,20,75,,strategy_confounded,,strategy_confounded,False
+23,Qatar Grand Prix,Ferrari,HAM,LEC,16,3.0,22,73,,unseen_compound,,unseen_compound,False
+23,Qatar Grand Prix,Ferrari,HAM,LEC,44,1.0,5,90,,unseen_compound,,unseen_compound,False
+23,Qatar Grand Prix,Ferrari,HAM,LEC,44,2.0,20,75,1.1245333373362498,,0.6054208260423778,,True
+23,Qatar Grand Prix,Ferrari,HAM,LEC,44,3.0,23,72,0.768267937807933,,0.29045154338888635,,True
+23,Qatar Grand Prix,Haas F1 Team,BEA,OCO,31,1.0,5,72,0.4688147472854894,,0.22033246980602997,,True
+23,Qatar Grand Prix,Haas F1 Team,BEA,OCO,31,3.0,22,55,,strategy_confounded,,strategy_confounded,False
+23,Qatar Grand Prix,Haas F1 Team,BEA,OCO,31,4.0,20,57,0.5436738519388562,,0.5121417819767871,,True
+23,Qatar Grand Prix,Haas F1 Team,BEA,OCO,87,1.0,5,72,0.46665403127694843,,0.2738646639784236,,True
+23,Qatar Grand Prix,Haas F1 Team,BEA,OCO,87,2.0,20,57,,strategy_confounded,,strategy_confounded,False
+23,Qatar Grand Prix,Haas F1 Team,BEA,OCO,87,3.0,5,72,0.22468503234184994,,0.10600248057851899,,True
+23,Qatar Grand Prix,McLaren,NOR,PIA,4,1.0,18,70,0.3882761333919562,,0.16086822351419114,,True
+23,Qatar Grand Prix,McLaren,NOR,PIA,4,2.0,15,73,0.37464937167420087,,0.3862896137226812,,True
+23,Qatar Grand Prix,McLaren,NOR,PIA,4,3.0,11,77,0.406640367762324,,0.3538983731813387,,True
+23,Qatar Grand Prix,McLaren,NOR,PIA,81,1.0,17,71,0.3769346157360624,,0.2243090950559493,,True
+23,Qatar Grand Prix,McLaren,NOR,PIA,81,2.0,15,73,0.3840541018027968,,0.39799374183247666,,True
+23,Qatar Grand Prix,McLaren,NOR,PIA,81,3.0,12,76,0.45008305363792306,,0.261776381863843,,True
+23,Qatar Grand Prix,Mercedes,ANT,RUS,12,1.0,4,87,0.14302694433984797,,0.10751009790667254,,True
+23,Qatar Grand Prix,Mercedes,ANT,RUS,12,2.0,20,71,0.23400924050762129,,0.2311706116060968,,True
+23,Qatar Grand Prix,Mercedes,ANT,RUS,12,3.0,22,69,0.2783755403075477,,0.4164956909181179,,True
+23,Qatar Grand Prix,Mercedes,ANT,RUS,63,1.0,5,86,0.13236397439309258,,0.11786873078136466,,True
+23,Qatar Grand Prix,Mercedes,ANT,RUS,63,2.0,19,72,0.14285006626558894,,0.1925002052455309,,True
+23,Qatar Grand Prix,Mercedes,ANT,RUS,63,3.0,21,70,0.5033591078550486,,0.5688395297900826,,True
+23,Qatar Grand Prix,Racing Bulls,HAD,LAW,30,1.0,5,86,0.36332886577592094,,0.39497373687319737,,True
+23,Qatar Grand Prix,Racing Bulls,HAD,LAW,30,2.0,19,72,0.28606875652582026,,0.20361684715024053,,True
+23,Qatar Grand Prix,Racing Bulls,HAD,LAW,30,3.0,23,68,0.3205875884144059,,0.2907908802781026,,True
+23,Qatar Grand Prix,Racing Bulls,HAD,LAW,6,1.0,5,86,0.2680818069349982,,0.29565664700942024,,True
+23,Qatar Grand Prix,Racing Bulls,HAD,LAW,6,2.0,20,71,0.16662880482477646,,0.15409861301202382,,True
+23,Qatar Grand Prix,Racing Bulls,HAD,LAW,6,3.0,19,72,0.23402632347052518,,0.19293095389167622,,True
+23,Qatar Grand Prix,Red Bull Racing,TSU,VER,1,1.0,5,89,0.25955010411252316,,0.282324339903343,,True
+23,Qatar Grand Prix,Red Bull Racing,TSU,VER,1,2.0,20,74,0.8368269076483983,,0.8296566701971869,,True
+23,Qatar Grand Prix,Red Bull Racing,TSU,VER,1,3.0,23,71,0.9063302021457037,,0.9023025004079446,,True
+23,Qatar Grand Prix,Red Bull Racing,TSU,VER,22,1.0,4,90,0.2648153153511039,,0.28087476532666145,,True
+23,Qatar Grand Prix,Red Bull Racing,TSU,VER,22,2.0,19,75,0.8376113205132986,,0.8322410604951724,,True
+23,Qatar Grand Prix,Red Bull Racing,TSU,VER,22,3.0,23,71,0.8977810706118672,,0.9084541004063867,,True
+23,Qatar Grand Prix,Williams,ALB,SAI,23,1.0,5,89,0.31214890078457247,,0.3268540578065341,,True
+23,Qatar Grand Prix,Williams,ALB,SAI,23,2.0,18,76,0.1296837447743368,,0.12172346849478702,,True
+23,Qatar Grand Prix,Williams,ALB,SAI,23,3.0,23,71,0.3242633901271037,,0.31507366168106776,,True
+23,Qatar Grand Prix,Williams,ALB,SAI,55,1.0,5,89,0.15602749340685307,,0.19370355973423728,,True
+23,Qatar Grand Prix,Williams,ALB,SAI,55,2.0,20,74,,strategy_confounded,,strategy_confounded,False
+23,Qatar Grand Prix,Williams,ALB,SAI,55,3.0,23,71,0.218595327345164,,0.35862310179470014,,True
+24,Abu Dhabi Grand Prix,Alpine,COL,GAS,10,1.0,9,84,0.32588692935648095,,0.2495594486392605,,True
+24,Abu Dhabi Grand Prix,Alpine,COL,GAS,10,2.0,23,70,0.2572999341591652,,0.4795811954939112,,True
+24,Abu Dhabi Grand Prix,Alpine,COL,GAS,10,3.0,14,79,0.4007228969517677,,0.2648670584976957,,True
+24,Abu Dhabi Grand Prix,Alpine,COL,GAS,43,1.0,13,80,0.40492749927658495,,0.3371214479721789,,True
+24,Abu Dhabi Grand Prix,Alpine,COL,GAS,43,2.0,19,74,0.36748343034535863,,0.33737437204769993,,True
+24,Abu Dhabi Grand Prix,Alpine,COL,GAS,43,3.0,15,78,0.274395447926841,,0.26139824913995163,,True
+24,Abu Dhabi Grand Prix,Aston Martin,ALO,STR,14,1.0,14,93,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Aston Martin,ALO,STR,14,2.0,40,67,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Aston Martin,ALO,STR,18,1.0,39,68,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Aston Martin,ALO,STR,18,2.0,14,93,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Ferrari,HAM,LEC,16,1.0,13,84,4.310414004824106,,8.18037246543387,,True
+24,Abu Dhabi Grand Prix,Ferrari,HAM,LEC,16,2.0,20,77,0.5088278834119961,,0.6124557521947829,,True
+24,Abu Dhabi Grand Prix,Ferrari,HAM,LEC,16,3.0,16,81,0.6592337940563642,,0.6484248738667375,,True
+24,Abu Dhabi Grand Prix,Ferrari,HAM,LEC,44,1.0,5,92,,unseen_compound,,unseen_compound,False
+24,Abu Dhabi Grand Prix,Ferrari,HAM,LEC,44,2.0,18,79,0.6222785656671701,,0.9204835199492736,,True
+24,Abu Dhabi Grand Prix,Ferrari,HAM,LEC,44,3.0,25,72,0.4082520714393854,,0.6695814851776418,,True
+24,Abu Dhabi Grand Prix,Haas F1 Team,BEA,OCO,31,1.0,17,88,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Haas F1 Team,BEA,OCO,31,2.0,35,70,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Haas F1 Team,BEA,OCO,87,1.0,11,94,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Haas F1 Team,BEA,OCO,87,2.0,42,63,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Kick Sauber,BOR,HUL,27,1.0,4,96,,unseen_compound,,unseen_compound,False
+24,Abu Dhabi Grand Prix,Kick Sauber,BOR,HUL,27,2.0,30,70,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Kick Sauber,BOR,HUL,27,3.0,14,86,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Kick Sauber,BOR,HUL,5,1.0,13,87,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Kick Sauber,BOR,HUL,5,2.0,39,61,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,McLaren,NOR,PIA,4,1.0,14,90,0.9013280952284778,,0.7223207923571786,,True
+24,Abu Dhabi Grand Prix,McLaren,NOR,PIA,4,2.0,21,83,0.5260661507086352,,0.5253671434875801,,True
+24,Abu Dhabi Grand Prix,McLaren,NOR,PIA,4,3.0,16,88,0.533062544507648,,0.5014626048617137,,True
+24,Abu Dhabi Grand Prix,McLaren,NOR,PIA,81,1.0,38,66,0.8972497961661547,,1.4596437599638505,,True
+24,Abu Dhabi Grand Prix,McLaren,NOR,PIA,81,2.0,15,89,0.925706453083949,,0.30360621456470466,,True
+24,Abu Dhabi Grand Prix,Mercedes,ANT,RUS,12,1.0,27,78,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Mercedes,ANT,RUS,12,2.0,24,81,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Mercedes,ANT,RUS,63,1.0,12,93,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Mercedes,ANT,RUS,63,2.0,42,63,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Racing Bulls,HAD,LAW,30,1.0,17,84,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Racing Bulls,HAD,LAW,30,2.0,34,67,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Racing Bulls,HAD,LAW,6,1.0,11,90,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Racing Bulls,HAD,LAW,6,2.0,39,62,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Red Bull Racing,TSU,VER,1,1.0,21,83,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Red Bull Racing,TSU,VER,1,2.0,31,73,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Red Bull Racing,TSU,VER,22,1.0,28,76,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Red Bull Racing,TSU,VER,22,2.0,24,80,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Williams,ALB,SAI,23,1.0,6,95,,unseen_compound,,unseen_compound,False
+24,Abu Dhabi Grand Prix,Williams,ALB,SAI,23,2.0,20,81,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Williams,ALB,SAI,23,3.0,22,79,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Williams,ALB,SAI,55,1.0,15,86,,effects_not_identifiable,,effects_not_identifiable,False
+24,Abu Dhabi Grand Prix,Williams,ALB,SAI,55,2.0,38,63,,effects_not_identifiable,,effects_not_identifiable,False

@@ -1,0 +1,201 @@
+round_number,race,team,driver,teammate,matched_laps,strict_gap,strict_gap_se_pp,lowconf_gap,lowconf_gap_se_pp,driver_clean_laps,teammate_clean_laps,regression_gap_linear,regression_gap_linear_se_pp,regression_linear_driver_term_se_seconds,regression_linear_reason_code,regression_linear_unreliable_gap,regression_gap_curved,regression_gap_curved_se_pp,regression_curved_driver_term_se_seconds,regression_curved_reason_code,regression_curved_unreliable_gap,final_gap,method_used,final_confidence,reason_code,disagreement_flag
+2,Chinese Grand Prix,Alpine,DOO,GAS,0,,,,,48,49,,,,race_disqualification,,,,,race_disqualification,,,unavailable,unavailable,race_disqualification,False
+2,Chinese Grand Prix,Aston Martin,ALO,STR,0,,,,,0,49,,,,strategy_confounded,,,,,strategy_confounded,,,unavailable,unavailable,strategy_confounded,False
+2,Chinese Grand Prix,Ferrari,HAM,LEC,0,,,,,47,50,,,,race_disqualification,,,,,race_disqualification,,,unavailable,unavailable,race_disqualification,False
+2,Chinese Grand Prix,Haas F1 Team,BEA,OCO,0,,,,,49,49,0.302328956,0.084405668,0.082268834,,,0.181487191,0.084539271,0.082498615,,,0.302328956,regression_gap_linear,medium,,False
+2,Chinese Grand Prix,Kick Sauber,BOR,HUL,0,,,,,48,48,-0.258928663,0.134593628,0.132920551,,,-0.065327466,0.147323743,0.145210878,,,-0.258928663,regression_gap_linear,medium,,False
+2,Chinese Grand Prix,McLaren,NOR,PIA,49,0.074128000,,,,50,50,0.184251067,0.264376138,0.255909278,,,0.148141332,0.248122259,0.240262621,,,0.074128000,strict_gap,high,,False
+2,Chinese Grand Prix,Mercedes,ANT,RUS,48,0.689334000,,,,50,50,0.716488521,0.203886306,0.197237785,,,0.801966226,0.196780929,0.190202023,,,0.689334000,strict_gap,high,,False
+2,Chinese Grand Prix,Racing Bulls,HAD,TSU,30,0.149780000,,,,45,41,0.197900946,0.109079990,0.106447501,,,0.147691719,0.112618604,0.109957473,,,0.149780000,strict_gap,high,,False
+2,Chinese Grand Prix,Red Bull Racing,LAW,VER,0,,,,,46,50,1.071244501,0.114737906,0.110636608,,,0.867295488,0.100783381,0.097374173,,,1.071244501,regression_gap_linear,medium,,False
+2,Chinese Grand Prix,Williams,ALB,SAI,46,-0.421344000,,,,49,49,-0.212775893,0.147177945,0.144403063,,,-0.296401898,0.141079934,0.138535956,,,-0.421344000,strict_gap,high,,False
+3,Japanese Grand Prix,Alpine,DOO,GAS,0,,,,,49,48,,,,effects_not_identifiable,,,,,effects_not_identifiable,,,unavailable,unavailable,effects_not_identifiable,False
+3,Japanese Grand Prix,Aston Martin,ALO,STR,0,,,,,49,45,-0.654573796,0.162152464,0.152824197,,,-0.671009048,0.168892821,0.159202438,,,-0.654573796,regression_gap_linear,medium,,False
+3,Japanese Grand Prix,Ferrari,HAM,LEC,0,,,,,49,49,0.259734643,0.058827965,0.054473897,,,0.257972612,0.058323933,0.054008122,,,0.259734643,regression_gap_linear,medium,,False
+3,Japanese Grand Prix,Haas F1 Team,BEA,OCO,0,,,,,49,49,-0.503995922,0.104815487,0.098659652,,,-0.500513080,0.104605757,0.098458806,,,-0.503995922,regression_gap_linear,medium,,False
+3,Japanese Grand Prix,Kick Sauber,BOR,HUL,0,,,,,49,49,-0.074510318,0.119601001,0.112367208,,,-0.063676577,0.109555700,0.102918322,,,-0.074510318,regression_gap_linear,medium,,False
+3,Japanese Grand Prix,McLaren,NOR,PIA,47,-0.005424000,,,,48,49,-0.111207912,0.067283658,0.062282707,,,-0.117301417,0.062149358,0.057533523,,,-0.005424000,strict_gap,high,,False
+3,Japanese Grand Prix,Mercedes,ANT,RUS,16,0.077312000,,,,47,48,0.076464790,0.102612464,0.095096711,,,0.040741228,0.107928245,0.100058788,,,0.077312000,strict_gap,high,,False
+3,Japanese Grand Prix,Racing Bulls,HAD,LAW,23,-0.739254000,,,,49,49,,,,effects_not_identifiable,,,,,effects_not_identifiable,,-0.739254000,strict_gap,high,,False
+3,Japanese Grand Prix,Red Bull Racing,TSU,VER,46,0.878257000,,,,48,49,1.330408609,0.088885561,0.081521481,,,1.301907423,0.081317757,0.074601756,,,0.878257000,strict_gap,high,,True
+3,Japanese Grand Prix,Williams,ALB,SAI,21,-0.648300000,,,,49,47,,,,effects_not_identifiable,,,,,effects_not_identifiable,,-0.648300000,strict_gap,high,,False
+4,Bahrain Grand Prix,Alpine,DOO,GAS,41,0.608119000,,,,42,45,0.551155059,0.103983561,0.101771397,,,0.547093839,0.102511600,0.100334719,,,0.608119000,strict_gap,high,,False
+4,Bahrain Grand Prix,Aston Martin,ALO,STR,20,-0.117078000,,,,48,47,-0.229695223,0.086601900,0.086046598,,,-0.199134986,0.088319544,0.087726246,,,-0.117078000,strict_gap,high,,False
+4,Bahrain Grand Prix,Ferrari,HAM,LEC,46,0.262051000,,,,47,47,0.296100822,0.085417154,0.083378688,,,0.296062239,0.081178797,0.079241509,,,0.262051000,strict_gap,high,,False
+4,Bahrain Grand Prix,Haas F1 Team,BEA,OCO,6,,,0.300893341,,46,45,0.512327409,0.098428453,0.096483161,,,0.412922826,0.111996405,0.109892803,,,0.512327409,regression_gap_linear,medium,,False
+4,Bahrain Grand Prix,Kick Sauber,BOR,HUL,0,,,,,48,45,,,,race_disqualification,,,,,race_disqualification,,,unavailable,unavailable,race_disqualification,False
+4,Bahrain Grand Prix,McLaren,NOR,PIA,28,0.359924000,,,,47,47,0.324468019,0.092376512,0.089668352,,,0.339266385,0.093091127,0.090348661,,,0.359924000,strict_gap,high,,False
+4,Bahrain Grand Prix,Mercedes,ANT,RUS,20,0.747489000,,,,43,28,0.713280343,0.116545290,0.113638886,,,0.705385917,0.109851368,0.107123074,,,0.747489000,strict_gap,high,,False
+4,Bahrain Grand Prix,Racing Bulls,HAD,LAW,0,,,,,43,47,-0.278947321,0.111312121,0.110333457,,,-0.282145303,0.114163431,0.113163438,,,-0.278947321,regression_gap_linear,medium,,False
+4,Bahrain Grand Prix,Red Bull Racing,TSU,VER,7,,,0.441730938,,45,42,0.881235962,0.121487007,0.118435595,,,0.514393730,0.129855734,0.127066816,,,0.881235962,regression_gap_linear,medium,,True
+4,Bahrain Grand Prix,Williams,ALB,SAI,12,-0.031433000,,,,48,34,-0.421401743,0.155147067,0.154166261,,,-0.442162012,0.147370307,0.146469816,,,-0.031433000,strict_gap,high,,True
+5,Saudi Arabian Grand Prix,Alpine,DOO,GAS,0,,,,,42,0,,,,no_race_laps,,,,,no_race_laps,,,unavailable,unavailable,no_race_laps,False
+5,Saudi Arabian Grand Prix,Aston Martin,ALO,STR,0,,,,,42,41,-0.434837627,0.113855233,0.108599906,,,-0.452304311,0.109454980,0.104420917,,,-0.434837627,regression_gap_linear,medium,,False
+5,Saudi Arabian Grand Prix,Ferrari,HAM,LEC,18,0.454010000,,,,42,43,0.801645653,0.116160251,0.107941752,,,0.768041763,0.116963367,0.108724279,,,0.454010000,strict_gap,high,,True
+5,Saudi Arabian Grand Prix,Haas F1 Team,BEA,OCO,0,,,,,43,46,,,,effects_not_identifiable,,,,,effects_not_identifiable,,,unavailable,unavailable,effects_not_identifiable,False
+5,Saudi Arabian Grand Prix,Kick Sauber,BOR,HUL,26,-0.006245000,,,,43,42,,,,effects_not_identifiable,,,,,effects_not_identifiable,,-0.006245000,strict_gap,high,,False
+5,Saudi Arabian Grand Prix,McLaren,NOR,PIA,0,,,,,42,43,0.112021579,0.093137382,0.086783277,,,0.128112132,0.084170100,0.078415224,,,0.112021579,regression_gap_linear,medium,,False
+5,Saudi Arabian Grand Prix,Mercedes,ANT,RUS,41,0.411178000,,,,42,43,0.417309454,0.179856430,0.168068767,,,0.440238956,0.172274636,0.160947105,,,0.411178000,strict_gap,high,,False
+5,Saudi Arabian Grand Prix,Racing Bulls,HAD,LAW,0,,,,,41,41,-0.046326947,0.113380259,0.107246285,,,-0.055038844,0.111615924,0.105586602,,,-0.046326947,regression_gap_linear,medium,,False
+5,Saudi Arabian Grand Prix,Red Bull Racing,TSU,VER,0,,,,,0,43,,,,strategy_confounded,,,,,strategy_confounded,,,unavailable,unavailable,strategy_confounded,False
+5,Saudi Arabian Grand Prix,Williams,ALB,SAI,41,-0.054310000,,,,42,43,0.124166085,0.133326698,0.125777537,,,0.116029780,0.118366715,0.111673672,,,-0.054310000,strict_gap,high,,False
+7,Emilia Romagna Grand Prix,Alpine,COL,GAS,5,,,0.664696288,,45,43,0.728171064,0.164040457,0.133215580,,,0.501286589,0.174229053,0.141814283,,,0.728171064,regression_gap_linear,medium,,False
+7,Emilia Romagna Grand Prix,Aston Martin,ALO,STR,42,-0.301973000,,,,44,44,-0.245339348,0.143409473,0.117746577,,,-0.190353548,0.130484765,0.107075801,,,-0.301973000,strict_gap,high,,False
+7,Emilia Romagna Grand Prix,Ferrari,HAM,LEC,0,,,,,48,45,0.303309162,0.149414786,0.120776485,,,0.365940866,0.161712301,0.130634957,,,0.303309162,regression_gap_linear,medium,,False
+7,Emilia Romagna Grand Prix,Haas F1 Team,BEA,OCO,24,0.174896000,,,,46,24,-0.010165152,0.192210877,0.157753234,,,0.008586690,0.184333335,0.151255907,,,0.174896000,strict_gap,high,,False
+7,Emilia Romagna Grand Prix,Kick Sauber,BOR,HUL,0,,,,,45,47,-0.063624108,0.147705250,0.121070316,,,0.014365099,0.147699602,0.120972150,,,-0.063624108,regression_gap_linear,medium,,False
+7,Emilia Romagna Grand Prix,McLaren,NOR,PIA,24,0.257784000,,,,48,46,0.032617344,0.133954151,0.107856915,,,0.093549054,0.147065711,0.118341528,,,0.257784000,strict_gap,high,,False
+7,Emilia Romagna Grand Prix,Mercedes,ANT,RUS,0,,,,,39,45,0.522551984,0.148434843,0.120436691,,,0.316987816,0.137831505,0.112054945,,,0.522551984,regression_gap_linear,medium,,False
+7,Emilia Romagna Grand Prix,Racing Bulls,HAD,LAW,20,-0.457163000,,,,48,45,-0.124407152,0.163079684,0.133299027,,,-0.353968845,0.173615167,0.142239329,,,-0.457163000,strict_gap,high,,True
+7,Emilia Romagna Grand Prix,Red Bull Racing,TSU,VER,0,,,,,47,49,1.819948807,0.114829053,0.091486388,,,1.817721410,0.093307623,0.074340582,,,1.819948807,regression_gap_linear,medium,,False
+7,Emilia Romagna Grand Prix,Williams,ALB,SAI,21,-0.113820000,,,,47,45,0.111923048,0.159092885,0.129164371,,,-0.150916744,0.164595485,0.133985753,,,-0.113820000,strict_gap,high,,False
+8,Monaco Grand Prix,Alpine,COL,GAS,0,,,,,60,2,,,1.043683592,strategy_confounded,-0.992251012,,,1.330894454,strategy_confounded,-0.950295958,,unavailable,unavailable,strategy_confounded,False
+8,Monaco Grand Prix,Aston Martin,ALO,STR,23,-2.803738000,,,,24,59,-2.057751296,0.404313227,0.319915550,,,-2.028931117,0.382783933,0.302807312,,,-2.803738000,strict_gap,high,,True
+8,Monaco Grand Prix,Ferrari,HAM,LEC,0,,,,,61,61,1.048327936,0.268685375,0.201074248,,,0.608543833,0.239498057,0.180019719,,,1.048327936,regression_gap_linear,medium,,True
+8,Monaco Grand Prix,Haas F1 Team,BEA,OCO,0,,,,,61,61,0.809583115,0.417915547,0.322209519,,,1.059917297,0.357890890,0.275243944,,,0.809583115,regression_gap_linear,medium,,False
+8,Monaco Grand Prix,Kick Sauber,BOR,HUL,0,,,,,61,58,-1.295469471,0.486165467,0.385585776,,,-1.406108778,0.414469649,0.329090126,,,-1.295469471,regression_gap_linear,medium,,False
+8,Monaco Grand Prix,McLaren,NOR,PIA,59,-0.183740000,,,,62,62,-0.021965613,0.233116548,0.175782918,,,-0.064439429,0.195345383,0.147363931,,,-0.183740000,strict_gap,high,,False
+8,Monaco Grand Prix,Mercedes,ANT,RUS,40,-0.000540000,,,,58,55,0.546970873,0.306403093,0.238597163,,,0.535660508,0.305069980,0.237586826,,,-0.000540000,strict_gap,high,,True
+8,Monaco Grand Prix,Racing Bulls,HAD,LAW,4,,,-2.648472903,,61,61,-0.061184762,0.831175001,0.643067308,,,-1.299156515,0.816525455,0.639628254,,,-0.061184762,regression_gap_linear,medium,,True
+8,Monaco Grand Prix,Red Bull Racing,TSU,VER,18,3.523612000,,,,63,62,3.846979255,0.456983663,0.339223775,,,4.341696162,0.452338565,0.334148981,,,3.523612000,strict_gap,high,,True
+8,Monaco Grand Prix,Williams,ALB,SAI,0,,,,,60,60,-0.335220747,0.325269241,0.253158396,,,-0.359515718,0.329325650,0.256377858,,,-0.335220747,regression_gap_linear,medium,,False
+9,Spanish Grand Prix,Alpine,COL,GAS,13,1.319333000,,,,49,51,1.021230179,0.178316122,0.144491627,,,0.985595907,0.170662523,0.138338407,,,1.319333000,strict_gap,high,,True
+9,Spanish Grand Prix,Aston Martin,ALO,STR,0,,,,,50,0,,,,no_race_laps,,,,,no_race_laps,,,unavailable,unavailable,no_race_laps,False
+9,Spanish Grand Prix,Ferrari,HAM,LEC,39,0.387466000,,,,52,52,0.065773706,0.123916926,0.099499728,,,0.078415653,0.126354243,0.101443962,,,0.387466000,strict_gap,high,,True
+9,Spanish Grand Prix,Haas F1 Team,BEA,OCO,6,,,-0.037569940,,49,51,-0.228309688,0.160560410,0.131442370,,,-0.258073006,0.160863761,0.131729611,,,-0.228309688,regression_gap_linear,medium,,False
+9,Spanish Grand Prix,Kick Sauber,BOR,HUL,7,,,0.514012973,,51,51,0.628373957,0.167133459,0.135461719,,,0.575084302,0.177758146,0.144149783,,,0.628373957,regression_gap_linear,medium,,False
+9,Spanish Grand Prix,McLaren,NOR,PIA,50,0.231188000,,,,52,52,0.139431307,0.099696372,0.079500242,,,0.136038759,0.086830255,0.069242844,,,0.231188000,strict_gap,high,,False
+9,Spanish Grand Prix,Mercedes,ANT,RUS,33,0.145587000,,,,44,52,0.208364820,0.094268148,0.075976924,,,0.220615336,0.089469260,0.072100452,,,0.145587000,strict_gap,high,,False
+9,Spanish Grand Prix,Racing Bulls,HAD,LAW,38,-0.470541000,,,,51,50,-0.691516744,0.136815923,0.112082625,,,-0.649491970,0.134120500,0.109827964,,,-0.470541000,strict_gap,high,,False
+9,Spanish Grand Prix,Red Bull Racing,TSU,VER,4,,,1.610049123,,47,49,2.113072286,0.121536081,0.095811449,,,2.101692620,0.125274272,0.098768712,,,2.113072286,regression_gap_linear,medium,,True
+9,Spanish Grand Prix,Williams,ALB,SAI,17,0.446253000,,,,20,51,-0.127485717,0.216329455,0.177132337,,,-0.168314089,0.223732201,0.183260384,,,0.446253000,strict_gap,high,,True
+10,Canadian Grand Prix,Alpine,COL,GAS,0,,,,,59,57,0.101255135,0.141040207,0.109004451,,,0.060880271,0.138292204,0.106924161,,,0.101255135,regression_gap_linear,medium,,False
+10,Canadian Grand Prix,Aston Martin,ALO,STR,0,,,,,57,56,-0.544832564,0.139486424,0.107706413,,,-0.532728789,0.139767095,0.107909978,,,-0.544832564,regression_gap_linear,medium,,False
+10,Canadian Grand Prix,Ferrari,HAM,LEC,0,,,,,57,55,0.430416529,0.108252159,0.081941952,,,0.440995023,0.096783153,0.073252631,,,0.430416529,regression_gap_linear,medium,,False
+10,Canadian Grand Prix,Haas F1 Team,BEA,OCO,0,,,,,56,59,0.547436049,0.178350845,0.136908511,,,0.443939536,0.177645609,0.136506287,,,0.547436049,regression_gap_linear,medium,,False
+10,Canadian Grand Prix,Kick Sauber,BOR,HUL,0,,,,,59,60,0.556994456,0.126931114,0.097394341,,,0.570600807,0.121801234,0.093445531,,,0.556994456,regression_gap_linear,medium,,False
+10,Canadian Grand Prix,McLaren,NOR,PIA,17,-0.265779000,,,,59,57,-0.020429604,0.084043119,0.063573938,,,-0.020944427,0.077734434,0.058802074,,,-0.265779000,strict_gap,high,,False
+10,Canadian Grand Prix,Mercedes,ANT,RUS,31,0.031357000,,,,56,57,0.083324460,0.070107681,0.052915916,,,0.076916187,0.062210438,0.046958225,,,0.031357000,strict_gap,high,,False
+10,Canadian Grand Prix,Racing Bulls,HAD,LAW,0,,,,,57,46,-0.417223411,0.166968010,0.130053490,,,-0.453883032,0.172869154,0.134700176,,,-0.417223411,regression_gap_linear,medium,,False
+10,Canadian Grand Prix,Red Bull Racing,TSU,VER,0,,,,,59,57,2.140222333,0.126516453,0.094695523,,,2.178728651,0.128356447,0.096036512,,,2.140222333,regression_gap_linear,medium,,False
+10,Canadian Grand Prix,Williams,ALB,SAI,0,,,,,42,58,0.668511937,0.260178496,0.200087635,,,1.177005140,0.325509678,0.249061151,,,0.668511937,regression_gap_linear,medium,,True
+11,Austrian Grand Prix,Alpine,COL,GAS,7,,,0.281590989,,57,58,0.018731236,0.142865249,0.101605403,,,0.022319006,0.138820194,0.098725044,,,0.018731236,regression_gap_linear,medium,,False
+11,Austrian Grand Prix,Aston Martin,ALO,STR,20,-0.587099000,,,,60,57,-0.732506006,0.187448401,0.134123735,,,-0.796312226,0.187409502,0.134182059,,,-0.587099000,strict_gap,high,,False
+11,Austrian Grand Prix,Ferrari,HAM,LEC,55,0.265654000,,,,58,58,0.257788213,0.085005264,0.059338156,,,0.257525311,0.079930644,0.055795951,,,0.265654000,strict_gap,high,,False
+11,Austrian Grand Prix,Haas F1 Team,BEA,OCO,0,,,,,57,57,0.370458924,0.138485356,0.097809522,,,0.510018561,0.139175209,0.098159865,,,0.370458924,regression_gap_linear,medium,,False
+11,Austrian Grand Prix,Kick Sauber,BOR,HUL,0,,,,,58,58,0.049508997,0.167023902,0.118040796,,,0.067056452,0.169306123,0.119632720,,,0.049508997,regression_gap_linear,medium,,False
+11,Austrian Grand Prix,McLaren,NOR,PIA,28,0.093001000,,,,58,57,-0.025778626,0.107815355,0.075124010,,,0.005654807,0.106845301,0.074424592,,,0.093001000,strict_gap,high,,False
+11,Austrian Grand Prix,Mercedes,ANT,RUS,0,,,,,0,59,,,,no_race_laps,,,,,no_race_laps,,,unavailable,unavailable,no_race_laps,False
+11,Austrian Grand Prix,Racing Bulls,HAD,LAW,23,0.795629000,,,,62,62,0.702223819,0.148800658,0.105124556,,,0.685599133,0.146362938,0.103419516,,,0.795629000,strict_gap,high,,False
+11,Austrian Grand Prix,Red Bull Racing,TSU,VER,0,,,,,55,0,,,,no_race_laps,,,,,no_race_laps,,,unavailable,unavailable,no_race_laps,False
+11,Austrian Grand Prix,Williams,ALB,SAI,0,,,,,8,0,,,,no_race_laps,,,,,no_race_laps,,,unavailable,unavailable,no_race_laps,False
+14,Hungarian Grand Prix,Alpine,COL,GAS,0,,,,,60,63,-0.061537664,0.187617717,0.155493587,,,-0.112968379,0.193544559,0.160487578,,,-0.061537664,regression_gap_linear,medium,,False
+14,Hungarian Grand Prix,Aston Martin,ALO,STR,63,-0.339470000,,,,66,66,-0.337911617,0.135756247,0.111968701,,,-0.426601333,0.097483052,0.080473270,,,-0.339470000,strict_gap,high,,False
+14,Hungarian Grand Prix,Ferrari,HAM,LEC,0,,,,,64,63,0.804066089,0.169686618,0.138172347,,,0.908784189,0.113960858,0.092698854,,,0.804066089,regression_gap_linear,medium,,False
+14,Hungarian Grand Prix,Haas F1 Team,BEA,OCO,12,-0.132358000,,,,42,65,-0.112577378,0.273546127,0.228004854,,,-0.002446744,0.298483064,0.248525557,,,-0.132358000,strict_gap,high,,False
+14,Hungarian Grand Prix,Kick Sauber,BOR,HUL,0,,,,,66,59,0.102741953,0.199946024,0.164430858,,,0.159852646,0.203057341,0.166893146,,,0.102741953,regression_gap_linear,medium,,False
+14,Hungarian Grand Prix,McLaren,NOR,PIA,16,0.169056000,,,,65,63,-0.137157422,0.101141398,0.082205120,,,-0.067078363,0.100550521,0.081667189,,,0.169056000,strict_gap,high,,True
+14,Hungarian Grand Prix,Mercedes,ANT,RUS,35,1.525397000,,,,64,62,1.291415292,0.177799011,0.143845155,,,1.370777760,0.173526211,0.140277174,,,1.525397000,strict_gap,high,,False
+14,Hungarian Grand Prix,Racing Bulls,HAD,LAW,31,0.527239000,,,,65,66,0.556900650,0.149401816,0.122497635,,,0.606736408,0.141368533,0.115853432,,,0.527239000,strict_gap,high,,False
+14,Hungarian Grand Prix,Red Bull Racing,TSU,VER,14,0.566681000,,,,61,63,0.810043234,0.187350373,0.153182955,,,1.018700068,0.180382045,0.147180277,,,0.566681000,strict_gap,high,,True
+14,Hungarian Grand Prix,Williams,ALB,SAI,12,0.122802000,,,,61,61,0.072668681,0.160182239,0.132350953,,,0.020857683,0.155177767,0.128282436,,,0.122802000,strict_gap,high,,False
+15,Dutch Grand Prix,Alpine,COL,GAS,0,,,,,45,49,-0.034628348,0.204121975,0.156336913,,,-0.009343738,0.201457586,0.154257766,,,-0.034628348,regression_gap_linear,medium,,False
+15,Dutch Grand Prix,Aston Martin,ALO,STR,6,,,-0.434888951,,43,46,0.029433028,0.160585034,0.122202729,,,-0.066831673,0.175183248,0.133438642,,,0.029433028,regression_gap_linear,medium,,True
+15,Dutch Grand Prix,Ferrari,HAM,LEC,19,0.027577000,,,,21,39,,,,effects_not_identifiable,,,,,effects_not_identifiable,,0.027577000,strict_gap,high,,False
+15,Dutch Grand Prix,Haas F1 Team,BEA,OCO,48,-0.098469000,,,,48,49,-0.083628435,0.125432199,0.096012989,,,-0.080957283,0.119570362,0.091523569,,,-0.098469000,strict_gap,high,,False
+15,Dutch Grand Prix,Kick Sauber,BOR,HUL,19,0.111519000,,,,44,45,0.312586989,0.190066646,0.145255691,,,0.291262740,0.189998658,0.145234514,,,0.111519000,strict_gap,high,,False
+15,Dutch Grand Prix,McLaren,NOR,PIA,48,0.026592000,,,,48,51,0.041847348,0.099212477,0.073977592,,,0.034382312,0.094107037,0.070175886,,,0.026592000,strict_gap,high,,False
+15,Dutch Grand Prix,Mercedes,ANT,RUS,48,0.071706000,,,,49,50,,,,effects_not_identifiable,,,,,effects_not_identifiable,,0.071706000,strict_gap,high,,False
+15,Dutch Grand Prix,Racing Bulls,HAD,LAW,30,-0.541576000,,,,51,48,-0.709728853,0.137966651,0.105049480,,,-0.715711527,0.136261268,0.103757239,,,-0.541576000,strict_gap,high,,False
+15,Dutch Grand Prix,Red Bull Racing,TSU,VER,26,1.306718000,,,,46,51,1.599345026,0.128565226,0.095891159,,,1.652136371,0.111184993,0.082884956,,,1.306718000,strict_gap,high,,True
+15,Dutch Grand Prix,Williams,ALB,SAI,21,0.093810000,,,,51,47,-0.284065999,0.137910720,0.104939667,,,-0.288521017,0.137570649,0.104685612,,,0.093810000,strict_gap,high,,True
+16,Italian Grand Prix,Alpine,COL,GAS,0,,,,,44,43,,,,effects_not_identifiable,,,,,effects_not_identifiable,,,unavailable,unavailable,effects_not_identifiable,False
+16,Italian Grand Prix,Aston Martin,ALO,STR,0,,,,,19,46,,,,strategy_confounded,,,,,strategy_confounded,,,unavailable,unavailable,strategy_confounded,False
+16,Italian Grand Prix,Ferrari,HAM,LEC,30,0.296262000,,,,49,47,0.264306743,0.083795446,0.069483878,,,0.207857262,0.075702913,0.062809176,,,0.296262000,strict_gap,high,,False
+16,Italian Grand Prix,Haas F1 Team,BEA,OCO,0,,,,,48,48,,,,effects_not_identifiable,,,,,effects_not_identifiable,,,unavailable,unavailable,effects_not_identifiable,False
+16,Italian Grand Prix,Kick Sauber,BOR,HUL,0,,,,,47,0,,,,no_race_laps,,,,,no_race_laps,,,unavailable,unavailable,no_race_laps,False
+16,Italian Grand Prix,McLaren,NOR,PIA,47,-0.084075000,,,,48,48,-0.096622729,0.097037685,0.080590322,,,-0.108538675,0.085255553,0.070813637,,,-0.084075000,strict_gap,high,,False
+16,Italian Grand Prix,Mercedes,ANT,RUS,43,0.388106000,,,,45,47,0.352334265,0.117538858,0.097595746,,,0.353324052,0.113646286,0.094362709,,,0.388106000,strict_gap,high,,False
+16,Italian Grand Prix,Racing Bulls,HAD,LAW,0,,,,,46,47,,,,effects_not_identifiable,,,,,effects_not_identifiable,,,unavailable,unavailable,effects_not_identifiable,False
+16,Italian Grand Prix,Red Bull Racing,TSU,VER,17,1.638022000,,,,47,47,1.583837628,0.107800869,0.088366177,,,1.680736670,0.101764641,0.083337995,,,1.638022000,strict_gap,high,,False
+16,Italian Grand Prix,Williams,ALB,SAI,0,,,,,47,46,-0.171631488,0.082952778,0.069416120,,,-0.133524944,0.081135833,0.067869645,,,-0.171631488,regression_gap_linear,medium,,False
+17,Azerbaijan Grand Prix,Alpine,COL,GAS,0,,,,,41,39,-0.133456149,0.127678869,0.136974428,,,-0.159133609,0.116587655,0.125108239,,,-0.133456149,regression_gap_linear,medium,,False
+17,Azerbaijan Grand Prix,Aston Martin,ALO,STR,12,-0.552922000,,,,40,40,-0.485658096,0.189094805,0.202666337,,,-0.611028019,0.191674762,0.205689783,,,-0.552922000,strict_gap,high,,False
+17,Azerbaijan Grand Prix,Ferrari,HAM,LEC,0,,,,,40,40,-0.018024442,0.115279454,0.121895841,,,0.058619346,0.105665956,0.111644985,,,-0.018024442,regression_gap_linear,medium,,False
+17,Azerbaijan Grand Prix,Haas F1 Team,BEA,OCO,19,0.042827000,,,,40,43,,,,effects_not_identifiable,,,,,effects_not_identifiable,,0.042827000,strict_gap,high,,False
+17,Azerbaijan Grand Prix,Kick Sauber,BOR,HUL,17,-0.388964000,,,,40,40,-0.569328935,0.173883487,0.186122472,,,-0.548620279,0.165584183,0.177202254,,,-0.388964000,strict_gap,high,,False
+17,Azerbaijan Grand Prix,McLaren,NOR,PIA,0,,,,,40,0,,,,no_race_laps,,,,,no_race_laps,,,unavailable,unavailable,no_race_laps,False
+17,Azerbaijan Grand Prix,Mercedes,ANT,RUS,0,,,,,41,39,0.213495311,0.076272777,0.080172502,,,0.220337479,0.068275396,0.071761294,,,0.213495311,regression_gap_linear,medium,,False
+17,Azerbaijan Grand Prix,Racing Bulls,HAD,LAW,10,0.503746000,,,,40,39,0.782694695,0.128494840,0.134726819,,,0.950194710,0.125293878,0.131151607,,,0.503746000,strict_gap,high,,True
+17,Azerbaijan Grand Prix,Red Bull Racing,TSU,VER,28,0.445490000,,,,39,40,0.511034687,0.099841821,0.104672462,,,0.522622353,0.088414976,0.092682073,,,0.445490000,strict_gap,high,,False
+17,Azerbaijan Grand Prix,Williams,ALB,SAI,0,,,,,41,39,1.173772744,0.141647701,0.148016054,,,1.188989845,0.153447331,0.160323602,,,1.173772744,regression_gap_linear,medium,,False
+18,Singapore Grand Prix,Alpine,COL,GAS,0,,,,,53,50,-0.045669562,0.275469307,0.271758038,,,1.361557309,0.316996001,0.308346031,,,-0.045669562,regression_gap_linear,medium,,True
+18,Singapore Grand Prix,Aston Martin,ALO,STR,24,-0.541285000,,,,56,54,-0.821762070,0.318740943,0.315216580,,,-0.303010588,0.304968379,0.300028264,,,-0.541285000,strict_gap,high,,True
+18,Singapore Grand Prix,Ferrari,HAM,LEC,36,-0.130221000,,,,51,55,0.058434828,0.472585538,0.458974215,,,0.311969660,0.412345058,0.399462362,,,-0.130221000,strict_gap,high,,True
+18,Singapore Grand Prix,Haas F1 Team,BEA,OCO,19,-0.414615000,,,,54,53,-0.283643373,0.319853306,0.315893025,,,-0.491153130,0.297571074,0.294499175,,,-0.414615000,strict_gap,high,,False
+18,Singapore Grand Prix,Kick Sauber,BOR,HUL,10,0.523928000,,,,55,53,0.875320859,0.381430471,0.372282126,,,0.273972355,0.343327741,0.337114217,,,0.523928000,strict_gap,high,,True
+18,Singapore Grand Prix,McLaren,NOR,PIA,54,0.072072000,,,,55,56,-0.108023843,0.196368049,0.190137837,,,-0.152636255,0.153591115,0.148784366,,,0.072072000,strict_gap,high,,False
+18,Singapore Grand Prix,Mercedes,ANT,RUS,54,0.508091000,,,,54,56,,,,effects_not_identifiable,,,,,effects_not_identifiable,,0.508091000,strict_gap,high,,False
+18,Singapore Grand Prix,Racing Bulls,HAD,LAW,0,,,,,55,55,,,,effects_not_identifiable,,,,,effects_not_identifiable,,,unavailable,unavailable,effects_not_identifiable,False
+18,Singapore Grand Prix,Red Bull Racing,TSU,VER,10,1.851971000,,,,55,54,1.995748017,0.247411735,0.236579932,,,2.153654259,0.242523711,0.231543365,,,1.851971000,strict_gap,high,,True
+18,Singapore Grand Prix,Williams,ALB,SAI,38,0.020431000,,,,54,54,-0.133776505,0.188596865,0.185620026,,,0.046758161,0.164691102,0.161799187,,,0.020431000,strict_gap,high,,False
+19,United States Grand Prix,Alpine,COL,GAS,20,0.239867000,,,,46,45,0.145429752,0.179102837,0.180656538,,,0.204597306,0.162180818,0.163490796,,,0.239867000,strict_gap,high,,False
+19,United States Grand Prix,Aston Martin,ALO,STR,0,,,,,46,46,-0.169407622,0.076822339,0.077246747,,,-0.173900921,0.071756591,0.072156256,,,-0.169407622,regression_gap_linear,medium,,False
+19,United States Grand Prix,Ferrari,HAM,LEC,0,,,,,42,45,0.189561467,0.099761314,0.099107888,,,0.233137116,0.089945295,0.089317870,,,0.189561467,regression_gap_linear,medium,,False
+19,United States Grand Prix,Haas F1 Team,BEA,OCO,0,,,,,46,46,,,,effects_not_identifiable,,,,,effects_not_identifiable,,,unavailable,unavailable,effects_not_identifiable,False
+19,United States Grand Prix,Kick Sauber,BOR,HUL,0,,,,,40,48,0.692962722,0.151270041,0.150782101,,,0.715833429,0.148601763,0.148089300,,,0.692962722,regression_gap_linear,medium,,False
+19,United States Grand Prix,McLaren,NOR,PIA,38,-0.467894000,,,,43,43,-0.456803063,0.103961211,0.103824450,,,-0.492915019,0.103862608,0.103763512,,,-0.467894000,strict_gap,high,,False
+19,United States Grand Prix,Mercedes,ANT,RUS,42,0.410706000,,,,44,47,0.202182407,0.112625836,0.112292773,,,0.204269145,0.113615110,0.113276773,,,0.410706000,strict_gap,high,,False
+19,United States Grand Prix,Racing Bulls,HAD,LAW,23,0.138112000,,,,45,47,,,,effects_not_identifiable,,,,,effects_not_identifiable,,0.138112000,strict_gap,high,,False
+19,United States Grand Prix,Red Bull Racing,TSU,VER,42,1.030032000,,,,46,47,0.923973404,0.093228197,0.092049162,,,0.983875998,0.087280888,0.086125735,,,1.030032000,strict_gap,high,,False
+19,United States Grand Prix,Williams,ALB,SAI,0,,,,,45,4,,,,strategy_confounded,,,,,strategy_confounded,,,unavailable,unavailable,strategy_confounded,False
+20,Mexico City Grand Prix,Alpine,COL,GAS,0,,,,,61,61,,,,effects_not_identifiable,,,,,effects_not_identifiable,,,unavailable,unavailable,effects_not_identifiable,False
+20,Mexico City Grand Prix,Aston Martin,ALO,STR,16,0.398276000,,,,27,59,0.126063930,0.168151611,0.139778469,,,0.139767730,0.173169333,0.143931587,,,0.398276000,strict_gap,high,,False
+20,Mexico City Grand Prix,Ferrari,HAM,LEC,19,0.192443000,,,,58,62,0.061280839,0.090151093,0.074194340,,,0.081824190,0.087522992,0.072016783,,,0.192443000,strict_gap,high,,False
+20,Mexico City Grand Prix,Haas F1 Team,BEA,OCO,38,-0.479963000,,,,59,62,-0.661420342,0.131659202,0.109539456,,,-0.704656981,0.133164132,0.110839396,,,-0.479963000,strict_gap,high,,False
+20,Mexico City Grand Prix,Kick Sauber,BOR,HUL,0,,,,,62,21,,,,effects_not_identifiable,,,,,effects_not_identifiable,,,unavailable,unavailable,effects_not_identifiable,False
+20,Mexico City Grand Prix,McLaren,NOR,PIA,20,-1.048195000,,,,63,59,-0.631154169,0.082519104,0.068187056,,,-0.681078416,0.084024231,0.069465574,,,-1.048195000,strict_gap,high,,True
+20,Mexico City Grand Prix,Mercedes,ANT,RUS,53,-0.001199000,,,,57,59,-0.121563456,0.095262964,0.078572307,,,-0.134379478,0.094028680,0.077564138,,,-0.001199000,strict_gap,high,,False
+20,Mexico City Grand Prix,Racing Bulls,HAD,LAW,0,,,,,62,0,,,,strategy_confounded,,,,,strategy_confounded,,,unavailable,unavailable,strategy_confounded,False
+20,Mexico City Grand Prix,Red Bull Racing,TSU,VER,61,0.724557000,,,,62,62,0.676655716,0.106822272,0.087723656,,,0.682597007,0.105837756,0.086910009,,,0.724557000,strict_gap,high,,False
+20,Mexico City Grand Prix,Williams,ALB,SAI,16,0.584306000,,,,62,55,0.410976527,0.242276589,0.200090646,,,0.472009217,0.228924648,0.188947248,,,0.584306000,strict_gap,high,,False
+21,São Paulo Grand Prix,Alpine,COL,GAS,0,,,,,56,56,0.231464493,0.119638077,0.089467843,,,0.319718941,0.119504370,0.089289081,,,0.231464493,regression_gap_linear,medium,,False
+21,São Paulo Grand Prix,Aston Martin,ALO,STR,47,0.625248000,,,,56,56,0.428645239,0.096375441,0.071882911,,,0.415538088,0.095255625,0.071056984,,,0.625248000,strict_gap,high,,False
+21,São Paulo Grand Prix,Ferrari,HAM,LEC,0,,,,,21,0,,,,strategy_confounded,,,,,strategy_confounded,,,unavailable,unavailable,strategy_confounded,False
+21,São Paulo Grand Prix,Haas F1 Team,BEA,OCO,0,,,,,56,58,-0.463281891,0.143833736,0.107978374,,,-0.488319761,0.134578881,0.101055884,,,-0.463281891,regression_gap_linear,medium,,False
+21,São Paulo Grand Prix,Kick Sauber,BOR,HUL,0,,,,,0,59,,,,no_race_laps,,,,,no_race_laps,,,unavailable,unavailable,no_race_laps,False
+21,São Paulo Grand Prix,McLaren,NOR,PIA,38,-0.322283000,,,,56,56,-0.018166564,0.069845242,0.051831666,,,-0.051536967,0.071070042,0.052758186,,,-0.322283000,strict_gap,high,,True
+21,São Paulo Grand Prix,Mercedes,ANT,RUS,21,0.014948000,,,,56,56,-0.030807711,0.085958401,0.063921511,,,-0.057363741,0.086582908,0.064403018,,,0.014948000,strict_gap,high,,False
+21,São Paulo Grand Prix,Racing Bulls,HAD,LAW,8,,,-0.060439909,,56,59,-0.063177518,0.147915237,0.111200165,,,-0.096268061,0.161729479,0.121625531,,,-0.063177518,regression_gap_linear,medium,,False
+21,São Paulo Grand Prix,Red Bull Racing,TSU,VER,0,,,,,56,56,0.970782435,0.106695020,0.078711645,,,0.987308180,0.105126004,0.077541403,,,0.970782435,regression_gap_linear,medium,,False
+21,São Paulo Grand Prix,Williams,ALB,SAI,0,,,,,56,56,-0.356167215,0.142772990,0.107472894,,,-0.292907707,0.142614956,0.107285986,,,-0.356167215,regression_gap_linear,medium,,False
+22,Las Vegas Grand Prix,Alpine,COL,GAS,17,0.915393000,,,,39,43,,,,effects_not_identifiable,,,,,effects_not_identifiable,,0.915393000,strict_gap,high,,False
+22,Las Vegas Grand Prix,Aston Martin,ALO,STR,0,,,,,42,0,,,,no_race_laps,,,,,no_race_laps,,,unavailable,unavailable,no_race_laps,False
+22,Las Vegas Grand Prix,Ferrari,HAM,LEC,0,,,,,40,40,0.491306892,0.117480815,0.112076310,,,0.493243573,0.112692119,0.107505835,,,0.491306892,regression_gap_linear,medium,,False
+22,Las Vegas Grand Prix,Haas F1 Team,BEA,OCO,9,,,-0.100512821,,41,39,-0.038313807,0.141072337,0.135938780,,,-0.086839109,0.151872336,0.146417036,,,-0.038313807,regression_gap_linear,medium,,False
+22,Las Vegas Grand Prix,Kick Sauber,BOR,HUL,0,,,,,0,40,,,,strategy_confounded,,,,,strategy_confounded,,,unavailable,unavailable,strategy_confounded,False
+22,Las Vegas Grand Prix,McLaren,NOR,PIA,0,,,,,40,40,,,,race_disqualification,,,,,race_disqualification,,,unavailable,unavailable,race_disqualification,False
+22,Las Vegas Grand Prix,Mercedes,ANT,RUS,0,,,,,43,41,,,,effects_not_identifiable,,,,,effects_not_identifiable,,,unavailable,unavailable,effects_not_identifiable,False
+22,Las Vegas Grand Prix,Racing Bulls,HAD,LAW,0,,,,,40,39,-0.729965778,0.097874057,0.094871721,,,-0.745085869,0.105524096,0.102302312,,,-0.729965778,regression_gap_linear,medium,,False
+22,Las Vegas Grand Prix,Red Bull Racing,TSU,VER,0,,,,,40,40,1.275315860,0.095843591,0.090614323,,,1.271700093,0.093068463,0.087993783,,,1.275315860,regression_gap_linear,medium,,False
+22,Las Vegas Grand Prix,Williams,ALB,SAI,0,,,,,25,40,-0.433598155,0.192384940,0.185634030,,,-0.609457225,0.216783317,0.209548248,,,-0.433598155,regression_gap_linear,medium,,False
+23,Qatar Grand Prix,Alpine,COL,GAS,21,0.293084000,,,,45,46,0.305169181,0.099810066,0.086514485,,,0.318617316,0.092890814,0.080506165,,,0.293084000,strict_gap,high,,False
+23,Qatar Grand Prix,Aston Martin,ALO,STR,17,-0.498484000,,,,48,42,-0.553999443,0.233432192,0.203206113,,,-0.595130497,0.246222711,0.214428165,,,-0.498484000,strict_gap,high,,False
+23,Qatar Grand Prix,Ferrari,HAM,LEC,20,0.222582000,,,,48,47,0.204361211,0.108774602,0.094051101,,,0.253245263,0.105161113,0.090882238,,,0.222582000,strict_gap,high,,False
+23,Qatar Grand Prix,Haas F1 Team,BEA,OCO,28,-0.300594000,,,,30,47,-0.576446073,0.098241051,0.086109810,,,-0.285726854,0.084337349,0.073733006,,,-0.300594000,strict_gap,high,,False
+23,Qatar Grand Prix,Kick Sauber,BOR,HUL,0,,,,,48,5,,,0.738512740,strategy_confounded,2.811444684,,,1.018336015,strategy_confounded,0.768296185,,unavailable,unavailable,strategy_confounded,False
+23,Qatar Grand Prix,McLaren,NOR,PIA,40,0.309337000,,,,44,44,0.374433708,0.114946673,0.097477395,,,0.292856964,0.094193353,0.079943243,,,0.309337000,strict_gap,high,,False
+23,Qatar Grand Prix,Mercedes,ANT,RUS,43,-0.627397000,,,,46,45,-0.566049721,0.108340878,0.093685317,,,-0.570759834,0.107686517,0.093123880,,,-0.627397000,strict_gap,high,,False
+23,Qatar Grand Prix,Racing Bulls,HAD,LAW,43,-0.194071000,,,,44,47,-0.268228140,0.070322469,0.060944578,,,-0.286171505,0.064827040,0.056191942,,,-0.194071000,strict_gap,high,,False
+23,Qatar Grand Prix,Red Bull Racing,TSU,VER,46,1.764284000,,,,46,48,1.444270669,0.098404762,0.083286795,,,1.445215320,0.097360401,0.082402109,,,1.764284000,strict_gap,high,,True
+23,Qatar Grand Prix,Williams,ALB,SAI,18,1.074087000,,,,46,48,1.113213752,0.064004891,0.054542592,,,1.119415495,0.064449109,0.054917650,,,1.074087000,strict_gap,high,,False
+24,Abu Dhabi Grand Prix,Alpine,COL,GAS,41,0.003381000,,,,47,46,0.379074771,0.104915904,0.093852818,,,0.394361736,0.092256023,0.082515221,,,0.003381000,strict_gap,high,,True
+24,Abu Dhabi Grand Prix,Aston Martin,ALO,STR,0,,,,,54,53,-0.059384472,0.101389309,0.091112745,,,-0.053980857,0.097895810,0.087968562,,,-0.059384472,regression_gap_linear,medium,,False
+24,Abu Dhabi Grand Prix,Ferrari,HAM,LEC,0,,,,,48,49,0.992767284,0.117078520,0.103175715,,,1.016728929,0.121701727,0.107224066,,,0.992767284,regression_gap_linear,medium,,False
+24,Abu Dhabi Grand Prix,Haas F1 Team,BEA,OCO,11,0.167045000,,,,53,52,-0.026518467,0.209309964,0.188076291,,,0.136934228,0.206066949,0.184859590,,,0.167045000,strict_gap,high,,False
+24,Abu Dhabi Grand Prix,Kick Sauber,BOR,HUL,0,,,,,52,48,0.310740534,0.137673468,0.123217123,,,0.398896758,0.134251854,0.120047566,,,0.310740534,regression_gap_linear,medium,,False
+24,Abu Dhabi Grand Prix,McLaren,NOR,PIA,0,,,,,51,53,-0.082069324,0.104851807,0.093038391,,,0.014331800,0.092536394,0.082032034,,,-0.082069324,regression_gap_linear,medium,,False
+24,Abu Dhabi Grand Prix,Mercedes,ANT,RUS,0,,,,,51,54,0.836022231,0.111439954,0.099152693,,,0.702511249,0.112268462,0.100020330,,,0.836022231,regression_gap_linear,medium,,False
+24,Abu Dhabi Grand Prix,Racing Bulls,HAD,LAW,9,,,-0.225289895,,50,51,-0.525566087,0.233460529,0.211446351,,,-0.306602052,0.241142981,0.217926546,,,-0.525566087,regression_gap_linear,medium,,True
+24,Abu Dhabi Grand Prix,Red Bull Racing,TSU,VER,0,,,,,52,52,1.485174810,0.077073303,0.067825324,,,1.490702090,0.072655133,0.063933786,,,1.485174810,regression_gap_linear,medium,,False
+24,Abu Dhabi Grand Prix,Williams,ALB,SAI,0,,,,,48,53,0.080287069,0.113870487,0.102191797,,,0.032874885,0.116620175,0.104708164,,,0.080287069,regression_gap_linear,medium,,False

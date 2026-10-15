@@ -1,0 +1,25 @@
+round_number,race,current_dry_status,strict_all_laps_slick_status,no_observed_wet_tyres_status,unknown_compound_records,current_pairs_with_gap,strict_pairs_with_gap,observed_rule_pairs_with_gap,extra_pairs_observed_rule
+1,Australian Grand Prix,wet,wet,wet,0,0,0,0,0
+2,Chinese Grand Prix,dry,dry,dry,0,4,4,4,0
+3,Japanese Grand Prix,dry,dry,dry,0,5,5,5,0
+4,Bahrain Grand Prix,dry,dry,dry,0,6,6,6,0
+5,Saudi Arabian Grand Prix,dry,dry,dry,0,4,4,4,0
+6,Miami Grand Prix,wet,unknown,dry,354,0,0,3,3
+7,Emilia Romagna Grand Prix,dry,dry,dry,0,5,5,5,0
+8,Monaco Grand Prix,dry,dry,dry,0,4,4,4,0
+9,Spanish Grand Prix,dry,dry,dry,0,6,6,6,0
+10,Canadian Grand Prix,dry,dry,dry,0,2,2,2,0
+11,Austrian Grand Prix,dry,dry,dry,0,4,4,4,0
+12,British Grand Prix,wet,wet,wet,0,0,0,0,0
+13,Belgian Grand Prix,wet,wet,wet,57,0,0,0,0
+14,Hungarian Grand Prix,dry,dry,dry,0,7,7,7,0
+15,Dutch Grand Prix,dry,dry,dry,0,8,8,8,0
+16,Italian Grand Prix,dry,dry,dry,0,4,4,4,0
+17,Azerbaijan Grand Prix,dry,dry,dry,0,5,5,5,0
+18,Singapore Grand Prix,dry,dry,dry,0,8,8,8,0
+19,United States Grand Prix,dry,dry,dry,0,5,5,5,0
+20,Mexico City Grand Prix,dry,dry,dry,0,7,7,7,0
+21,São Paulo Grand Prix,dry,dry,dry,0,3,3,3,0
+22,Las Vegas Grand Prix,dry,dry,dry,0,1,1,1,0
+23,Qatar Grand Prix,dry,dry,dry,0,9,9,9,0
+24,Abu Dhabi Grand Prix,dry,dry,dry,0,2,2,2,0

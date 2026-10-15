@@ -1,0 +1,121 @@
+{
+  "label_counts": {
+    "medium": 79,
+    "high": 72,
+    "unavailable": 32,
+    "low": 17
+  },
+  "changed_labels": 35,
+  "flag_counts": {
+    "fixed": 31,
+    "v2": 33,
+    "v3": 18
+  },
+  "flag_overlaps": {
+    "fixed_v2": 16,
+    "fixed_v3": 15,
+    "v2_v3": 15,
+    "all_three": 12
+  },
+  "untestable_v2": {
+    "only_one_estimate_available": 9,
+    "estimate_missing_error": 0,
+    "no_gap_at_all": 32
+  },
+  "untestable_v3": {
+    "only_one_estimate_available": 9,
+    "estimate_missing_error": 0,
+    "no_gap_at_all": 32
+  },
+  "smallest_error_counts": {
+    "regression_gap_curved": 129,
+    "unavailable": 32,
+    "strict_gap": 26,
+    "regression_gap_linear": 8,
+    "lowconf_gap": 5
+  },
+  "smallest_error_common_pairs": 168,
+  "smallest_error_changed_gaps": 140,
+  "smallest_error_mean_absolute_change_pp": 0.1215446037559524,
+  "smallest_error_changed_only_mean_pp": 0.14585352450714284,
+  "smallest_error_sign_flips": 9,
+  "skipped_resamples": 0,
+  "pairs_with_skipped_resamples": 0,
+  "all_filtered_audit": [
+    {
+      "round_number": 2,
+      "race": "Chinese Grand Prix",
+      "driver": "ALO",
+      "teammate": "STR",
+      "finishing_status": "Retired",
+      "raw_lap_count": 4,
+      "removed_lap1": 1,
+      "removed_pit": 1,
+      "removed_sc_vsc_red": 0,
+      "removed_yellow": 2,
+      "removed_deleted": 0,
+      "removed_other": 0,
+      "clean_laps": 0,
+      "largest_filter": "yellow",
+      "evidence": "lap 1: lap1 [lap1_or_invalid_number;yellow;inaccurate_or_unknown] | lap 2: yellow [yellow] | lap 3: yellow [yellow] | lap 4: pit [pit;inaccurate_or_unknown]",
+      "assessment": "Consistent with recorded exclusions during a short retired race; no evidence here of a filter bug. Buffers remain conservative; records alone do not establish crash/mechanical cause."
+    },
+    {
+      "round_number": 20,
+      "race": "Mexico City Grand Prix",
+      "driver": "LAW",
+      "teammate": "HAD",
+      "finishing_status": "Retired",
+      "raw_lap_count": 5,
+      "removed_lap1": 1,
+      "removed_pit": 4,
+      "removed_sc_vsc_red": 0,
+      "removed_yellow": 0,
+      "removed_deleted": 0,
+      "removed_other": 0,
+      "clean_laps": 0,
+      "largest_filter": "pit",
+      "evidence": "lap 1: lap1 [lap1_or_invalid_number;inaccurate_or_unknown] | lap 2: pit [pit;inaccurate_or_unknown] | lap 3: pit [pit;yellow;inaccurate_or_unknown] | lap 4: pit [pit] | lap 5: pit [pit;yellow;inaccurate_or_unknown]",
+      "assessment": "Consistent with recorded exclusions during a short retired race; no evidence here of a filter bug. Buffers remain conservative; records alone do not establish crash/mechanical cause."
+    },
+    {
+      "round_number": 21,
+      "race": "S\u00e3o Paulo Grand Prix",
+      "driver": "LEC",
+      "teammate": "HAM",
+      "finishing_status": "Retired",
+      "raw_lap_count": 6,
+      "removed_lap1": 1,
+      "removed_pit": 0,
+      "removed_sc_vsc_red": 5,
+      "removed_yellow": 0,
+      "removed_deleted": 0,
+      "removed_other": 0,
+      "clean_laps": 0,
+      "largest_filter": "sc_vsc_red",
+      "evidence": "lap 1: lap1 [lap1_or_invalid_number;yellow;inaccurate_or_unknown] | lap 2: sc_vsc_red [sc_vsc_red;yellow;inaccurate_or_unknown] | lap 3: sc_vsc_red [sc_vsc_red;inaccurate_or_unknown] | lap 4: sc_vsc_red [sc_vsc_red;inaccurate_or_unknown] | lap 5: sc_vsc_red [sc_vsc_red;inaccurate_or_unknown] | lap 6: sc_vsc_red [invalid_time;generated_or_unknown;sc_vsc_red;yellow;inaccurate_or_unknown]",
+      "assessment": "Consistent with recorded exclusions during a short retired race; no evidence here of a filter bug. Buffers remain conservative; records alone do not establish crash/mechanical cause."
+    },
+    {
+      "round_number": 22,
+      "race": "Las Vegas Grand Prix",
+      "driver": "BOR",
+      "teammate": "HUL",
+      "finishing_status": "Retired",
+      "raw_lap_count": 2,
+      "removed_lap1": 1,
+      "removed_pit": 1,
+      "removed_sc_vsc_red": 0,
+      "removed_yellow": 0,
+      "removed_deleted": 0,
+      "removed_other": 0,
+      "clean_laps": 0,
+      "largest_filter": "lap1;pit",
+      "evidence": "lap 1: lap1 [lap1_or_invalid_number;pit;yellow;inaccurate_or_unknown] | lap 2: pit [invalid_time;pit;sc_vsc_red;yellow;inaccurate_or_unknown]",
+      "assessment": "Consistent with recorded exclusions during a short retired race; no evidence here of a filter bug. Buffers remain conservative; records alone do not establish crash/mechanical cause."
+    }
+  ],
+  "bootstrap_compute_seconds": 10.612559827277437,
+  "bootstrap_window_seconds": 18.892881499952637,
+  "total_runtime_seconds": 19.338728375034407
+}

@@ -1,0 +1,35 @@
+{
+  "confidence_counts": {
+    "high": 100,
+    "medium": 58,
+    "unavailable": 32,
+    "low": 10
+  },
+  "fixed_disagreement": 31,
+  "uncertainty_disagreement": 33,
+  "both_disagreement": 16,
+  "disagreement_unevaluable": 41,
+  "regression_pairs_with_small_clusters": 91,
+  "smallest_error_common_pairs": 168,
+  "smallest_error_different_gaps": 105,
+  "smallest_error_method_switches": 105,
+  "smallest_error_mean_absolute_change_pp": 0.07994888363690476,
+  "smallest_error_changed_only_mean_pp": 0.1279182138190476,
+  "smallest_error_sign_flips": 10,
+  "prediction_overall": {
+    "round_number": 0,
+    "race": "Overall",
+    "attempted_folds": 816,
+    "common_valid_folds": 470,
+    "heldout_laps": 7799,
+    "linear_mae_seconds": 0.8016399495293405,
+    "curved_mae_seconds": 0.8207129545833796,
+    "curved_minus_linear_seconds": 0.019073005054039083,
+    "better_model": "linear"
+  },
+  "audit_cause_counts": {
+    "real_early_dnf": 7,
+    "all_laps_filtered": 4,
+    "unknown": 3
+  }
+}
