@@ -1,0 +1,65 @@
+{
+  "method_version": "2025_teammate_rating_1_log_round_fix",
+  "drivers": 21,
+  "confidence_counts": {
+    "high": 16,
+    "medium": 4,
+    "low/provisional": 1,
+    "unavailable": 0
+  },
+  "rating_status_counts": {
+    "established": 20,
+    "provisional": 1,
+    "unavailable": 0
+  },
+  "sensitivity_over_two": {
+    "monaco_1p0": [],
+    "reference_6_2": [],
+    "weights_50_45_5": []
+  },
+  "sensitivity_summary": {
+    "monaco_1p0": {
+      "maximum_absolute_rating_change": 0.01740254393161944,
+      "maximum_absolute_rank_change": 1.0,
+      "rank_changes": 2
+    },
+    "reference_6_2": {
+      "maximum_absolute_rating_change": 0.02689834162004623,
+      "maximum_absolute_rank_change": 1.0,
+      "rank_changes": 4
+    },
+    "weights_50_45_5": {
+      "maximum_absolute_rating_change": 0.030814446111816496,
+      "maximum_absolute_rank_change": 1.0,
+      "rank_changes": 2
+    }
+  },
+  "sensitivity_drivers_over_two_any": [],
+  "input_audit_rows": 0,
+  "comparison_groups": 9,
+  "qualifying_log_orientation_difference_max": 0.0,
+  "qualifying_log_orientation_difference_mean": 0.0,
+  "qualifying_combined_gap_units": "log-percentage points",
+  "qualifying_round_combination": "log-convert each round; remove reciprocal rounding residual equally; weighted mean",
+  "settings": {
+    "signal_weights": [
+      0.45,
+      0.45,
+      0.1
+    ],
+    "reference_races": [
+      8,
+      8,
+      3
+    ],
+    "monaco_multiplier": 0.5,
+    "resamples": 2000,
+    "seed": 42
+  },
+  "sources_sha256": {
+    "data/2025_qualifying_gaps_by_round.csv": "23cdd67e1d4f1b34d6a74dee3879b331fd0c57ddfd163e105837f719ea08a644",
+    "data/race_pace_dry_final.csv": "5d73c1ee83732859e75570c56a880d9c15166ffa62be4bdd91ad1f69dbfb7ed2",
+    "data/race_pace_wet_final.csv": "e9b05ca0a027a485889a8353aabaff12085566ff8a80a81200090fd49437447b"
+  },
+  "runtime_seconds": 0.6233789580874145
+}

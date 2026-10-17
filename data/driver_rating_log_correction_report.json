@@ -1,0 +1,204 @@
+{
+  "method_version": "2025_teammate_rating_1_log_round_fix",
+  "qualifying_units": "log-percentage points; source q1_gap/q2_gap/q3_gap stay ordinary percentages",
+  "rounding_rule": "Log-convert both six-decimal source percentages. For each driver and round use half of (own log gap minus teammate log gap), then apply the unchanged round weights.",
+  "exact_mirror_usable_pairs": 233,
+  "both_blank_pairs": 7,
+  "row_order_invariant": true,
+  "saved_csv_exact_mirrors": true,
+  "qualifying_sign_flips": [],
+  "combined_sign_flips": [],
+  "largest_absolute_qualifying_change": 0.0003034245136618319,
+  "largest_absolute_combined_change": 0.0002584310673687251,
+  "largest_change_driver": "DOO",
+  "largest_absolute_displayed_csv_combined_change": 0.0010000000000000009,
+  "displayed_csv_drivers_changed": [
+    "ALO",
+    "LAW",
+    "STR"
+  ],
+  "previous_outputs_backup": "/Users/joseenriquegasca/Desktop/F1 ML Project 1/f1-driver-model/data/runs/driver_rating_before_log_fix_001",
+  "full_precision_comparison": [
+    {
+      "driver": "ALB",
+      "previous_qualifying": 0.13934151926589555,
+      "corrected_qualifying": 0.1392437278044179,
+      "previous_combined": 0.14154984604759036,
+      "corrected_combined": 0.14150095031685153,
+      "combined_change": -4.8895730738823806e-05
+    },
+    {
+      "driver": "ALO",
+      "previous_qualifying": -0.42530217097903217,
+      "corrected_qualifying": -0.4254588394626158,
+      "previous_combined": -0.3634663558080886,
+      "corrected_combined": -0.36354189239838797,
+      "combined_change": -7.553659029935211e-05
+    },
+    {
+      "driver": "ANT",
+      "previous_qualifying": 0.3926114755972625,
+      "corrected_qualifying": 0.39233492240886325,
+      "previous_combined": 0.3254600237609006,
+      "corrected_combined": 0.325321747166701,
+      "combined_change": -0.00013827659419962668
+    },
+    {
+      "driver": "BEA",
+      "previous_qualifying": -0.0933259080190423,
+      "corrected_qualifying": -0.09341437069958701,
+      "previous_combined": -0.05607740467001048,
+      "corrected_combined": -0.056120056319558825,
+      "combined_change": -4.2651649548343384e-05
+    },
+    {
+      "driver": "BOR",
+      "previous_qualifying": 0.041313615006006776,
+      "corrected_qualifying": 0.041301332332029206,
+      "previous_combined": 0.09266450532040825,
+      "corrected_combined": 0.09265858331688336,
+      "combined_change": -5.922003524894137e-06
+    },
+    {
+      "driver": "COL",
+      "previous_qualifying": 0.3274784588071719,
+      "corrected_qualifying": 0.3273504753651124,
+      "previous_combined": 0.30624827321720915,
+      "corrected_combined": 0.3061865669147876,
+      "combined_change": -6.170630242158248e-05
+    },
+    {
+      "driver": "DOO",
+      "previous_qualifying": 0.31325878779050836,
+      "corrected_qualifying": 0.3129572848785781,
+      "previous_combined": 0.35511859219786346,
+      "corrected_combined": 0.35486016113049473,
+      "combined_change": -0.0002584310673687251
+    },
+    {
+      "driver": "GAS",
+      "previous_qualifying": -0.3239235410530061,
+      "corrected_qualifying": -0.32375217774347886,
+      "previous_combined": -0.320952672262546,
+      "corrected_combined": -0.3208700506668811,
+      "combined_change": 8.262159566485572e-05
+    },
+    {
+      "driver": "HAD",
+      "previous_qualifying": -0.17752291678883325,
+      "corrected_qualifying": -0.17779540980777328,
+      "previous_combined": -0.18573510933279797,
+      "corrected_combined": -0.18587135584226794,
+      "combined_change": -0.00013624650946997274
+    },
+    {
+      "driver": "HAM",
+      "previous_qualifying": 0.24180345253141308,
+      "corrected_qualifying": 0.24169333222362632,
+      "previous_combined": 0.2704388794897763,
+      "corrected_combined": 0.2703838193358829,
+      "combined_change": -5.506015389339369e-05
+    },
+    {
+      "driver": "HUL",
+      "previous_qualifying": -0.041313615006006776,
+      "corrected_qualifying": -0.041301332332029206,
+      "previous_combined": -0.09266450532040825,
+      "corrected_combined": -0.09265858331688336,
+      "combined_change": 5.922003524894137e-06
+    },
+    {
+      "driver": "LAW",
+      "previous_qualifying": 0.26867858462803723,
+      "corrected_qualifying": 0.2689328862066171,
+      "previous_combined": 0.32046834974577504,
+      "corrected_combined": 0.32059095943544746,
+      "combined_change": 0.00012260968967242603
+    },
+    {
+      "driver": "LEC",
+      "previous_qualifying": -0.24180345253141308,
+      "corrected_qualifying": -0.24169333222362632,
+      "previous_combined": -0.2704388794897763,
+      "corrected_combined": -0.2703838193358829,
+      "combined_change": 5.506015389339369e-05
+    },
+    {
+      "driver": "NOR",
+      "previous_qualifying": -0.09678744639763322,
+      "corrected_qualifying": -0.09709087091129505,
+      "previous_combined": -0.06325636565246053,
+      "corrected_combined": -0.06340265961440461,
+      "combined_change": -0.00014629396194408562
+    },
+    {
+      "driver": "OCO",
+      "previous_qualifying": 0.0933259080190423,
+      "corrected_qualifying": 0.09341437069958701,
+      "previous_combined": 0.05607740467001048,
+      "corrected_combined": 0.056120056319558825,
+      "combined_change": 4.2651649548343384e-05
+    },
+    {
+      "driver": "PIA",
+      "previous_qualifying": 0.09678744639763322,
+      "corrected_qualifying": 0.09709087091129505,
+      "previous_combined": 0.06325636565246053,
+      "corrected_combined": 0.06340265961440461,
+      "combined_change": 0.00014629396194408562
+    },
+    {
+      "driver": "RUS",
+      "previous_qualifying": -0.3926114755972625,
+      "corrected_qualifying": -0.39233492240886325,
+      "previous_combined": -0.3254600237609006,
+      "corrected_combined": -0.325321747166701,
+      "combined_change": 0.00013827659419962668
+    },
+    {
+      "driver": "SAI",
+      "previous_qualifying": -0.13934151926589555,
+      "corrected_qualifying": -0.1392437278044179,
+      "previous_combined": -0.14154984604759036,
+      "corrected_combined": -0.14150095031685153,
+      "combined_change": 4.8895730738823806e-05
+    },
+    {
+      "driver": "STR",
+      "previous_qualifying": 0.42530217097903217,
+      "corrected_qualifying": 0.4254588394626158,
+      "previous_combined": 0.3634663558080886,
+      "corrected_combined": 0.36354189239838797,
+      "combined_change": 7.553659029935211e-05
+    },
+    {
+      "driver": "TSU",
+      "previous_qualifying": 0.6128270265614507,
+      "corrected_qualifying": 0.6127260080426845,
+      "previous_combined": 0.9030053714466264,
+      "corrected_combined": 0.9029548621872432,
+      "combined_change": -5.050925938321349e-05
+    },
+    {
+      "driver": "VER",
+      "previous_qualifying": -0.7039826944006549,
+      "corrected_qualifying": -0.7038634844415285,
+      "previous_combined": -1.0225734242462161,
+      "corrected_combined": -1.0225159480159232,
+      "combined_change": 5.7476230292952124e-05
+    }
+  ],
+  "confidence_counts": {
+    "high": 16,
+    "medium": 4,
+    "low/provisional": 1,
+    "unavailable": 0
+  },
+  "rating_status_counts": {
+    "established": 20,
+    "provisional": 1,
+    "unavailable": 0
+  },
+  "other_rules_and_support_unchanged": true,
+  "tests_passed": 108
+}

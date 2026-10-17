@@ -1,0 +1,64 @@
+season,driver,signal,valid,eligible,missing,coverage,effective_races,rating,median,missing_reasons,warnings,single_race_ci_low,single_race_ci_high,single_race_round,season_ci_low,season_ci_high,season_ci_reason
+2025,ALB,qualifying,23,24,1,0.958,23.000,0.139,0.055,"{""no_valid_round"": 1}",,,,,,,not_requested
+2025,ALB,dry,18,20,2,0.900,15.230,0.144,-0.006,"{""no_race_laps"": 1, ""strategy_confounded"": 1}",,,,,,,not_requested
+2025,ALB,wet,0,3,3,0.000,0.000,,,"{""no_race_laps"": 1, ""too_few_traffic_qualified_laps"": 2}",,,,,,,insufficient_evidence
+2025,ALO,qualifying,23,24,1,0.958,23.000,-0.425,-0.363,"{""no_valid_round"": 1}",,,,,,,not_requested
+2025,ALO,dry,16,20,4,0.800,13.745,-0.294,-0.388,"{""no_race_laps"": 2, ""strategy_confounded"": 2}",,,,,,,not_requested
+2025,ALO,wet,1,3,2,0.333,1.000,-0.466,-0.466,"{""too_few_traffic_qualified_laps"": 2}",,-0.563,-0.360,1,,,single_race_evidence
+2025,ANT,qualifying,24,24,0,1.000,24.000,0.392,0.256,{},,,,,,,not_requested
+2025,ANT,dry,18,20,2,0.900,16.009,0.258,0.300,"{""effects_not_identifiable"": 1, ""no_race_laps"": 1}",,,,,,,not_requested
+2025,ANT,wet,0,3,3,0.000,0.000,,,"{""too_few_same_number_laps"": 1, ""too_few_stable_condition_laps"": 1, ""too_few_traffic_qualified_laps"": 1}",,,,,,,insufficient_evidence
+2025,BEA,qualifying,22,24,2,0.917,22.000,-0.093,-0.199,"{""no_valid_round"": 2}",,,,,,,not_requested
+2025,BEA,dry,17,20,3,0.850,14.400,-0.018,-0.038,"{""effects_not_identifiable"": 3}",,,,,,,not_requested
+2025,BEA,wet,1,3,2,0.333,1.000,-0.065,-0.065,"{""too_few_traffic_qualified_laps"": 2}",,-0.401,0.194,1,,,single_race_evidence
+2025,BOR,qualifying,23,24,1,0.958,23.000,0.041,-0.082,"{""no_valid_round"": 1}",,,,,,,not_requested
+2025,BOR,dry,14,20,6,0.700,11.345,0.138,0.076,"{""effects_not_identifiable"": 1, ""no_race_laps"": 2, ""race_disqualification"": 1, ""strategy_confounded"": 2}",,,,,,,not_requested
+2025,BOR,wet,1,3,2,0.333,1.000,0.178,0.178,"{""too_few_same_number_laps"": 1, ""too_few_traffic_qualified_laps"": 1}",,-0.086,0.299,1,,,single_race_evidence
+2025,COL,qualifying,18,18,0,1.000,18.000,0.327,0.382,{},,,,,,,not_requested
+2025,COL,dry,13,16,3,0.812,11.419,0.261,0.101,"{""effects_not_identifiable"": 2, ""strategy_confounded"": 1}",,,,,,,not_requested
+2025,COL,wet,1,2,1,0.500,1.000,0.632,0.632,"{""no_race_laps"": 1}",,0.472,0.675,13,,,single_race_evidence
+2025,DOO,qualifying,6,6,0,1.000,6.000,0.313,0.368,{},,,,,,,not_requested
+2025,DOO,dry,1,4,3,0.250,1.000,0.606,0.606,"{""effects_not_identifiable"": 1, ""no_race_laps"": 1, ""race_disqualification"": 1}",,,,,,,not_requested
+2025,DOO,wet,0,1,1,0.000,0.000,,,"{""no_race_laps"": 1}",,,,,,,insufficient_evidence
+2025,GAS,qualifying,24,24,0,1.000,24.000,-0.324,-0.368,{},,,,,,,not_requested
+2025,GAS,dry,14,20,6,0.700,12.365,-0.295,-0.166,"{""effects_not_identifiable"": 3, ""no_race_laps"": 1, ""race_disqualification"": 1, ""strategy_confounded"": 1}",,,,,,,not_requested
+2025,GAS,wet,1,3,2,0.333,1.000,-0.632,-0.632,"{""no_race_laps"": 2}",,-0.675,-0.472,13,,,single_race_evidence
+2025,HAD,qualifying,23,24,1,0.958,23.000,-0.178,-0.165,"{""no_valid_round"": 1}",,,,,,,not_requested
+2025,HAD,dry,17,20,3,0.850,14.532,-0.194,-0.194,"{""effects_not_identifiable"": 2, ""strategy_confounded"": 1}",,,,,,,not_requested
+2025,HAD,wet,0,3,3,0.000,0.000,,,"{""no_race_laps"": 2, ""too_few_same_compound_laps"": 1}",,,,,,,insufficient_evidence
+2025,HAM,qualifying,24,24,0,1.000,24.000,0.242,0.179,{},,,,,,,not_requested
+2025,HAM,dry,18,20,2,0.900,16.055,0.299,0.281,"{""race_disqualification"": 1, ""strategy_confounded"": 1}",,,,,,,not_requested
+2025,HAM,wet,0,3,3,0.000,0.000,,,"{""too_few_traffic_qualified_laps"": 3}",,,,,,,insufficient_evidence
+2025,HUL,qualifying,23,24,1,0.958,23.000,-0.041,0.082,"{""no_valid_round"": 1}",,,,,,,not_requested
+2025,HUL,dry,14,20,6,0.700,11.345,-0.138,-0.076,"{""effects_not_identifiable"": 1, ""no_race_laps"": 2, ""race_disqualification"": 1, ""strategy_confounded"": 2}",,,,,,,not_requested
+2025,HUL,wet,1,3,2,0.333,1.000,-0.178,-0.178,"{""too_few_same_number_laps"": 1, ""too_few_traffic_qualified_laps"": 1}",,-0.299,0.086,1,,,single_race_evidence
+2025,LAW,qualifying,23,24,1,0.958,23.000,0.269,0.195,"{""no_valid_round"": 1}",,,,,,,not_requested
+2025,LAW,dry,17,20,3,0.850,14.394,0.259,0.279,"{""effects_not_identifiable"": 2, ""strategy_confounded"": 1}",,,,,,,not_requested
+2025,LAW,wet,1,3,2,0.333,1.000,1.854,1.854,"{""no_race_laps"": 1, ""too_few_same_compound_laps"": 1}",,1.219,1.957,1,,,single_race_evidence
+2025,LEC,qualifying,24,24,0,1.000,24.000,-0.242,-0.179,{},,,,,,,not_requested
+2025,LEC,dry,18,20,2,0.900,16.055,-0.299,-0.281,"{""race_disqualification"": 1, ""strategy_confounded"": 1}",,,,,,,not_requested
+2025,LEC,wet,0,3,3,0.000,0.000,,,"{""too_few_traffic_qualified_laps"": 3}",,,,,,,insufficient_evidence
+2025,NOR,qualifying,24,24,0,1.000,24.000,-0.097,-0.071,{},,,,,,,not_requested
+2025,NOR,dry,18,20,2,0.900,16.521,-0.029,0.049,"{""no_race_laps"": 1, ""race_disqualification"": 1}",,,,,,,not_requested
+2025,NOR,wet,1,3,2,0.333,1.000,-0.074,-0.074,"{""too_few_same_compound_laps"": 1, ""too_few_stable_condition_laps"": 1}",,-0.253,-0.050,12,,,single_race_evidence
+2025,OCO,qualifying,22,24,2,0.917,22.000,0.093,0.199,"{""no_valid_round"": 2}",,,,,,,not_requested
+2025,OCO,dry,17,20,3,0.850,14.400,0.018,0.038,"{""effects_not_identifiable"": 3}",,,,,,,not_requested
+2025,OCO,wet,1,3,2,0.333,1.000,0.065,0.065,"{""too_few_traffic_qualified_laps"": 2}",,-0.194,0.401,1,,,single_race_evidence
+2025,PIA,qualifying,24,24,0,1.000,24.000,0.097,0.071,{},,,,,,,not_requested
+2025,PIA,dry,18,20,2,0.900,16.521,0.029,-0.049,"{""no_race_laps"": 1, ""race_disqualification"": 1}",,,,,,,not_requested
+2025,PIA,wet,1,3,2,0.333,1.000,0.074,0.074,"{""too_few_same_compound_laps"": 1, ""too_few_stable_condition_laps"": 1}",,0.050,0.253,12,,,single_race_evidence
+2025,RUS,qualifying,24,24,0,1.000,24.000,-0.392,-0.256,{},,,,,,,not_requested
+2025,RUS,dry,18,20,2,0.900,16.009,-0.258,-0.300,"{""effects_not_identifiable"": 1, ""no_race_laps"": 1}",,,,,,,not_requested
+2025,RUS,wet,0,3,3,0.000,0.000,,,"{""too_few_same_number_laps"": 1, ""too_few_stable_condition_laps"": 1, ""too_few_traffic_qualified_laps"": 1}",,,,,,,insufficient_evidence
+2025,SAI,qualifying,23,24,1,0.958,23.000,-0.139,-0.055,"{""no_valid_round"": 1}",,,,,,,not_requested
+2025,SAI,dry,18,20,2,0.900,15.230,-0.144,0.006,"{""no_race_laps"": 1, ""strategy_confounded"": 1}",,,,,,,not_requested
+2025,SAI,wet,0,3,3,0.000,0.000,,,"{""no_race_laps"": 1, ""too_few_traffic_qualified_laps"": 2}",,,,,,,insufficient_evidence
+2025,STR,qualifying,23,24,1,0.958,23.000,0.425,0.363,"{""no_valid_round"": 1}",,,,,,,not_requested
+2025,STR,dry,16,20,4,0.800,13.745,0.294,0.388,"{""no_race_laps"": 2, ""strategy_confounded"": 2}",,,,,,,not_requested
+2025,STR,wet,1,3,2,0.333,1.000,0.466,0.466,"{""too_few_traffic_qualified_laps"": 2}",,0.360,0.563,1,,,single_race_evidence
+2025,TSU,qualifying,23,24,1,0.958,23.000,0.613,0.543,"{""no_valid_round"": 1}",,,,,,,not_requested
+2025,TSU,dry,18,20,2,0.900,15.361,1.193,1.283,"{""no_race_laps"": 1, ""strategy_confounded"": 1}",,,,,,,not_requested
+2025,TSU,wet,0,3,3,0.000,0.000,,,"{""no_race_laps"": 1, ""too_few_stable_condition_laps"": 1, ""too_few_traffic_qualified_laps"": 1}",,,,,,,insufficient_evidence
+2025,VER,qualifying,23,24,1,0.958,23.000,-0.704,-0.611,"{""no_valid_round"": 1}",,,,,,,not_requested
+2025,VER,dry,18,20,2,0.900,15.114,-1.280,-1.283,"{""no_race_laps"": 1, ""strategy_confounded"": 1}",,,,,,,not_requested
+2025,VER,wet,1,3,2,0.333,1.000,-1.854,-1.854,"{""too_few_stable_condition_laps"": 1, ""too_few_traffic_qualified_laps"": 1}",,-1.957,-1.219,1,,,single_race_evidence
