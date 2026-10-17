@@ -1,0 +1,17 @@
+round_number,race,field_minimum,status,insufficient_field,measured_jump
+1,Australian Grand Prix,4,analysed,39.0,0.0
+6,Miami Grand Prix,4,excluded_not_evaluated,,
+12,British Grand Prix,4,analysed,44.0,25.0
+13,Belgian Grand Prix,4,analysed,25.0,0.0
+1,Australian Grand Prix,5,analysed,39.0,0.0
+6,Miami Grand Prix,5,excluded_not_evaluated,,
+12,British Grand Prix,5,analysed,59.0,10.0
+13,Belgian Grand Prix,5,analysed,29.0,0.0
+1,Australian Grand Prix,6,analysed,39.0,0.0
+6,Miami Grand Prix,6,excluded_not_evaluated,,
+12,British Grand Prix,6,analysed,69.0,0.0
+13,Belgian Grand Prix,6,analysed,29.0,0.0
+1,Australian Grand Prix,8,analysed,39.0,0.0
+6,Miami Grand Prix,8,excluded_not_evaluated,,
+12,British Grand Prix,8,analysed,69.0,0.0
+13,Belgian Grand Prix,8,analysed,29.0,0.0

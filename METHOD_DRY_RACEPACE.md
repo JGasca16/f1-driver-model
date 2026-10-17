@@ -393,3 +393,48 @@ The original output-exists traceback has been replaced by automatic numbered
 run folders. Existing CSVs and summaries remain unchanged. A new test covers
 both complete and partial prior outputs and successive folder reservations.
 After this fix, all **66 tests pass**.
+
+## Known limitations
+
+- **The final gaps use a fixed method order, not the most precise estimate.**
+  An eligible strict matched-lap gap is always used first, even if the linear
+  regression has a smaller standard error. When there are fewer than ten
+  matched laps, an accepted regression supplies the gap instead. It uses all
+  clean laps and makes adjustments for tyre compound, tyre age and race lap,
+  so it answers a somewhat different question from the thinner matched sample.
+  The methods are not averaged. Readers should check `method_used`, the lap
+  counts and the error before comparing numbers in the same `final_gap` column.
+
+- **Some pairs have no usable estimate.** Of the 200 dry-race pairs, 32 have
+  no gap: 10 because the model cannot separate the requested effects
+  (`effects_not_identifiable`), 9 because the teammates lack enough clean laps
+  on a shared compound (`strategy_confounded`), 9 because at least one driver
+  has no non-generated race-lap records (`no_race_laps`), and 4 because of a
+  race disqualification (`race_disqualification`). These blanks are missing
+  evidence, not zero gaps or proof that the drivers were equally fast.
+
+- **Monaco needs extra caution.** Limited overtaking can make a driver's lap
+  times depend heavily on the car ahead and track position. Monaco therefore
+  carries the `low_overtaking_limited` flag, but its gap is still reported.
+  The flag does not automatically lower the confidence label or change the
+  number. Even a small reported error cannot show that the gap measures the
+  drivers' unrestricted pace there.
+
+- **The regression simplifies how pace changes during a race.** It assumes
+  that one driver's adjusted advantage stays constant and that tyre-age and
+  lap-number effects follow roughly straight lines shared by both teammates.
+  Real tyre degradation, fuel effects and driver performance can change shape
+  or differ between drivers. The fitted gap can absorb those differences,
+  so it should be read as an adjusted comparison under these assumptions.
+
+- **The sample covers only the 2025 season.** It cannot establish whether an
+  advantage persists across years, rules or cars. Car development, upgrades
+  and how well each driver adapts to them can change the teammate gap through
+  the season. A change in the numbers need not mean a change in driver skill.
+
+- **Teammate pace is relative to the car and the comparison partner.** These
+  gaps compare drivers using the same team's car in a particular race; they
+  do not directly measure absolute driver quality across teams. Different
+  cars can suit different drivers, and setups, upgrades and damage can differ
+  even between teammates. A strong gap in one car cannot be transferred
+  directly into a claim about how that driver would perform in another car.

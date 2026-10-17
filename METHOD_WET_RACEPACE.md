@@ -293,3 +293,49 @@ warnings in historical tests are nonfatal.
 Content hashes confirm that all **76 pre-existing scripts, tests, documents
 and CSVs** are unchanged. Only the new wet script, tests, this document and the
 two copies of its result CSV were created. No dry/wet merge was performed.
+
+## Known limitations
+
+- **Coverage is too sparse for a strong wet-race rating.** Only 6 of the 30
+  eligible teammate pairs have a primary wet gap, and only 1 is labelled high
+  confidence. The available numbers describe a small, selected set of race
+  portions and drivers. Any future combined rating should give these wet-race
+  measurements much less weight than the dry-race measurements. No combined
+  weighting rule is established by this method.
+
+- **The weather check mostly rejects missing reference evidence.** At the
+  official eight-driver minimum, all 137 driver-laps removed by this check
+  after traffic filtering fail because at least one of the previous, current
+  or following lap numbers has too few clean reference drivers. None is
+  rejected for a measured median change above 2%. This does not prove the
+  excluded conditions were stable; the check could not assess them. Lowering
+  the minimum to four, five or six added no teammate gaps. See
+  [the field-minimum diagnostics](WET_FIELD_MINIMUM_DIAGNOSTICS.md) for the
+  counts and explanation.
+
+- **Traffic filtering has a large, unvalidated influence on coverage.** The
+  fixed 1.5-second rule removes 355 eligible pair-laps, compared with 21 removed
+  by the primary weather check after traffic. Other traffic thresholds were
+  not tested. The original choice was fixed in advance, not tuned to these
+  results, but it has not been validated as the best cutoff. The retained
+  sample therefore depends strongly on this choice. Its start-line timing
+  estimate also cannot describe traffic throughout a lap.
+
+- **Miami is absent from the wet evidence.** The wet pipeline excludes Miami
+  entirely and never investigates compound recovery. Miami's compound records
+  were studied separately during the dry-pipeline work, but that investigation
+  does not make Miami eligible here. Readers should not interpret its absence
+  as a measured wet gap, a zero gap or evidence about its drivers' wet pace.
+
+- **The sample covers only the 2025 season.** Wet opportunities are limited
+  within that one year. Car development, upgrades and how each driver responds
+  to the car can affect these gaps as well as driver skill. The results cannot
+  establish a driver's usual wet advantage across seasons or different cars.
+
+- **A handful of wet gaps may miss the larger differences wet conditions can
+  reveal.** Wet conditions are generally expected to magnify pace differences
+  between drivers, but this project has not established their usual size
+  relative to dry gaps. Rain intensity, tyre choice, confidence and the car's
+  behaviour can all change the comparison. These six retained gaps may sample
+  only a driver's more comparable race portions, so they should not be treated
+  as representative of that driver's typical wet performance or full wet skill.

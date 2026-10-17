@@ -1,0 +1,121 @@
+round_number,race,team,driver,teammate,field_minimum,matched_laps,gap,gap_se_pp,ci_low,ci_high,confidence,reason_code,before_weather_pair_laps,insufficient_field,measured_jump,new_pair_vs_8
+1,Australian Grand Prix,Alpine,DOO,GAS,8,0,,,,,unavailable,no_race_laps,0,0,0,False
+1,Australian Grand Prix,Aston Martin,ALO,STR,8,11,-0.4651062869909801,0.15620683549643286,-0.5612200245055194,-0.35942318551014535,medium,,11,0,0,False
+1,Australian Grand Prix,Ferrari,HAM,LEC,8,0,,,,,unavailable,too_few_traffic_qualified_laps,1,1,0,False
+1,Australian Grand Prix,Haas F1 Team,BEA,OCO,8,23,-0.06530256856769946,0.1469503158103231,-0.40055007421635186,0.19423070766144324,high,,25,2,0,False
+1,Australian Grand Prix,Kick Sauber,BOR,HUL,8,16,0.17806580041547104,0.11694621265470562,-0.08623940293583493,0.2993795875452856,medium,,17,1,0,False
+1,Australian Grand Prix,McLaren,NOR,PIA,8,9,,,,,unavailable,too_few_stable_condition_laps,10,1,0,False
+1,Australian Grand Prix,Mercedes,ANT,RUS,8,9,,,,,unavailable,too_few_stable_condition_laps,11,2,0,False
+1,Australian Grand Prix,Racing Bulls,HAD,TSU,8,0,,,,,unavailable,no_race_laps,0,0,0,False
+1,Australian Grand Prix,Red Bull Racing,LAW,VER,8,11,1.8710859098237371,0.22816130984801916,1.2262645164841262,1.9765731163595013,medium,,12,1,0,False
+1,Australian Grand Prix,Williams,ALB,SAI,8,0,,,,,unavailable,no_race_laps,0,0,0,False
+1,Australian Grand Prix,Alpine,DOO,GAS,4,0,,,,,unavailable,no_race_laps,0,0,0,False
+1,Australian Grand Prix,Aston Martin,ALO,STR,4,11,-0.4651062869909801,0.15620683549643286,-0.5612200245055194,-0.35942318551014535,medium,,11,0,0,False
+1,Australian Grand Prix,Ferrari,HAM,LEC,4,0,,,,,unavailable,too_few_traffic_qualified_laps,1,1,0,False
+1,Australian Grand Prix,Haas F1 Team,BEA,OCO,4,23,-0.06530256856769946,0.1469503158103231,-0.40055007421635186,0.19423070766144324,high,,25,2,0,False
+1,Australian Grand Prix,Kick Sauber,BOR,HUL,4,16,0.17806580041547104,0.11694621265470562,-0.08623940293583493,0.2993795875452856,medium,,17,1,0,False
+1,Australian Grand Prix,McLaren,NOR,PIA,4,9,,,,,unavailable,too_few_stable_condition_laps,10,1,0,False
+1,Australian Grand Prix,Mercedes,ANT,RUS,4,9,,,,,unavailable,too_few_stable_condition_laps,11,2,0,False
+1,Australian Grand Prix,Racing Bulls,HAD,TSU,4,0,,,,,unavailable,no_race_laps,0,0,0,False
+1,Australian Grand Prix,Red Bull Racing,LAW,VER,4,11,1.8710859098237371,0.22816130984801916,1.2262645164841262,1.9765731163595013,medium,,12,1,0,False
+1,Australian Grand Prix,Williams,ALB,SAI,4,0,,,,,unavailable,no_race_laps,0,0,0,False
+1,Australian Grand Prix,Alpine,DOO,GAS,5,0,,,,,unavailable,no_race_laps,0,0,0,False
+1,Australian Grand Prix,Aston Martin,ALO,STR,5,11,-0.4651062869909801,0.15620683549643286,-0.5612200245055194,-0.35942318551014535,medium,,11,0,0,False
+1,Australian Grand Prix,Ferrari,HAM,LEC,5,0,,,,,unavailable,too_few_traffic_qualified_laps,1,1,0,False
+1,Australian Grand Prix,Haas F1 Team,BEA,OCO,5,23,-0.06530256856769946,0.1469503158103231,-0.40055007421635186,0.19423070766144324,high,,25,2,0,False
+1,Australian Grand Prix,Kick Sauber,BOR,HUL,5,16,0.17806580041547104,0.11694621265470562,-0.08623940293583493,0.2993795875452856,medium,,17,1,0,False
+1,Australian Grand Prix,McLaren,NOR,PIA,5,9,,,,,unavailable,too_few_stable_condition_laps,10,1,0,False
+1,Australian Grand Prix,Mercedes,ANT,RUS,5,9,,,,,unavailable,too_few_stable_condition_laps,11,2,0,False
+1,Australian Grand Prix,Racing Bulls,HAD,TSU,5,0,,,,,unavailable,no_race_laps,0,0,0,False
+1,Australian Grand Prix,Red Bull Racing,LAW,VER,5,11,1.8710859098237371,0.22816130984801916,1.2262645164841262,1.9765731163595013,medium,,12,1,0,False
+1,Australian Grand Prix,Williams,ALB,SAI,5,0,,,,,unavailable,no_race_laps,0,0,0,False
+1,Australian Grand Prix,Alpine,DOO,GAS,6,0,,,,,unavailable,no_race_laps,0,0,0,False
+1,Australian Grand Prix,Aston Martin,ALO,STR,6,11,-0.4651062869909801,0.15620683549643286,-0.5612200245055194,-0.35942318551014535,medium,,11,0,0,False
+1,Australian Grand Prix,Ferrari,HAM,LEC,6,0,,,,,unavailable,too_few_traffic_qualified_laps,1,1,0,False
+1,Australian Grand Prix,Haas F1 Team,BEA,OCO,6,23,-0.06530256856769946,0.1469503158103231,-0.40055007421635186,0.19423070766144324,high,,25,2,0,False
+1,Australian Grand Prix,Kick Sauber,BOR,HUL,6,16,0.17806580041547104,0.11694621265470562,-0.08623940293583493,0.2993795875452856,medium,,17,1,0,False
+1,Australian Grand Prix,McLaren,NOR,PIA,6,9,,,,,unavailable,too_few_stable_condition_laps,10,1,0,False
+1,Australian Grand Prix,Mercedes,ANT,RUS,6,9,,,,,unavailable,too_few_stable_condition_laps,11,2,0,False
+1,Australian Grand Prix,Racing Bulls,HAD,TSU,6,0,,,,,unavailable,no_race_laps,0,0,0,False
+1,Australian Grand Prix,Red Bull Racing,LAW,VER,6,11,1.8710859098237371,0.22816130984801916,1.2262645164841262,1.9765731163595013,medium,,12,1,0,False
+1,Australian Grand Prix,Williams,ALB,SAI,6,0,,,,,unavailable,no_race_laps,0,0,0,False
+12,British Grand Prix,Alpine,COL,GAS,8,0,,,,,unavailable,no_race_laps,0,0,0,False
+12,British Grand Prix,Aston Martin,ALO,STR,8,2,,,,,unavailable,too_few_traffic_qualified_laps,3,1,0,False
+12,British Grand Prix,Ferrari,HAM,LEC,8,6,,,,,unavailable,too_few_traffic_qualified_laps,8,2,0,False
+12,British Grand Prix,Haas F1 Team,BEA,OCO,8,5,,,,,unavailable,too_few_traffic_qualified_laps,5,0,0,False
+12,British Grand Prix,Kick Sauber,BOR,HUL,8,0,,,,,unavailable,too_few_same_number_laps,0,0,0,False
+12,British Grand Prix,McLaren,NOR,PIA,8,18,-0.07388033505797476,0.06960811966547914,-0.2526900103492452,-0.05033138909928289,medium,,23,5,0,False
+12,British Grand Prix,Mercedes,ANT,RUS,8,0,,,,,unavailable,too_few_same_number_laps,0,0,0,False
+12,British Grand Prix,Racing Bulls,HAD,LAW,8,0,,,,,unavailable,no_race_laps,0,0,0,False
+12,British Grand Prix,Red Bull Racing,TSU,VER,8,8,,,,,unavailable,too_few_stable_condition_laps,11,3,0,False
+12,British Grand Prix,Williams,ALB,SAI,8,8,,,,,unavailable,too_few_traffic_qualified_laps,9,1,0,False
+12,British Grand Prix,Alpine,COL,GAS,4,0,,,,,unavailable,no_race_laps,0,0,0,False
+12,British Grand Prix,Aston Martin,ALO,STR,4,2,,,,,unavailable,too_few_traffic_qualified_laps,3,1,0,False
+12,British Grand Prix,Ferrari,HAM,LEC,4,6,,,,,unavailable,too_few_traffic_qualified_laps,8,1,1,False
+12,British Grand Prix,Haas F1 Team,BEA,OCO,4,5,,,,,unavailable,too_few_traffic_qualified_laps,5,0,0,False
+12,British Grand Prix,Kick Sauber,BOR,HUL,4,0,,,,,unavailable,too_few_same_number_laps,0,0,0,False
+12,British Grand Prix,McLaren,NOR,PIA,4,18,-0.07388033505797476,0.06960811966547914,-0.2526900103492452,-0.05033138909928289,medium,,23,3,2,False
+12,British Grand Prix,Mercedes,ANT,RUS,4,0,,,,,unavailable,too_few_same_number_laps,0,0,0,False
+12,British Grand Prix,Racing Bulls,HAD,LAW,4,0,,,,,unavailable,no_race_laps,0,0,0,False
+12,British Grand Prix,Red Bull Racing,TSU,VER,4,8,,,,,unavailable,too_few_stable_condition_laps,11,1,2,False
+12,British Grand Prix,Williams,ALB,SAI,4,8,,,,,unavailable,too_few_traffic_qualified_laps,9,1,0,False
+12,British Grand Prix,Alpine,COL,GAS,5,0,,,,,unavailable,no_race_laps,0,0,0,False
+12,British Grand Prix,Aston Martin,ALO,STR,5,2,,,,,unavailable,too_few_traffic_qualified_laps,3,1,0,False
+12,British Grand Prix,Ferrari,HAM,LEC,5,6,,,,,unavailable,too_few_traffic_qualified_laps,8,1,1,False
+12,British Grand Prix,Haas F1 Team,BEA,OCO,5,5,,,,,unavailable,too_few_traffic_qualified_laps,5,0,0,False
+12,British Grand Prix,Kick Sauber,BOR,HUL,5,0,,,,,unavailable,too_few_same_number_laps,0,0,0,False
+12,British Grand Prix,McLaren,NOR,PIA,5,18,-0.07388033505797476,0.06960811966547914,-0.2526900103492452,-0.05033138909928289,medium,,23,5,0,False
+12,British Grand Prix,Mercedes,ANT,RUS,5,0,,,,,unavailable,too_few_same_number_laps,0,0,0,False
+12,British Grand Prix,Racing Bulls,HAD,LAW,5,0,,,,,unavailable,no_race_laps,0,0,0,False
+12,British Grand Prix,Red Bull Racing,TSU,VER,5,8,,,,,unavailable,too_few_stable_condition_laps,11,2,1,False
+12,British Grand Prix,Williams,ALB,SAI,5,8,,,,,unavailable,too_few_traffic_qualified_laps,9,1,0,False
+12,British Grand Prix,Alpine,COL,GAS,6,0,,,,,unavailable,no_race_laps,0,0,0,False
+12,British Grand Prix,Aston Martin,ALO,STR,6,2,,,,,unavailable,too_few_traffic_qualified_laps,3,1,0,False
+12,British Grand Prix,Ferrari,HAM,LEC,6,6,,,,,unavailable,too_few_traffic_qualified_laps,8,2,0,False
+12,British Grand Prix,Haas F1 Team,BEA,OCO,6,5,,,,,unavailable,too_few_traffic_qualified_laps,5,0,0,False
+12,British Grand Prix,Kick Sauber,BOR,HUL,6,0,,,,,unavailable,too_few_same_number_laps,0,0,0,False
+12,British Grand Prix,McLaren,NOR,PIA,6,18,-0.07388033505797476,0.06960811966547914,-0.2526900103492452,-0.05033138909928289,medium,,23,5,0,False
+12,British Grand Prix,Mercedes,ANT,RUS,6,0,,,,,unavailable,too_few_same_number_laps,0,0,0,False
+12,British Grand Prix,Racing Bulls,HAD,LAW,6,0,,,,,unavailable,no_race_laps,0,0,0,False
+12,British Grand Prix,Red Bull Racing,TSU,VER,6,8,,,,,unavailable,too_few_stable_condition_laps,11,3,0,False
+12,British Grand Prix,Williams,ALB,SAI,6,8,,,,,unavailable,too_few_traffic_qualified_laps,9,1,0,False
+13,Belgian Grand Prix,Alpine,COL,GAS,8,10,0.6337520509410559,0.048731244883787106,0.4728784867888384,0.6768752774078999,medium,,10,0,0,False
+13,Belgian Grand Prix,Aston Martin,ALO,STR,8,0,,,,,unavailable,too_few_traffic_qualified_laps,0,0,0,False
+13,Belgian Grand Prix,Ferrari,HAM,LEC,8,7,,,,,unavailable,too_few_traffic_qualified_laps,7,0,0,False
+13,Belgian Grand Prix,Haas F1 Team,BEA,OCO,8,0,,,,,unavailable,too_few_traffic_qualified_laps,0,0,0,False
+13,Belgian Grand Prix,Kick Sauber,BOR,HUL,8,9,,,,,unavailable,too_few_traffic_qualified_laps,9,0,0,False
+13,Belgian Grand Prix,McLaren,NOR,PIA,8,1,,,,,unavailable,too_few_same_compound_laps,2,1,0,False
+13,Belgian Grand Prix,Mercedes,ANT,RUS,8,2,,,,,unavailable,too_few_traffic_qualified_laps,2,0,0,False
+13,Belgian Grand Prix,Racing Bulls,HAD,LAW,8,0,,,,,unavailable,too_few_same_compound_laps,0,0,0,False
+13,Belgian Grand Prix,Red Bull Racing,TSU,VER,8,1,,,,,unavailable,too_few_traffic_qualified_laps,1,0,0,False
+13,Belgian Grand Prix,Williams,ALB,SAI,8,0,,,,,unavailable,too_few_traffic_qualified_laps,0,0,0,False
+13,Belgian Grand Prix,Alpine,COL,GAS,4,10,0.6337520509410559,0.048731244883787106,0.4728784867888384,0.6768752774078999,medium,,10,0,0,False
+13,Belgian Grand Prix,Aston Martin,ALO,STR,4,0,,,,,unavailable,too_few_traffic_qualified_laps,0,0,0,False
+13,Belgian Grand Prix,Ferrari,HAM,LEC,4,7,,,,,unavailable,too_few_traffic_qualified_laps,7,0,0,False
+13,Belgian Grand Prix,Haas F1 Team,BEA,OCO,4,0,,,,,unavailable,too_few_traffic_qualified_laps,0,0,0,False
+13,Belgian Grand Prix,Kick Sauber,BOR,HUL,4,9,,,,,unavailable,too_few_traffic_qualified_laps,9,0,0,False
+13,Belgian Grand Prix,McLaren,NOR,PIA,4,1,,,,,unavailable,too_few_same_compound_laps,2,1,0,False
+13,Belgian Grand Prix,Mercedes,ANT,RUS,4,2,,,,,unavailable,too_few_traffic_qualified_laps,2,0,0,False
+13,Belgian Grand Prix,Racing Bulls,HAD,LAW,4,0,,,,,unavailable,too_few_same_compound_laps,0,0,0,False
+13,Belgian Grand Prix,Red Bull Racing,TSU,VER,4,1,,,,,unavailable,too_few_traffic_qualified_laps,1,0,0,False
+13,Belgian Grand Prix,Williams,ALB,SAI,4,0,,,,,unavailable,too_few_traffic_qualified_laps,0,0,0,False
+13,Belgian Grand Prix,Alpine,COL,GAS,5,10,0.6337520509410559,0.048731244883787106,0.4728784867888384,0.6768752774078999,medium,,10,0,0,False
+13,Belgian Grand Prix,Aston Martin,ALO,STR,5,0,,,,,unavailable,too_few_traffic_qualified_laps,0,0,0,False
+13,Belgian Grand Prix,Ferrari,HAM,LEC,5,7,,,,,unavailable,too_few_traffic_qualified_laps,7,0,0,False
+13,Belgian Grand Prix,Haas F1 Team,BEA,OCO,5,0,,,,,unavailable,too_few_traffic_qualified_laps,0,0,0,False
+13,Belgian Grand Prix,Kick Sauber,BOR,HUL,5,9,,,,,unavailable,too_few_traffic_qualified_laps,9,0,0,False
+13,Belgian Grand Prix,McLaren,NOR,PIA,5,1,,,,,unavailable,too_few_same_compound_laps,2,1,0,False
+13,Belgian Grand Prix,Mercedes,ANT,RUS,5,2,,,,,unavailable,too_few_traffic_qualified_laps,2,0,0,False
+13,Belgian Grand Prix,Racing Bulls,HAD,LAW,5,0,,,,,unavailable,too_few_same_compound_laps,0,0,0,False
+13,Belgian Grand Prix,Red Bull Racing,TSU,VER,5,1,,,,,unavailable,too_few_traffic_qualified_laps,1,0,0,False
+13,Belgian Grand Prix,Williams,ALB,SAI,5,0,,,,,unavailable,too_few_traffic_qualified_laps,0,0,0,False
+13,Belgian Grand Prix,Alpine,COL,GAS,6,10,0.6337520509410559,0.048731244883787106,0.4728784867888384,0.6768752774078999,medium,,10,0,0,False
+13,Belgian Grand Prix,Aston Martin,ALO,STR,6,0,,,,,unavailable,too_few_traffic_qualified_laps,0,0,0,False
+13,Belgian Grand Prix,Ferrari,HAM,LEC,6,7,,,,,unavailable,too_few_traffic_qualified_laps,7,0,0,False
+13,Belgian Grand Prix,Haas F1 Team,BEA,OCO,6,0,,,,,unavailable,too_few_traffic_qualified_laps,0,0,0,False
+13,Belgian Grand Prix,Kick Sauber,BOR,HUL,6,9,,,,,unavailable,too_few_traffic_qualified_laps,9,0,0,False
+13,Belgian Grand Prix,McLaren,NOR,PIA,6,1,,,,,unavailable,too_few_same_compound_laps,2,1,0,False
+13,Belgian Grand Prix,Mercedes,ANT,RUS,6,2,,,,,unavailable,too_few_traffic_qualified_laps,2,0,0,False
+13,Belgian Grand Prix,Racing Bulls,HAD,LAW,6,0,,,,,unavailable,too_few_same_compound_laps,0,0,0,False
+13,Belgian Grand Prix,Red Bull Racing,TSU,VER,6,1,,,,,unavailable,too_few_traffic_qualified_laps,1,0,0,False
+13,Belgian Grand Prix,Williams,ALB,SAI,6,0,,,,,unavailable,too_few_traffic_qualified_laps,0,0,0,False
