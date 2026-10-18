@@ -7,11 +7,12 @@ ratings. No points, wins or finishing positions enter this calculation.
 
 ## Fixed choices
 
-- Qualifying round weights: Q1 0.20, Q2 0.30, Q3 0.50. Drop missing rounds
-  and divide by the sum of the remaining weights. No valid round gives
-  `no_valid_round`. Sprint qualifying is absent from the input.
-- Log contribution: `100 * ln(1 + gap/100)`. The other driver receives its
-  exact negative. Errors become `SE / (1 + gap/100)` for both drivers.
+- Qualifying: first convert each available round gap to log-percentage points
+  with `100 * ln(1 + gap/100)`, then combine with weights Q3 0.50, Q2 0.30,
+  Q1 0.20, divided by the sum of the available rounds' weights. No valid round
+  gives `no_valid_round`. Sprint qualifying is absent from the input.
+- Dry and wet log contribution: `100 * ln(1 + gap/100)`. The other driver
+  receives its exact negative. Errors become `SE / (1 + gap/100)` for both drivers.
   Nonfinite values and gaps at or below -100 are rejected and audited.
 - Each qualifying race has weight 1. Dry and wet use
   `max(0.25, 1 / (1 + (SE_log/0.15)^2))`. An absent/invalid error uses 0.25
@@ -42,19 +43,21 @@ ratings. No points, wins or finishing positions enter this calculation.
 
 ## Input and interpretation decisions for review
 
-Qualifying has two rows per pair. Its combined-round export retains both
-perspectives, but season aggregation selects the alphabetically first driver
-once per race/team and makes equal/opposite log contributions. Validate the
-round-by-round reverse percentages against the reciprocal formula, allowing
+Qualifying has two rows per pair. Under method_version
+`2025_teammate_rating_1_log_round_fix`, each round is converted to log-percentage
+points before the rounds are combined. The combined-round export retains both
+perspectives as exact opposites, and season aggregation reads the symmetric
+value directly for the driver named in each row; it chooses no reference driver.
+Validate the round-by-round reverse percentages against the reciprocal formula, allowing
 0.0000011 pp for the source's six-decimal rounding. This tolerance checks
 serialization, not performance or inclusion quality.
 
-A weighted average of ordinary percentages is not exactly reciprocal to the
-reverse row's weighted average. The alphabetical choice therefore matters
-slightly. This is an explicit default for review, not two independent pieces
-of evidence or an average of opposite source rows. The run summary measures
-the discrepancy. Neither source row is modified. Invalid values in either
-direction reject and flag that pair/signal observation.
+To remove the small reciprocal-rounding residual in the six-decimal source
+gaps, each round uses half the difference between the two directions' converted
+log gaps. Reversing the pair therefore gives its exact negative before applying
+the round weights. The two rows represent the same comparison, not independent
+evidence. Neither source row is modified. Invalid values in either direction
+reject and flag that pair/signal observation.
 
 The Monaco instruction is implemented as a multiplier on the precision weight,
 after calculating that weight, as proposed in Section 4 of the approved spec.
@@ -205,11 +208,12 @@ gap or SE needed an audit flag in this run.
 
 All 21 drivers meet the combined-interval gates. Doohan has 1,998 usable draws
 out of 2,000; everyone else has 2,000. His interval does not overcome the thin
-dry evidence or upgrade his provisional status. The orientation check found
-that using the reverse qualifying combined row would differ by a mean
-**0.000324** and maximum **0.004503 log-percentage points per race/pair**.
-These values describe the explicitly documented reference-direction choice,
-which remains flagged for review.
+dry evidence or upgrade his provisional status. The old alphabetical-reference
+calculation produced a mean orientation discrepancy of **0.000324** and maximum
+**0.004503 log-percentage points per race/pair**. These are historical values:
+`2025_teammate_rating_1_log_round_fix` removed that choice by combining the
+rounds in symmetric log space. The current combined qualifying rows are exact
+mirrors to floating-point precision, independent of row order.
 
 None of the sensitivity changes moved anyone more than two places. The maximum
 move was one position, and the largest absolute score change was 0.031
