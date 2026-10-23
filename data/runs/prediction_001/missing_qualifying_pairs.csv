@@ -1,0 +1,8 @@
+round_number,race,team,driver_a,driver_b,pair_id,result_present,valid_positions,status_a,status_b,position_a,position_b,outcome,valid_qualifying,qualifying_advantage,grid_valid,grid_flag,grid_pick,main_history_usable,previous_pick,head_to_head_probability,head_to_head_comparisons,qualifying_pick
+1,Australian Grand Prix,Haas F1 Team,BEA,OCO,01_BEA_OCO,True,True,Finished,Finished,14,13,0,False,,True,,0,False,,0.5,0,
+7,Emilia Romagna Grand Prix,Red Bull Racing,TSU,VER,07_TSU_VER,True,True,Finished,Finished,10,1,0,False,,True,,0,False,0,0.20000000000000001,3,
+15,Dutch Grand Prix,Aston Martin,ALO,STR,15_ALO_STR,True,True,Finished,Finished,8,7,0,False,,True,,1,False,1,0.75,10,
+17,Azerbaijan Grand Prix,Haas F1 Team,BEA,OCO,17_BEA_OCO,True,True,Finished,Finished,12,14,1,False,,True,,1,False,1,0.5,12,
+18,Singapore Grand Prix,Williams,ALB,SAI,18_ALB_SAI,True,True,Lapped,Lapped,14,10,0,False,,True,,0,False,0,0.7142857142857143,12,
+19,United States Grand Prix,Racing Bulls,HAD,LAW,19_HAD_LAW,True,True,Finished,Finished,16,11,0,False,,True,,0,False,1,0.66666666666666663,13,
+21,São Paulo Grand Prix,Kick Sauber,BOR,HUL,21_BOR_HUL,True,True,Retired,Finished,20,9,0,False,,True,,0,False,,0.5,14,

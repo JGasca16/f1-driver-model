@@ -1,0 +1,4 @@
+target,eligible_rows,initial_training_rows,initial_training_weekends,main_rows,main_weekends,main_exclusions,early_first_round,early_rows,early_weekends,early_fallback_rows
+main_both_finish,149,54,8,95,12,25,8,34,5,20
+all_starters,186,73,8,113,12,7,7,53,6,20
+no_double_retirement,183,72,8,111,12,9,7,52,6,20
