@@ -1,4 +1,4 @@
-"""2025 teammate season ratings. Fixed choices: DRIVER_RATING_METHOD.md.
+"""Teammate season ratings. Fixed choices: DRIVER_RATING_METHOD.md.
 
 The log-round correction changes qualifying combination only: its input is
 already in log-percentage points and is read directly for each named driver.
@@ -20,23 +20,24 @@ from qualifying_gaps_combined import (
     FILENAME as QUALIFYING_FILENAME,
 )
 
+from season_config import DEFAULT, add_season_arguments, from_args
+
 ROOT = Path(__file__).resolve().parent
-YEAR = 2025
+YEAR = DEFAULT.year
 SIGNALS = ("qualifying", "dry", "wet")
-WET_ROUNDS = {1, 12, 13}
-DRY_ROUNDS = set(range(1, 25)) - WET_ROUNDS - {6}
+WET_ROUNDS = {int(n) for n in DEFAULT.facts["wet_races"]}
+DRY_ROUNDS = set(DEFAULT.facts["dry_rounds"])
 RESAMPLES = 2000
 SEED = 42
 MIN_CI_WEEKENDS = 6
 MIN_BOOTSTRAP_FRACTION = 0.95
 ARITHMETIC_TOLERANCE = 1e-12
-METHOD_VERSION = "2025_teammate_rating_1_log_round_fix"
-SOURCES = ("data/2025_qualifying_gaps_by_round.csv", "data/race_pace_dry_final.csv",
-           "data/race_pace_wet_final.csv")
+METHOD_VERSION = DEFAULT.facts["method_id"]
+SOURCES = DEFAULT.sources()
 COLUMNS = "season driver teams teammates comparison_group teammate_changed season_appearances qualifying_rating dry_rating wet_rating combined_rating rating_units rating_status qualifying_weight dry_weight wet_weight qualifying_valid qualifying_eligible qualifying_effective_races dry_valid dry_eligible dry_effective_races wet_valid wet_eligible wet_effective_races races_included confidence combined_ci_low combined_ci_high bootstrap_valid qualifying_median dry_median wet_median dry_strict_count dry_linear_count monaco_included notes method_version source_files".split()
-OUTPUT_NAMES = [QUALIFYING_FILENAME, "driver_rating_2025.csv", "driver_rating_sensitivity.csv",
-                "driver_rating_signal_diagnostics.csv", "driver_rating_teammate_periods.csv",
-                "driver_rating_input_audit.csv", "driver_rating_run_summary.json"]
+OUTPUT_KEYS = ["qualifying", "ratings", "sensitivity", "signal_diagnostics",
+               "teammate_periods", "input_audit", "rating_summary"]
+OUTPUT_NAMES = [DEFAULT.filename(k) for k in OUTPUT_KEYS]
 
 
 @dataclass(frozen=True)
@@ -105,23 +106,26 @@ def confidence_label(score, q_effective, d_effective, q_coverage, d_coverage, us
     return "low/provisional"
 
 
-def check_roster(qualifying):
+def check_roster(qualifying, season_settings=None):
     """Qualifying, including blanks, defines appearances and teammate periods."""
+    cfg = season_settings or DEFAULT
     roster = qualifying[["round_number", "race", "team", "driver", "teammate"]].copy()
     roster["round_number"] = roster.round_number.astype(int)
-    if set(roster.round_number) != set(range(1, 25)) or len(roster) != 480 or roster.driver.nunique() != 21:
-        raise ValueError("Expected 24 weekends, 480 appearances and 21 drivers")
+    if (set(roster.round_number) != set(range(1, cfg.facts["round_count"] + 1))
+            or len(roster) != cfg.facts["expected_appearances"]
+            or roster.driver.nunique() != cfg.facts["expected_unique_drivers"]):
+        raise ValueError("Season appearances or driver counts differ from the verified manifest")
     if roster.duplicated(["round_number", "driver"]).any():
         raise ValueError("Repeated driver in qualifying roster")
     for (_, _), group in roster.groupby(["round_number", "team"]):
-        if len(group) != 2 or set(group.driver) != set(group.teammate):
+        if len(group) != cfg.facts["team_size"] or set(group.driver) != set(group.teammate):
             raise ValueError("Incomplete or asymmetric teammate roster")
     for number, group in roster.groupby("round_number"):
-        if len(group) != 20 or group.race.nunique() != 1:
+        if len(group) != cfg.facts["expected_entries"] or group.race.nunique() != 1:
             raise ValueError(f"Invalid roster for round {number}")
         teammate_map = dict(zip(group.driver, group.teammate))
-        expected = {"VER": "LAW", "HAD": "TSU"} if number < 3 else {"VER": "TSU", "HAD": "LAW"}
-        expected["GAS"] = "DOO" if number < 7 else "COL"
+        expected = {p["driver"]: p["teammate"] for p in cfg.facts["roster_periods"]
+                    if p["first"] <= number <= p["last"]}
         for driver, teammate in expected.items():
             if teammate_map.get(driver) != teammate:
                 raise ValueError(f"Approved teammate-period table disagrees at round {number}: {driver}")
@@ -179,8 +183,9 @@ def validate_qualifying_rows(source, combined):
     return discrepancies
 
 
-def make_observations(source, combined, dry, wet, roster):
+def make_observations(source, combined, dry, wet, roster, season_settings=None):
     """Read each qualifying driver directly; expand the one-row race pairs."""
+    cfg = season_settings or DEFAULT
     discrepancies = validate_qualifying_rows(source, combined)
     audit, records = [], []
     roster_map = roster.set_index(["round_number", "driver"])
@@ -269,7 +274,9 @@ def make_observations(source, combined, dry, wet, roster):
                     "matched_laps": row.get("matched_laps", row.get("matched_laps_2pct", "")),
                     "clean_laps_min": min(int(row["driver_clean_laps"]), int(row["teammate_clean_laps"])) if signal == "dry" else ""})
     for signal in SIGNALS:
-        expected_rounds = set(range(1, 25)) if signal == "qualifying" else DRY_ROUNDS if signal == "dry" else WET_ROUNDS
+        expected_rounds = (set(range(1, cfg.facts["round_count"] + 1)) if signal == "qualifying"
+                           else set(cfg.facts["dry_rounds"]) if signal == "dry"
+                           else {int(n) for n in cfg.facts["wet_races"]})
         expected = roster.loc[roster.round_number.isin(expected_rounds)]
         actual = {(record["round_number"], record["driver"]) for record in records if record["signal"] == signal}
         if actual != set(zip(expected.round_number, expected.driver)):
@@ -345,7 +352,10 @@ def bootstrap_ci(samples, distinct_weekends, minimum=MIN_CI_WEEKENDS):
 
 
 def build_ratings(observations, roster, settings=Settings(), resamples=RESAMPLES, seed=SEED,
-                  combined_source="data/2025_qualifying_gaps_combined.csv"):
+                  combined_source=None, season_settings=None):
+    cfg = season_settings or DEFAULT
+    if combined_source is None:
+        combined_source = cfg.input("qualifying").relative_to(cfg.root)
     observations = add_weights(observations, settings)
     drivers = sorted(roster.driver.unique())
     overall, _, _, normalized = season_arrays(observations, drivers, settings)
@@ -359,7 +369,7 @@ def build_ratings(observations, roster, settings=Settings(), resamples=RESAMPLES
         valid = own.loc[np.isfinite(own.contribution)]
         contributing = valid.round_number.nunique()
         low, high, bootstrap_valid, ci_reason = bootstrap_ci(sampled[:, di], contributing)
-        row = {"season": YEAR, "driver": driver, "teams": ";".join(sorted(appearances.team.unique())),
+        row = {"season": cfg.year, "driver": driver, "teams": ";".join(sorted(appearances.team.unique())),
             "teammates": ";".join(sorted(appearances.teammate.unique())),
             "comparison_group": groups[driver], "teammate_changed": appearances.teammate.nunique() > 1,
             "season_appearances": len(appearances), "combined_rating": overall[0, di],
@@ -368,8 +378,8 @@ def build_ratings(observations, roster, settings=Settings(), resamples=RESAMPLES
             "dry_strict_count": len(valid.loc[(valid.signal == "dry") & (valid.method_used == "strict")]),
             "dry_linear_count": len(valid.loc[(valid.signal == "dry") & (valid.method_used == "linear")]),
             "monaco_included": bool(((valid.signal == "dry") & (valid.race == "Monaco Grand Prix")).any()),
-            "method_version": METHOD_VERSION,
-            "source_files": ";".join(SOURCES + (str(combined_source),))}
+            "method_version": cfg.facts["method_id"],
+            "source_files": ";".join(cfg.sources() + (str(combined_source),))}
         summaries = {}
         for si, signal in enumerate(SIGNALS):
             group = own.loc[own.signal == signal]
@@ -378,7 +388,7 @@ def build_ratings(observations, roster, settings=Settings(), resamples=RESAMPLES
             for key in ["rating", "valid", "eligible", "effective_races", "median"]:
                 row[f"{signal}_{key}"] = summary[key]
             row[f"{signal}_weight"] = normalized[0, di, si]
-            detail = {"season": YEAR, "driver": driver, "signal": signal, **summary}
+            detail = {"season": cfg.year, "driver": driver, "signal": signal, **summary}
             detail["missing_reasons"] = json.dumps(summary["missing_reasons"], sort_keys=True)
             detail["warnings"] = ";".join(summary["warnings"])
             detail["single_race_ci_low"], detail["single_race_ci_high"] = np.nan, np.nan
@@ -400,7 +410,7 @@ def build_ratings(observations, roster, settings=Settings(), resamples=RESAMPLES
         period_notes = []
         for period, entries in appearances.groupby("period", sort=True):
             period_own = own.loc[own.period == period]
-            identity = {"season": YEAR, "driver": driver, "period": int(period),
+            identity = {"season": cfg.year, "driver": driver, "period": int(period),
                         "team": entries.team.iloc[0], "teammate": entries.teammate.iloc[0],
                         "round_start": int(entries.round_number.min()), "round_end": int(entries.round_number.max())}
             note = {**identity, "signals": {}}
@@ -427,7 +437,7 @@ def descriptive_ranks(table):
     return table.combined_rating.where(table.rating_status.eq("established")).rank(method="min", ascending=True)
 
 
-def sensitivity_runs(observations, roster, baseline):
+def sensitivity_runs(observations, roster, baseline, season_settings=None):
     variants = {"monaco_1p0": replace(Settings(), monaco_multiplier=1.0),
                 "reference_6_2": replace(Settings(), reference_races=(6, 6, 2)),
                 "weights_50_45_5": replace(Settings(), signal_weights=(.50, .45, .05))}
@@ -435,7 +445,7 @@ def sensitivity_runs(observations, roster, baseline):
     base_rank = descriptive_ranks(baseline)
     records, headlines = [], {}
     for variant, settings in variants.items():
-        table, _, _ = build_ratings(observations, roster, settings)
+        table, _, _ = build_ratings(observations, roster, settings, season_settings=season_settings)
         table = table.set_index("driver")
         rank = descriptive_ranks(table)
         moved = []
@@ -461,22 +471,28 @@ def sensitivity_runs(observations, roster, baseline):
 def main():
     started = time.perf_counter()
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output-dir", type=Path, default=ROOT / "data")
+    parser.add_argument("--output-dir", type=Path)
+    add_season_arguments(parser)
+    parser.add_argument("--offline", action="store_true", help="CSV-only stage; never uses the network")
     args = parser.parse_args()
+    cfg = from_args(args)
+    args.output_dir = cfg.checked(args.output_dir) if args.output_dir else cfg.path("data")
+    sources = cfg.sources()
     # Check all output names before starting. Exclusive writes protect races too.
-    existing = [str(args.output_dir / name) for name in OUTPUT_NAMES if (args.output_dir / name).exists()]
+    existing = [str(cfg.output(key, args.output_dir)) for key in OUTPUT_KEYS
+                if cfg.output(key, args.output_dir).exists()]
     if existing:
         raise FileExistsError("Outputs exist; use a new --output-dir: " + ", ".join(existing))
-    qualifying, dry, wet = [read_csv(ROOT / name) for name in SOURCES]
+    qualifying, dry, wet = [read_csv(cfg.root / name) for name in sources]
     combined = combine_table(qualifying)
-    roster = check_roster(qualifying)
-    observations, audit, discrepancy = make_observations(qualifying, combined, dry, wet, roster)
-    combined_source = (args.output_dir / QUALIFYING_FILENAME).resolve()
+    roster = check_roster(qualifying, cfg)
+    observations, audit, discrepancy = make_observations(qualifying, combined, dry, wet, roster, cfg)
+    combined_source = cfg.output("qualifying", args.output_dir).resolve()
     if combined_source.is_relative_to(ROOT):
         combined_source = combined_source.relative_to(ROOT)
-    table, diagnostics, periods = build_ratings(observations, roster, combined_source=combined_source)
-    sensitivity, headlines = sensitivity_runs(observations, roster, table)
-    summary = {"method_version": METHOD_VERSION, "drivers": len(table),
+    table, diagnostics, periods = build_ratings(observations, roster, combined_source=combined_source, season_settings=cfg)
+    sensitivity, headlines = sensitivity_runs(observations, roster, table, cfg)
+    summary = {"method_version": cfg.facts["method_id"], "drivers": len(table),
         "confidence_counts": {label: int(table.confidence.eq(label).sum()) for label in ["high", "medium", "low/provisional", "unavailable"]},
         "rating_status_counts": {label: int(table.rating_status.eq(label).sum()) for label in ["established", "provisional", "unavailable"]},
         "sensitivity_over_two": headlines,
@@ -492,14 +508,14 @@ def main():
         "qualifying_round_combination": "log-convert each round; remove reciprocal rounding residual equally; weighted mean",
         "settings": {"signal_weights": Settings().signal_weights, "reference_races": Settings().reference_races,
                      "monaco_multiplier": Settings().monaco_multiplier, "resamples": RESAMPLES, "seed": SEED},
-        "sources_sha256": {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in SOURCES}}
-    for frame, name, display in [(combined, QUALIFYING_FILENAME, False),
-        (table, "driver_rating_2025.csv", True), (diagnostics, "driver_rating_signal_diagnostics.csv", True),
-        (periods, "driver_rating_teammate_periods.csv", True), (audit, "driver_rating_input_audit.csv", False),
-        (sensitivity, "driver_rating_sensitivity.csv", True)]:
-        write_csv_new(frame, args.output_dir / name, display)
+        "sources_sha256": {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in sources}}
+    for frame, key, display in [(combined, "qualifying", False),
+        (table, "ratings", True), (diagnostics, "signal_diagnostics", True),
+        (periods, "teammate_periods", True), (audit, "input_audit", False),
+        (sensitivity, "sensitivity", True)]:
+        write_csv_new(frame, cfg.output(key, args.output_dir), display)
     summary["runtime_seconds"] = time.perf_counter() - started
-    with (args.output_dir / "driver_rating_run_summary.json").open("x") as handle:
+    with cfg.output("rating_summary", args.output_dir).open("x") as handle:
         json.dump(summary, handle, indent=2, allow_nan=False)
         handle.write("\n")
     print(f"Drivers: {len(table)}")

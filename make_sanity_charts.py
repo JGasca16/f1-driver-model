@@ -1,4 +1,4 @@
-"""Make four inspection charts from the saved 2025 results, without changing them."""
+"""Make four inspection charts from the saved season results, without changing them."""
 
 import argparse
 import os
@@ -16,11 +16,10 @@ from matplotlib.patches import Patch
 import numpy as np
 import pandas as pd
 
+from season_config import DEFAULT, add_season_arguments, from_args
+
 ROOT = Path(__file__).resolve().parent
-FILENAMES = (
-    'rating_by_group.png', 'qualifying_vs_dry.png',
-    'gap_by_race_selected_pairs.png', 'data_coverage.png',
-)
+FILENAMES = tuple(DEFAULT.facts["chart_files"])
 SIGN = 'Negative = faster than teammate'
 # Bit values record qualifying (1), dry (2), and wet (4) availability.
 CATEGORIES = {
@@ -48,7 +47,8 @@ def save_chart(fig, path):
     plt.close(fig)
 
 
-def chart_groups(ratings, path):
+def chart_groups(ratings, path, season_settings=None):
+    cfg = season_settings or DEFAULT
     ordered = grouped_driver_order(ratings)
     fig, ax = plt.subplots(figsize=(11, 12))
     positions, labels, group_ranges = [], [], []
@@ -78,10 +78,10 @@ def chart_groups(ratings, path):
     ax.invert_yaxis()
     ax.axvline(0, color='black', linewidth=.8)
     ax.set_xlabel('Combined rating (log-percentage points)\n' + SIGN)
-    ax.set_title('2025 ratings within comparison groups\nBars: saved rating; whiskers: saved 95% interval', pad=15)
+    ax.set_title(f'{cfg.year} ratings within comparison groups\nBars: saved rating; whiskers: saved 95% interval', pad=15)
     ax.grid(axis='x', alpha=.15)
     ax.set_axisbelow(True)
-    fig.text(.32, .025, '* Hatched bar: provisional (Doohan). Group order is alphabetical, not a global ranking.', fontsize=9)
+    fig.text(.32, .025, cfg.facts["charts"]["provisional_caption"], fontsize=9)
     fig.subplots_adjust(left=.32, right=.97, top=.93, bottom=.10)
     save_chart(fig, path)
 
@@ -92,17 +92,14 @@ def scatter_statistics(ratings):
     return opposite, float(valid.qualifying_rating.corr(valid.dry_rating)), len(valid)
 
 
-def chart_scatter(ratings, path):
+def chart_scatter(ratings, path, season_settings=None):
+    cfg = season_settings or DEFAULT
     opposite, correlation, count = scatter_statistics(ratings)
     fig, ax = plt.subplots(figsize=(10, 9))
     valid = ratings.dropna(subset=['qualifying_rating', 'dry_rating'])
     ax.scatter(valid.qualifying_rating, valid.dry_rating, color='#0072b2', s=38, zorder=3)
     # Offsets keep labels readable around the dense central cluster.
-    offsets = {'BEA':(-30,10), 'NOR':(-12,-26), 'OCO':(9,-14), 'PIA':(9,8),
-               'BOR':(-29,8), 'ALB':(10,-2), 'HUL':(10,-13), 'SAI':(-25,-20),
-               'LAW':(-45,5), 'COL':(-8,20), 'ANT':(12,-7), 'HAM':(-38,7),
-               'STR':(12,8), 'ALO':(-40,0), 'RUS':(-5,-30), 'GAS':(7,-18),
-               'LEC':(10,-1), 'HAD':(-65,6)}
+    offsets = cfg.facts["charts"]["label_offsets"]
     for row in valid.itertuples():
         ax.annotate(row.driver, (row.qualifying_rating, row.dry_rating),
                     xytext=offsets.get(row.driver, (7,7)), textcoords='offset points',
@@ -121,7 +118,8 @@ def chart_scatter(ratings, path):
     save_chart(fig, path)
 
 
-def pair_series(dry, driver, teammate):
+def pair_series(dry, driver, teammate, season_settings=None):
+    cfg = season_settings or DEFAULT
     rows = []
     for row in dry.itertuples():
         if {row.driver, row.teammate} != {driver, teammate}:
@@ -133,14 +131,18 @@ def pair_series(dry, driver, teammate):
             gap = -100 * gap / (100 + gap)
         rows.append({'round_number': row.round_number, 'gap': gap,
                      'se': se, 'method': row.method_used})
-    return pd.DataFrame(rows).set_index('round_number').reindex(range(1,25))
+    return pd.DataFrame(rows, columns=['round_number','gap','se','method']).set_index('round_number').reindex(range(1,cfg.facts['round_count']+1))
 
 
-def chart_races(dry, path):
-    fig, axes = plt.subplots(3, 1, figsize=(13, 10), sharex=True)
-    for ax, (driver, teammate), color in zip(axes, [('TSU','VER'),('NOR','PIA'),('HAM','LEC')],
-                                            ['#0072b2','#d55e00','#009e73']):
-        series = pair_series(dry, driver, teammate)
+def chart_races(dry, path, season_settings=None):
+    cfg = season_settings or DEFAULT
+    pairs = cfg.facts["charts"]["pairs"]
+    if not pairs:
+        raise ValueError("No verified chart pairs in the manifest")
+    fig, axes = plt.subplots(len(pairs), 1, figsize=(13, 10), sharex=True)
+    axes = np.atleast_1d(axes)
+    for ax, (driver, teammate), color in zip(axes, pairs, (['#0072b2','#d55e00','#009e73'] * len(pairs))):
+        series = pair_series(dry, driver, teammate, cfg)
         # Reindexing the whole season leaves real breaks at missing races and absent pairings.
         ax.plot(series.index, series.gap, color=color, alpha=.6, linewidth=1)
         for method, marker in [('strict','o'), ('linear','s')]:
@@ -150,14 +152,14 @@ def chart_races(dry, path):
             ax.errorbar(errors.index, errors.gap, yerr=errors.se, fmt='none',
                         ecolor=color, capsize=3, linewidth=1)
         ax.axhline(0, color='black', linewidth=.7)
-        ax.axvline(8, color='#777777', linestyle=':', linewidth=1)
-        ax.text(8.15, .96, 'Monaco', transform=ax.get_xaxis_transform(), va='top', fontsize=9)
+        ax.axvline(cfg.facts['charts']['monaco_round'], color='#777777', linestyle=':', linewidth=1)
+        ax.text(cfg.facts['charts']['monaco_round'] + .15, .96, 'Monaco', transform=ax.get_xaxis_transform(), va='top', fontsize=9)
         ax.set_title(f'{driver} relative to {teammate}', loc='left', fontsize=11)
         ax.set_ylabel('Dry gap (%)')
         ax.grid(axis='y', alpha=.15)
-    axes[-1].set_xticks(range(1,25))
-    axes[-1].set_xlabel('2025 race round')
-    axes[-1].set_xlim(.5,24.5)
+    axes[-1].set_xticks(range(1,cfg.facts["round_count"]+1))
+    axes[-1].set_xlabel(f'{cfg.year} race round')
+    axes[-1].set_xlim(.5,cfg.facts["round_count"]+.5)
     fig.suptitle('Selected teammate pairs: per-race dry pace\n' + SIGN + ' (first-named driver)', fontsize=14)
     fig.legend(handles=[Line2D([], [], color='#555555', marker='o', linestyle='none', label='Strict'),
                         Line2D([], [], color='#555555', marker='s', linestyle='none', label='Linear regression')],
@@ -167,10 +169,11 @@ def chart_races(dry, path):
     save_chart(fig, path)
 
 
-def coverage_data(ratings, qualifying, dry, wet):
+def coverage_data(ratings, qualifying, dry, wet, season_settings=None):
+    cfg = season_settings or DEFAULT
     drivers = sorted(ratings.driver)
     entered = set(zip(qualifying.driver, qualifying.round_number))
-    matrix = np.full((len(drivers),24), -1, dtype=int)
+    matrix = np.full((len(drivers),cfg.facts["round_count"]), -1, dtype=int)
     signals = {}
     for row in qualifying.itertuples():
         signals[(row.driver,row.round_number)] = 1 if pd.notna(row.combined_gap) else 0
@@ -183,13 +186,14 @@ def coverage_data(ratings, qualifying, dry, wet):
                 if pd.notna(getattr(row,column)):
                     signals[key] |= bit
     for i, driver in enumerate(drivers):
-        for round_number in range(1,25):
+        for round_number in range(1,cfg.facts["round_count"]+1):
             matrix[i,round_number-1] = signals.get((driver,round_number), -1)
     return drivers, matrix
 
 
-def chart_coverage(ratings, qualifying, dry, wet, path):
-    drivers, matrix = coverage_data(ratings, qualifying, dry, wet)
+def chart_coverage(ratings, qualifying, dry, wet, path, season_settings=None):
+    cfg = season_settings or DEFAULT
+    drivers, matrix = coverage_data(ratings, qualifying, dry, wet, cfg)
     # Dry and wet races are separate, so "All three" is not a coverage category.
     codes = [0,1,2,3,5] + [code for code in (4,6) if (matrix == code).any()]
     display = np.zeros_like(matrix)
@@ -200,13 +204,13 @@ def chart_coverage(ratings, qualifying, dry, wet, path):
     ax.imshow(display, cmap=ListedColormap(colors), norm=BoundaryNorm(np.arange(len(colors)+1)-.5,len(colors)), aspect='auto')
     absent_y, absent_x = np.where(matrix == -1)
     ax.scatter(absent_x, absent_y, marker='x', s=24, color='#555555', linewidths=1)
-    ax.set_xticks(range(24), range(1,25))
+    ax.set_xticks(range(cfg.facts["round_count"]), range(1,cfg.facts["round_count"]+1))
     ax.set_yticks(range(len(drivers)), drivers)
-    ax.set_xticks(np.arange(-.5,24,1), minor=True)
+    ax.set_xticks(np.arange(-.5,cfg.facts["round_count"],1), minor=True)
     ax.set_yticks(np.arange(-.5,len(drivers),1), minor=True)
     ax.grid(which='minor', color='white', linewidth=.8)
     ax.tick_params(which='minor', bottom=False, left=False)
-    ax.set_xlabel('2025 race round')
+    ax.set_xlabel(f'{cfg.year} race round')
     ax.set_title('Usable signals by driver and race\nBlank gaps are missing evidence, not zero pace gaps', pad=14)
     handles = [Patch(facecolor=CATEGORIES[c][1], edgecolor='#999999', label=f'{CATEGORIES[c][0]} ({int((matrix == c).sum())})') for c in codes]
     handles.append(Line2D([],[], color='#555555', marker='x', linestyle='none', label=f'Not entered ({int((matrix == -1).sum())})'))
@@ -216,21 +220,26 @@ def chart_coverage(ratings, qualifying, dry, wet, path):
     return {CATEGORIES[c][0]: int((matrix == c).sum()) for c in CATEGORIES} | {'Not entered':int((matrix == -1).sum())}
 
 
-def make_charts(data_dir=ROOT/'data', output_dir=ROOT/'charts'):
-    data_dir, output_dir = Path(data_dir), Path(output_dir)
+def make_charts(data_dir=None, output_dir=None, season_settings=None):
+    cfg = season_settings or DEFAULT
+    cfg.require_verified()
+    data_dir = cfg.checked(data_dir) if data_dir else cfg.path("data")
+    output_dir = cfg.checked(output_dir) if output_dir else cfg.path("charts")
+    names = cfg.facts["chart_files"]
     # The wet file was explicitly approved as a fourth input for round-level coverage.
-    ratings = pd.read_csv(data_dir/'driver_rating_2025.csv')
-    qualifying = pd.read_csv(data_dir/'2025_qualifying_gaps_combined.csv')
-    dry = pd.read_csv(data_dir/'race_pace_dry_final.csv')
-    wet = pd.read_csv(data_dir/'race_pace_wet_final.csv')
-    for name in FILENAMES:
+    ratings = pd.read_csv(cfg.output("ratings", data_dir))
+    qualifying = pd.read_csv(cfg.output("qualifying", data_dir))
+    dry = pd.read_csv(cfg.output("dry", data_dir))
+    wet = pd.read_csv(cfg.output("wet", data_dir))
+    for name in names:
+        cfg.checked(output_dir/name, published=True)
         if (output_dir/name).exists():
             raise FileExistsError(f'{output_dir/name} exists; choose a new --output-dir.')
     output_dir.mkdir(parents=True, exist_ok=True)
-    chart_groups(ratings, output_dir/FILENAMES[0])
-    chart_scatter(ratings, output_dir/FILENAMES[1])
-    chart_races(dry, output_dir/FILENAMES[2])
-    counts = chart_coverage(ratings, qualifying, dry, wet, output_dir/FILENAMES[3])
+    chart_groups(ratings, output_dir/names[0], cfg)
+    chart_scatter(ratings, output_dir/names[1], cfg)
+    chart_races(dry, output_dir/names[2], cfg)
+    counts = chart_coverage(ratings, qualifying, dry, wet, output_dir/names[3], cfg)
     opposite, correlation, count = scatter_statistics(ratings)
     print(f'Saved four charts at 150 dpi in {output_dir}')
     print(f'Opposite signs: {opposite}/{count}; Pearson correlation: {correlation:.6f}')
@@ -240,6 +249,8 @@ def make_charts(data_dir=ROOT/'data', output_dir=ROOT/'charts'):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output-dir', type=Path, default=ROOT/'charts')
+    parser.add_argument('--output-dir', type=Path)
+    parser.add_argument('--offline',action='store_true',help='CSV-only charts; never uses the network')
+    add_season_arguments(parser)
     args = parser.parse_args()
-    make_charts(output_dir=args.output_dir)
+    make_charts(output_dir=args.output_dir, season_settings=from_args(args))

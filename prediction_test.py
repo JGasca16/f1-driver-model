@@ -1,6 +1,7 @@
 """Offline, expanding-window teammate prediction test with frozen settings."""
 import argparse
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
+from glob import glob
 import hashlib
 import io
 import json
@@ -16,6 +17,8 @@ from scipy.optimize import minimize
 
 import driver_rating as rating
 import qualifying_gaps_combined as qualifying
+
+from season_config import DEFAULT, load_season, add_season_arguments
 
 ROOT = Path(__file__).resolve().parent
 IDENTITY = ['round_number', 'race', 'team', 'driver', 'teammate']
@@ -34,12 +37,37 @@ def sha256(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+class PredictionConfig(dict):
+    """Keep season paths separate from the frozen prediction choices."""
+
+
+def season_for(config, root=ROOT):
+    cfg = getattr(config, "season_settings", None)
+    if cfg is None:
+        cfg = load_season(config["season"], config.get("manifest"))
+    return replace(cfg, root=Path(root).resolve())
+
+
 def path_for(config, section, name, root=ROOT):
-    return Path(root) / config[section][name].format(season=config['season'])
+    cfg = season_for(config, root)
+    if section == "inputs":
+        return cfg.path("cache_sqlite") if name == "cache" else cfg.input(name)
+    return cfg.path("runs") if name == "runs" else cfg.input(name)
 
 
-def load_config(path=ROOT/'prediction_test_config.json'):
-    config = json.loads(Path(path).read_text())
+def result_paths(config, root=ROOT):
+    cfg = season_for(config, root)
+    return [cfg.checked(p, published=True) for p in sorted(glob(str(cfg.path("results_glob"))))]
+
+
+def load_config(path=ROOT/'prediction_test_config.json', season=None, manifest=None, root=ROOT):
+    config = PredictionConfig(json.loads(Path(path).read_text()))
+    selected = config["season"] if season is None else season
+    if config["season"] != selected:
+        raise ValueError("Prediction config and requested season disagree")
+    config.season_settings = load_season(selected, manifest or config.get("manifest"), root=root)
+    if config["rounds"] != config.season_settings.facts["round_count"]:
+        raise ValueError("Frozen prediction schedule and manifest calendar disagree")
     if config['logistic']['intercept'] or config['network'] or config['overwrite']:
         raise ValueError('This test requires no intercept, no network and no overwrite.')
     if config['schedule']['initial_training_first'] != config['history']['calendar_rounds'] + 1:
@@ -67,11 +95,10 @@ def load_inputs(config, root=ROOT):
     if set(q.round_number) != set(range(1, config['rounds']+1)):
         raise ValueError('Incomplete season roster.')
     for _, group in q.groupby(['round_number','team']):
-        if len(group) != 2 or set(group.driver) != set(group.teammate):
+        if len(group) != season_for(config, root).facts['team_size'] or set(group.driver) != set(group.teammate):
             raise ValueError('Incomplete teammate pair.')
     results = []
-    pattern = config['inputs']['results_glob'].format(season=config['season'])
-    for path in sorted(Path(root).glob(pattern)):
+    for path in result_paths(config, root):
         number = int(path.name.split('_')[1])
         frame = pd.read_csv(path, usecols=RESULT_COLUMNS)
         frame['round_number'] = number
@@ -485,7 +512,8 @@ def new_run_folder(config,root=ROOT):
     base.mkdir(parents=True,exist_ok=True)
     number=1
     while True:
-        path=base/f"{config['outputs']['run_prefix']}{number:03}"
+        cfg=season_for(config, root)
+        path=cfg.checked(base/f"{cfg.facts['run_prefixes']['prediction']}{number:03}")
         try:
             path.mkdir()
             return path
@@ -493,9 +521,10 @@ def new_run_folder(config,root=ROOT):
             number+=1
 
 
-def run(config_path=ROOT/'prediction_test_config.json',root=ROOT):
+def run(config_path=ROOT/'prediction_test_config.json',root=ROOT,season=None,manifest=None):
     started=time.perf_counter()
-    config=load_config(config_path)
+    config=load_config(config_path, season, manifest, root)
+    cfg=season_for(config, root)
     tables,results=load_inputs(config,root)
     validation=validate_full_slice(tables,config,root)
     print('Full-slice validation passed; maximum difference from rounded saved score:',validation.absolute_difference.max(),flush=True)
@@ -524,13 +553,14 @@ def run(config_path=ROOT/'prediction_test_config.json',root=ROOT):
              'eligibility':eligibility,'excluded_pairs':eligibility[~eligibility.eligible],
              'missing_qualifying_pairs':pairs[~pairs.valid_qualifying], 'prior_ratings':priors,'features':features,
              'full_slice_validation':validation,'race_finish_status':status}
-    for name,frame in outputs.items(): write_csv(frame,folder/f'{name}.csv')
+    for name,frame in outputs.items():
+        write_csv(frame,cfg.checked(folder/cfg.run_name(f'{name}.csv'), published=True))
     config_bytes=Path(config_path).read_bytes()
-    with (folder/'prediction_test_config.json').open('xb') as handle: handle.write(config_bytes)
+    with (folder/cfg.run_name('prediction_test_config.json')).open('xb') as handle: handle.write(config_bytes)
     config_hash=hashlib.sha256(config_bytes).hexdigest()
-    (folder/'config.sha256').write_text(config_hash+'\n')
+    (folder/cfg.run_name('config.sha256')).write_text(config_hash+'\n')
     sources=[path_for(config,'inputs',name,root) for name in INPUT_COLUMNS]+[path_for(config,'inputs','ratings',root),path_for(config,'inputs','cache',root)]
-    sources += sorted(Path(root).glob(config['inputs']['results_glob'].format(season=config['season'])))
+    sources += result_paths(config, root)
     summary={'config_sha256':config_hash,'runtime_seconds':time.perf_counter()-started,'counts':counts.to_dict('records'),
              'status_counts':status.status.value_counts().to_dict(),'position_matches':int(status.position_matches_csv.sum()),
              'full_slice_max_difference':validation.absolute_difference.max(),'source_sha256':{str(p.relative_to(root)):sha256(p) for p in sources},
@@ -541,7 +571,7 @@ def run(config_path=ROOT/'prediction_test_config.json',root=ROOT):
     for target in config['target_rules']:
         sample=predictions[(predictions.target==target)&(predictions.period=='main')&(predictions.method=='M3')]
         summary['feature_correlation'][target]=sample.rating_difference.corr(sample.qualifying_advantage)
-    with (folder/'summary.json').open('x') as handle:json.dump(summary,handle,indent=2)
+    with (folder/cfg.run_name('summary.json')).open('x') as handle:json.dump(summary,handle,indent=2)
     for (target,period), group in metrics.groupby(['target','period'],sort=False):
         print(f'\n{target} / {period}\n'+group[['method','pair_count','weekend_count','brier','accuracy','log_loss','ties']].to_string(index=False))
     print('\nPRIMARY DIFFERENCES (candidate minus baseline)\n'+comparisons[comparisons.comparison=='primary'].to_string(index=False))
@@ -551,6 +581,12 @@ def run(config_path=ROOT/'prediction_test_config.json',root=ROOT):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--config',type=Path,default=ROOT/'prediction_test_config.json')
+    parser.add_argument('--config',type=Path)
+    add_season_arguments(parser)
+    parser.add_argument('--offline',action='store_true',help='Always offline; SQLite is read-only')
     args=parser.parse_args()
-    run(args.config)
+    # Validate the season before any prediction input or fallback can be read.
+    load_season(args.season,args.manifest)
+    config_path = args.config or ROOT / ("prediction_test_config.json" if args.season == DEFAULT.year
+                                        else f"prediction_test_config_{args.season}.json")
+    run(config_path,season=args.season,manifest=args.manifest)

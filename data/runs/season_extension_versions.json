@@ -1,0 +1,10 @@
+{
+  "python": "3.14.7 (v3.14.7:823f0323ee6, Aug  5 2026, 07:07:01) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "executable": "/Users/joseenriquegasca/Desktop/F1 ML Project 1/f1-driver-model/.venv/bin/python",
+  "pandas": "2.3.3",
+  "numpy": "2.5.4",
+  "scikit-learn": "NOT INSTALLED",
+  "matplotlib": "3.11.2",
+  "fastf1": "3.8.3",
+  "scipy": "1.18.1"
+}

@@ -1,0 +1,62 @@
+{
+  "season": 2024,
+  "method_id": "2025_teammate_rating_1_log_round_fix",
+  "round_count": "UNVERIFIED",
+  "expected_entries": "UNVERIFIED",
+  "team_size": "UNVERIFIED",
+  "expected_appearances": "UNVERIFIED",
+  "expected_unique_drivers": "UNVERIFIED",
+  "registry_verified": "UNVERIFIED",
+  "roster_verified": "UNVERIFIED",
+  "qualifying_disqualifications": [],
+  "wet_races": "UNVERIFIED",
+  "dry_rounds": "UNVERIFIED",
+  "dry_holdouts": [],
+  "roster_periods": [],
+  "qualifying_summary": "UNVERIFIED",
+  "legacy_parity_required": "UNVERIFIED",
+  "miami_audit": "UNVERIFIED",
+  "charts": "UNVERIFIED",
+  "paths": {
+    "data": "data/2024",
+    "charts": "charts/2024",
+    "cache": "cache/season_2024",
+    "runs": "data/2024/runs",
+    "results_glob": "data/2024/2024_[0-9][0-9]_*.csv",
+    "result_pattern": "2024_{round:02d}_{race}.csv",
+    "cache_sqlite": "cache/season_2024/fastf1_http_cache.sqlite"
+  },
+  "files": {
+    "qualifying_rounds": "2024_qualifying_gaps_by_round.csv",
+    "qualifying_evidence": "2024_qualifying_round_session_evidence.csv",
+    "qualifying": "2024_qualifying_gaps_combined.csv",
+    "legacy_qualifying": "2024_qualifying_teammate_gaps.csv",
+    "dry": "2024_race_pace_dry_final.csv",
+    "dry_summary": "2024_race_pace_dry_run_summary.json",
+    "wet": "2024_race_pace_wet_final.csv",
+    "ratings": "driver_rating_2024.csv",
+    "sensitivity": "2024_driver_rating_sensitivity.csv",
+    "signal_diagnostics": "2024_driver_rating_signal_diagnostics.csv",
+    "teammate_periods": "2024_driver_rating_teammate_periods.csv",
+    "input_audit": "2024_driver_rating_input_audit.csv",
+    "rating_summary": "2024_driver_rating_run_summary.json",
+    "status": "2024_race_finish_status.csv"
+  },
+  "chart_files": [
+    "2024_rating_by_group.png",
+    "2024_qualifying_vs_dry.png",
+    "2024_gap_by_race_selected_pairs.png",
+    "2024_data_coverage.png"
+  ],
+  "run_prefixes": {
+    "dry": "2024_dry_",
+    "wet": "2024_wet_",
+    "prediction": "2024_prediction_"
+  },
+  "allowlist": [
+    "data/2024",
+    "charts/2024",
+    "cache/season_2024"
+  ],
+  "qualifying_advancement": "UNVERIFIED"
+}

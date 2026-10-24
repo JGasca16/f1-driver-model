@@ -7,22 +7,22 @@ from pathlib import Path
 import fastf1
 import pandas as pd
 
-YEAR = 2025
+from season_config import DEFAULT, add_season_arguments, from_args
+
+YEAR = DEFAULT.year
 ROUNDS = ["Q1", "Q2", "Q3"]
 # Whole-session exclusions copied from the verified 2025 registry.
 # Sources, assumptions and review questions are in QUALIFYING_BY_ROUND.md.
-DISQUALIFIED_2025 = {
-    (17, "31"): "rear-wing deflection infringement",
-    (18, "23"): "rear-wing/DRS technical infringement",
-    (18, "55"): "rear-wing/DRS technical infringement",
-}
+DISQUALIFIED_2025 = {(x["round"], x["driver_number"]): x["reason"]
+                     for x in DEFAULT.facts["qualifying_disqualifications"]}
 KEYS = ["round_number", "race", "team", "driver", "teammate"]
 
-def prepare_times(results, parts, round_number=None, disqualified=None):
+def prepare_times(results, parts, round_number=None, disqualified=None, season_settings=None):
     """Prefer result times; recover eligible missing times from valid laps."""
+    cfg = season_settings or DEFAULT
     results = pd.DataFrame(results).set_index("DriverNumber", drop=False)
-    if len(results) != 20 or results.index.has_duplicates:
-        raise ValueError("Expected 20 distinct qualifying entries for a 2025 race")
+    if len(results) != cfg.facts["expected_entries"] or results.index.has_duplicates:
+        raise ValueError(f"Expected {cfg.facts['expected_entries']} distinct qualifying entries for {cfg.year}")
     if results["Abbreviation"].eq("").any() or results["TeamName"].eq("").any():
         raise ValueError("Driver or team information is missing")
     if results[["Abbreviation", "TeamName"]].isna().any().any():
@@ -80,15 +80,12 @@ def prepare_times(results, parts, round_number=None, disqualified=None):
                 ranking.loc[driver, "first_set"] = matching.min()
         ranking = ranking.loc[reached.ge(number)].dropna(subset=["seconds"])
         ranking = ranking.sort_values(["seconds", "first_set"], kind="stable")
-        cutoff = 15 if number == 1 else 10
+        cutoff = cfg.facts["qualifying_advancement"][name]
         advancing = ranking.head(cutoff).index
         reached.loc[advancing] = reached.loc[advancing].clip(lower=number + 1)
 
     if disqualified is None:
-        disqualified = {
-            driver: reason for (event_round, driver), reason in DISQUALIFIED_2025.items()
-            if event_round == round_number
-        }
+        disqualified = cfg.disqualifications(round_number)
     times = official_times.copy()
     sources = pd.DataFrame("missing", index=times.index, columns=ROUNDS)
     sources = sources.mask(times.notna(), "results")
@@ -113,13 +110,13 @@ def time_flags(driver, times, lap_times, reached, disqualified):
             flags.append(f"{reason}_{name}")
     return flags
 
-def compare_teammates(round_number, race_name, results, parts, disqualified=None):
+def compare_teammates(round_number, race_name, results, parts, disqualified=None, season_settings=None):
     results, times, lap_times, reached, sources, disqualified = prepare_times(
-        results, parts, round_number, disqualified,
+        results, parts, round_number, disqualified, season_settings,
     )
     rows = []
     for team, drivers in results.groupby("TeamName", sort=True):
-        if len(drivers) != 2:
+        if len(drivers) != (season_settings or DEFAULT).facts["team_size"]:
             raise ValueError(f"Expected two teammates for {team}; found {len(drivers)}")
         first, second = drivers.index
         common_round = next((
@@ -184,11 +181,11 @@ def driver_round_reason(driver, name, times, reached, exclusions):
     return "no_valid_lap"
 
 
-def compare_by_round(round_number, race, results, parts, disqualified=None):
+def compare_by_round(round_number, race, results, parts, disqualified=None, season_settings=None):
     # Keep every legacy column, calculated with exactly the original method.
-    rows = compare_teammates(round_number, race, results, parts, disqualified)
+    rows = compare_teammates(round_number, race, results, parts, disqualified, season_settings)
     results, times, raw, reached, sources, exclusions = prepare_times(
-        results, parts, round_number, disqualified)
+        results, parts, round_number, disqualified, season_settings)
     numbers = results.set_index("Abbreviation").DriverNumber
     for row in rows:
         driver, teammate = numbers[row["driver"]], numbers[row["teammate"]]
@@ -256,7 +253,8 @@ def verify_parity(output, baseline):
     pd.testing.assert_series_equal(new.selected_round, old.qualifying_round, check_names=False, check_exact=True)
 
 
-def print_summary(output):
+def print_summary(output, season_settings=None):
+    cfg = season_settings or DEFAULT
     pairs = output.loc[output.driver < output.teammate]
     usable = pairs[[f"{name.lower()}_gap" for name in ROUNDS]].notna().sum(axis=1)
     print(f"\n{len(output)} driver rows; {len(pairs)} unique teammate pairs")
@@ -266,48 +264,53 @@ def print_summary(output):
               f"{pairs.loc[pairs[f'{prefix}_gap'].isna(), f'{prefix}_reason_code'].value_counts().to_dict()}")
     print(f"All three rounds: {usable.eq(3).sum()}; only one: {usable.eq(1).sum()}; "
           f"two: {usable.eq(2).sum()}; none: {usable.eq(0).sum()}")
-    print("Selected gap and all legacy columns match the existing CSV exactly.")
-    miami = output.loc[output.round_number.eq(6)]
+    if cfg.facts["legacy_parity_required"]:
+        print("Selected gap and all legacy columns match the existing CSV exactly.")
+    summary = cfg.facts["qualifying_summary"]
+    miami = output.loc[output.round_number.eq(summary["round"])]
     for name in ROUNDS:
-        print(f"Miami {name}: {miami[f'{name.lower()}_driver_time_source'].value_counts().to_dict()}")
+        print(f"{summary['label']} {name}: {miami[f'{name.lower()}_driver_time_source'].value_counts().to_dict()}")
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--offline", action="store_true")
     parser.add_argument("--output-dir", type=Path, help="Use a new folder for a repeat run")
+    add_season_arguments(parser)
     args = parser.parse_args()
+    cfg = from_args(args)
     root = Path(__file__).resolve().parent
-    destination = args.output_dir or root / "data"
-    targets = [destination / n for n in ["2025_qualifying_gaps_by_round.csv", "2025_qualifying_round_session_evidence.csv"]]
+    destination = cfg.checked(args.output_dir) if args.output_dir else cfg.path("data")
+    targets = [cfg.output(k, destination) for k in ["qualifying_rounds", "qualifying_evidence"]]
     if any(p.exists() for p in targets):
         parser.error("Outputs already exist; choose a new --output-dir. Previous files are preserved.")
     started = time.perf_counter()
-    fastf1.Cache.enable_cache(str(root / "cache"))
+    fastf1.Cache.enable_cache(str(cfg.path("cache")))
     fastf1.Cache.offline_mode(args.offline)
     fastf1.set_log_level("ERROR")
-    schedule = fastf1.get_event_schedule(YEAR, include_testing=False)
-    if len(schedule) != 24:
-        raise ValueError("Expected 24 main qualifying sessions")
+    schedule = fastf1.get_event_schedule(cfg.year, include_testing=False)
+    if len(schedule) != cfg.facts["round_count"]:
+        raise ValueError("Schedule length differs from the verified manifest")
     rows, evidence = [], []
     for _, event in schedule.iterrows():
         print(f"Loading main qualifying: {event.EventName}", flush=True)
         session = load_qualifying(event)
         parts = session.laps.split_qualifying_sessions()
-        rows.extend(compare_by_round(int(event.RoundNumber), event.EventName, session.results, parts))
+        rows.extend(compare_by_round(int(event.RoundNumber), event.EventName, session.results, parts, season_settings=cfg))
         evidence.extend(session_evidence(event, session))
     output = pd.DataFrame(rows).sort_values(["round_number", "team", "driver"])
     first = KEYS + [c for name in ROUNDS for c in [f"{name.lower()}_gap", f"{name.lower()}_reason_code"]] + ["selected_gap", "selected_round"]
     output = output[first + [c for c in output.columns if c not in first]]
-    baseline = pd.read_csv(root / "data/2025_qualifying_teammate_gaps.csv", float_precision="round_trip")
-    verify_parity(output, baseline)
+    if cfg.facts["legacy_parity_required"]:
+        baseline = pd.read_csv(cfg.input("legacy_qualifying"), float_precision="round_trip")
+        verify_parity(output, baseline)
     destination.mkdir(parents=True, exist_ok=True)
     with targets[0].open("x") as stream:
         output.to_csv(stream, index=False, float_format="%.6f")
     audit = pd.DataFrame(evidence, columns=["round_number", "race", "category", "time", "driver_number", "message"])
     with targets[1].open("x") as stream:
         audit.to_csv(stream, index=False)
-    print_summary(output)
+    print_summary(output, cfg)
     print("Recorded red flags by race:", audit.loc[audit.category.eq("red_flag"), "race"].value_counts().to_dict())
     print(f"Saved {targets[0]}\nSession evidence: {targets[1]}\nRuntime: {time.perf_counter()-started:.2f}s")
 

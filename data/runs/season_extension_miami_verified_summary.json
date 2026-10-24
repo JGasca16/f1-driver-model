@@ -1,0 +1,22 @@
+{
+  "compound_conflicts": 54,
+  "affected_drivers": [
+    "ALB",
+    "ALO",
+    "ANT",
+    "HAM",
+    "LAW",
+    "LEC",
+    "NOR",
+    "PIA",
+    "RUS",
+    "SAI",
+    "TSU",
+    "VER"
+  ],
+  "unknown_compounds": 354,
+  "tyre_age_conflicts": 403,
+  "unresolved": [],
+  "audit_status": "conflict_found",
+  "exclude_for_compound_conflict": true
+}

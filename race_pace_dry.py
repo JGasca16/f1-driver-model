@@ -9,7 +9,9 @@ import fastf1
 import numpy as np
 import pandas as pd
 
-YEAR = 2025
+from season_config import DEFAULT, add_season_arguments, from_args
+
+YEAR = DEFAULT.year
 MIN_MATCHED_LAPS = 10
 MIN_CLEAN = 10
 MIN_SHARED_COMPOUND = 8
@@ -34,7 +36,7 @@ class RaceData:
     end: object = pd.NaT
     issue: str = ""
 
-def build_roster(race_results, qualifying_results=None):
+def build_roster(race_results, qualifying_results=None, season_settings=None):
     """Race entries take precedence; qualifying fills withdrawn entries only."""
     columns = ["DriverNumber", "Abbreviation", "TeamName", "Status"]
     roster = pd.DataFrame(race_results).reindex(columns=columns).copy()
@@ -48,7 +50,7 @@ def build_roster(race_results, qualifying_results=None):
         raise ValueError("Incomplete driver/team roster")
     if roster["DriverNumber"].duplicated().any() or roster["Abbreviation"].duplicated().any():
         raise ValueError("Duplicate race entries")
-    if not roster.groupby("TeamName").size().eq(2).all():
+    if not roster.groupby("TeamName").size().eq((season_settings or DEFAULT).facts["team_size"]).all():
         raise ValueError("A team does not have two identifiable weekend entries")
     return roster.sort_values(["TeamName", "Abbreviation"]).reset_index(drop=True)
 
@@ -115,18 +117,19 @@ def filter_clean_laps(laps):
     )
     return laps.loc[keep].copy()
 
-def load_race(event):
+def load_race(event, season_settings=None):
+    cfg = season_settings or DEFAULT
     session = event.get_session("R")
     session.load(laps=True, telemetry=False, weather=True, messages=True)
     results = pd.DataFrame(session.results)
     qualifying = None
-    if len(results) != 20 or not results.groupby("TeamName").size().eq(2).all():
+    if len(results) != cfg.facts["expected_entries"] or not results.groupby("TeamName").size().eq(cfg.facts["team_size"]).all():
         q = event.get_session("Q")
         q.load(laps=False, telemetry=False, weather=False, messages=False)
         qualifying = q.results
-    roster = build_roster(results, qualifying)
-    if len(roster) != 20:
-        raise ValueError("Could not establish the 20-driver weekend roster")
+    roster = build_roster(results, qualifying, cfg)
+    if len(roster) != cfg.facts["expected_entries"]:
+        raise ValueError("Could not establish the manifest weekend roster; schema audit required")
     race = RaceData(int(event["RoundNumber"]), event["EventName"], roster, pd.DataFrame(), pd.DataFrame())
     try:
         race.laps = pd.DataFrame(session.laps).reset_index(drop=True)
@@ -376,19 +379,20 @@ def analyse_race(race):
     return rows, bootstrap_audit
 
 
-def dry_races(offline):
+def dry_races(offline, season_settings=None):
+    cfg = season_settings or DEFAULT
     root = Path(__file__).resolve().parent
-    fastf1.Cache.enable_cache(str(root / "cache"))
+    fastf1.Cache.enable_cache(str(cfg.path("cache")))
     fastf1.Cache.offline_mode(offline)
     fastf1.set_log_level("ERROR")
-    schedule = fastf1.get_event_schedule(YEAR, include_testing=False)
-    if len(schedule) != 24:
-        raise ValueError("Expected 24 races on the 2025 calendar")
+    schedule = fastf1.get_event_schedule(cfg.year, include_testing=False)
+    if len(schedule) != cfg.facts["round_count"]:
+        raise ValueError("Schedule length differs from the verified manifest")
     for _, event in schedule.iterrows():
-        if event.EventName == "Miami Grand Prix":
-            print("Excluded Miami Grand Prix (explicit exclusion)", flush=True)
+        if cfg.holdout(event.EventName):
+            print(f"Excluded {event.EventName} (explicit exclusion)", flush=True)
             continue
-        race = load_race(event)
+        race = load_race(event, cfg)
         if race.issue:
             raise ValueError(f"{race.race}: {race.issue}")
         status, reason = dry_race_status(race.laps, race.weather, race.start, race.end)
@@ -400,16 +404,18 @@ def dry_races(offline):
             print(f"Excluded {race.race}: {reason}", flush=True)
 
 
-def output_paths(destination):
+def output_paths(destination, season_settings=None):
     """Keep previous results and give repeat runs their own numbered folder."""
-    names = ["race_pace_dry_final.csv", "race_pace_dry_run_summary.json"]
+    cfg = season_settings or DEFAULT
+    destination = cfg.checked(destination)
+    names = [cfg.filename(k) for k in ("dry", "dry_summary")]
     destination.mkdir(parents=True, exist_ok=True)
     if any((destination / name).exists() for name in names):
-        runs = destination / "runs"
+        runs = cfg.checked(destination / "runs")
         runs.mkdir(exist_ok=True)
         number = 1
         while True:
-            candidate = runs / f"dry_{number:03d}"
+            candidate = cfg.checked(runs / f"{cfg.facts['run_prefixes']['dry']}{number:03d}")
             try:
                 # Creating the folder reserves it, even for simultaneous runs.
                 candidate.mkdir()
@@ -418,19 +424,21 @@ def output_paths(destination):
                 number += 1
         print(f"Previous outputs kept. Saving this run in {candidate}", flush=True)
         destination = candidate
-    return [destination / name for name in names]
+    return [cfg.checked(destination / name, published=True) for name in names]
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--offline", action="store_true")
     parser.add_argument("--output-dir", type=Path, help="Output folder; existing results are preserved in repeat runs")
+    add_season_arguments(parser)
     args = parser.parse_args()
-    destination = args.output_dir or Path(__file__).resolve().parent / "data"
-    paths = output_paths(destination)
+    cfg = from_args(args)
+    destination = cfg.checked(args.output_dir) if args.output_dir else cfg.path("data")
+    paths = output_paths(destination, cfg)
     started = time.perf_counter()
     rows, audits = [], []
-    for race in dry_races(args.offline):
+    for race in dry_races(args.offline, cfg):
         entries, audit = analyse_race(race)
         rows.extend(entries)
         audits.extend(audit)

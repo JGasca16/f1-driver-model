@@ -12,13 +12,15 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from season_config import DEFAULT, add_season_arguments, from_args
+
 ROOT = Path(__file__).resolve().parent
 ROUND_WEIGHTS = {"q1": 0.20, "q2": 0.30, "q3": 0.50}
 # Same source-serialization tolerance used by the original rating calculation.
 ROUND_TRIP_TOLERANCE = 0.0000011
 IDENTITY = ["round_number", "race", "team", "driver", "teammate"]
 COLUMNS = IDENTITY + ["combined_gap", "rounds_used", "q1_gap", "q2_gap", "q3_gap", "reason_code"]
-FILENAME = "2025_qualifying_gaps_combined.csv"
+FILENAME = DEFAULT.filename("qualifying")
 
 
 class InvalidGap(ValueError):
@@ -112,13 +114,17 @@ def write_csv_new(frame, path, three_decimals=False):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--input", type=Path, default=ROOT / "data/2025_qualifying_gaps_by_round.csv")
-    parser.add_argument("--output-dir", type=Path, default=ROOT / "data")
+    parser.add_argument("--input", type=Path)
+    parser.add_argument("--output-dir", type=Path)
+    add_season_arguments(parser)
+    parser.add_argument("--offline", action="store_true", help="CSV-only stage; never uses the network")
     args = parser.parse_args()
-    output = args.output_dir / FILENAME
+    cfg = from_args(args)
+    output = cfg.output("qualifying", args.output_dir)
+    source = cfg.checked(args.input) if args.input else cfg.input("qualifying_rounds")
     if output.exists():
         raise FileExistsError(f"Output exists: {output}. Use a new --output-dir.")
-    combined = combine_table(read_csv(args.input))
+    combined = combine_table(read_csv(source))
     write_csv_new(combined, output)
     pairs = combined.loc[combined.driver < combined.teammate]
     print(f"Qualifying: {pairs.combined_gap.notna().sum()} of {len(pairs)} pairs have a combined gap.")

@@ -8,8 +8,10 @@ import fastf1
 import numpy as np
 import pandas as pd
 
-YEAR = 2025
-RACES = {1: "Australian Grand Prix", 12: "British Grand Prix", 13: "Belgian Grand Prix"}
+from season_config import DEFAULT, add_season_arguments, from_args
+
+YEAR = DEFAULT.year
+RACES = {int(n): name for n, name in DEFAULT.facts["wet_races"].items()}
 COMPOUNDS = {"SOFT", "MEDIUM", "HARD", "INTERMEDIATE", "WET"}
 TRAFFIC_SECONDS = 1.5
 MIN_FIELD_DRIVERS = 8
@@ -31,7 +33,7 @@ class RaceData:
     laps: pd.DataFrame
 
 
-def build_roster(race_results, qualifying_results=None):
+def build_roster(race_results, qualifying_results=None, season_settings=None):
     """Race entries take precedence; qualifying fills withdrawn entries only."""
     columns = ["DriverNumber", "Abbreviation", "TeamName", "Status"]
     roster = pd.DataFrame(race_results).reindex(columns=columns).copy()
@@ -45,7 +47,7 @@ def build_roster(race_results, qualifying_results=None):
         raise ValueError("Incomplete driver/team roster")
     if roster["DriverNumber"].duplicated().any() or roster["Abbreviation"].duplicated().any():
         raise ValueError("Duplicate race entries")
-    if not roster.groupby("TeamName").size().eq(2).all():
+    if not roster.groupby("TeamName").size().eq((season_settings or DEFAULT).facts["team_size"]).all():
         raise ValueError("A team does not have two identifiable weekend entries")
     return roster.sort_values(["TeamName", "Abbreviation"]).reset_index(drop=True)
 
@@ -242,18 +244,19 @@ def analyse_race(race):
     return rows, audit
 
 
-def load_race(event):
+def load_race(event, season_settings=None):
+    cfg = season_settings or DEFAULT
     session = event.get_session("R")
     session.load(laps=True, telemetry=False, weather=False, messages=True)
     results = pd.DataFrame(session.results)
     qualifying = None
-    if len(results) != 20 or not results.groupby("TeamName").size().eq(2).all():
+    if len(results) != cfg.facts["expected_entries"] or not results.groupby("TeamName").size().eq(cfg.facts["team_size"]).all():
         q = event.get_session("Q")
         q.load(laps=False, telemetry=False, weather=False, messages=False)
         qualifying = q.results
-    roster = build_roster(results, qualifying)
-    if len(roster) != 20:
-        raise ValueError("Could not establish the 20-driver weekend roster")
+    roster = build_roster(results, qualifying, cfg)
+    if len(roster) != cfg.facts["expected_entries"]:
+        raise ValueError("Could not establish the manifest weekend roster; schema audit required")
     laps = pd.DataFrame(session.laps).reset_index(drop=True)
     if laps.empty or session.track_status.empty or session.race_control_messages.empty:
         raise ValueError("Race laps, track status or race-control messages unavailable")
@@ -271,23 +274,25 @@ def wet_tyre_status(laps):
     return "no_wet_tyres_recorded"
 
 
-def save_output(output, destination):
+def save_output(output, destination, season_settings=None):
     """Always archive this run. Create the canonical file only if absent."""
-    runs = destination / "runs"
+    cfg = season_settings or DEFAULT
+    destination = cfg.checked(destination)
+    runs = cfg.checked(destination / "runs")
     runs.mkdir(parents=True, exist_ok=True)
     number = 1
     while True:
-        folder = runs / f"wet_{number:03d}"
+        folder = cfg.checked(runs / f"{cfg.facts['run_prefixes']['wet']}{number:03d}")
         try:
             folder.mkdir()
             break
         except FileExistsError:
             number += 1
-    target = folder / "race_pace_wet_final.csv"
+    target = cfg.output("wet", folder)
     content = output.to_csv(index=False)
     with target.open("x") as stream:
         stream.write(content)
-    canonical = destination / "race_pace_wet_final.csv"
+    canonical = cfg.output("wet", destination)
     try:
         with canonical.open("x") as stream:
             stream.write(content)
@@ -299,7 +304,7 @@ def save_output(output, destination):
     return target, canonical
 
 
-def print_summary(output, audits, held_out, runtime):
+def print_summary(output, audits, held_out, runtime, season_settings=None):
     print(f"\nWet/mixed races analysed: {output.round_number.nunique()}; teammate pairs: {len(output)}")
     for p in THRESHOLDS:
         print(f"{p}% threshold: {output[f'wet_gap_{p}pct'].notna().sum()}/{len(output)} pairs have a gap")
@@ -317,7 +322,8 @@ def print_summary(output, audits, held_out, runtime):
             print(f"    Pair-laps: {counts['same_compound_pair_laps']} same-compound -> "
                   f"traffic -{counts['traffic_removed_pair_laps']} -> weather jumps -{counts['weather_jump_removed_pair_laps']} "
                   f"-> weather unknown -{counts['weather_unknown_removed_pair_laps']} -> {counts['retained_pair_laps']} kept")
-    print("Miami excluded entirely; no compound recovery attempted.")
+    for item in (season_settings or DEFAULT).facts["dry_holdouts"]:
+        print(f"{item['race'].removesuffix(' Grand Prix')} excluded entirely; no compound recovery attempted.")
     print("Other races held out pending classification approval:", held_out or "none")
     print(f"Runtime: {runtime:.2f} seconds")
 
@@ -326,21 +332,24 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--offline", action="store_true", help="Use only the existing FastF1 cache")
     parser.add_argument("--output-dir", type=Path, help="Parent folder for the canonical file and numbered runs")
+    add_season_arguments(parser)
     args = parser.parse_args()
+    cfg = from_args(args)
     started = time.perf_counter()
     root = Path(__file__).resolve().parent
-    fastf1.Cache.enable_cache(str(root / "cache"))
+    fastf1.Cache.enable_cache(str(cfg.path("cache")))
     fastf1.Cache.offline_mode(args.offline)
     fastf1.set_log_level("ERROR")
-    schedule = fastf1.get_event_schedule(YEAR, include_testing=False)
-    if len(schedule) != 24:
-        raise ValueError("Expected the 24-race 2025 calendar")
+    schedule = fastf1.get_event_schedule(cfg.year, include_testing=False)
+    if len(schedule) != cfg.facts["round_count"]:
+        raise ValueError("Schedule length differs from the verified manifest")
     rows, audits, held_out = [], [], []
-    for number, name in RACES.items():
+    for key, name in cfg.facts["wet_races"].items():
+        number = int(key)
         events = schedule.loc[schedule.RoundNumber.eq(number) & schedule.EventName.eq(name)]
         if len(events) != 1:
             raise ValueError(f"Could not identify scheduled race {number}: {name}")
-        race = load_race(events.iloc[0])
+        race = load_race(events.iloc[0], cfg)
         status = wet_tyre_status(race.laps)
         if status != "wet_tyres_recorded":
             held_out.append(f"{race.race}: {status}; not reclassified or counted")
@@ -350,8 +359,8 @@ def main():
         audits.append(audit)
         print(f"Analysed {race.race}", flush=True)
     output = pd.DataFrame(rows, columns=COLUMNS)
-    save_output(output, args.output_dir or root / "data")
-    print_summary(output, audits, held_out, time.perf_counter()-started)
+    save_output(output, args.output_dir or cfg.path("data"), cfg)
+    print_summary(output, audits, held_out, time.perf_counter()-started, cfg)
 
 
 if __name__ == "__main__":

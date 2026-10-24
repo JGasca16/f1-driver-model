@@ -1,0 +1,251 @@
+{
+  "season": 2025,
+  "method_id": "2025_teammate_rating_1_log_round_fix",
+  "round_count": 24,
+  "expected_entries": 20,
+  "team_size": 2,
+  "expected_appearances": 480,
+  "expected_unique_drivers": 21,
+  "registry_verified": true,
+  "roster_verified": true,
+  "qualifying_disqualifications": [
+    {
+      "round": 17,
+      "driver_number": "31",
+      "reason": "rear-wing deflection infringement"
+    },
+    {
+      "round": 18,
+      "driver_number": "23",
+      "reason": "rear-wing/DRS technical infringement"
+    },
+    {
+      "round": 18,
+      "driver_number": "55",
+      "reason": "rear-wing/DRS technical infringement"
+    }
+  ],
+  "wet_races": {
+    "1": "Australian Grand Prix",
+    "12": "British Grand Prix",
+    "13": "Belgian Grand Prix"
+  },
+  "dry_rounds": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "dry_holdouts": [
+    {
+      "round": 6,
+      "race": "Miami Grand Prix",
+      "reason": "Explicit 2025 exclusion: compound/stint labels conflict with pit timing; no compound recovery enters approved pace.",
+      "evidence": [
+        "METHOD_DRY_RACEPACE.md",
+        "MIAMI_COMPOUND_INVESTIGATION.md"
+      ]
+    }
+  ],
+  "roster_periods": [
+    {
+      "driver": "VER",
+      "teammate": "LAW",
+      "first": 1,
+      "last": 2
+    },
+    {
+      "driver": "HAD",
+      "teammate": "TSU",
+      "first": 1,
+      "last": 2
+    },
+    {
+      "driver": "VER",
+      "teammate": "TSU",
+      "first": 3,
+      "last": 24
+    },
+    {
+      "driver": "HAD",
+      "teammate": "LAW",
+      "first": 3,
+      "last": 24
+    },
+    {
+      "driver": "GAS",
+      "teammate": "DOO",
+      "first": 1,
+      "last": 6
+    },
+    {
+      "driver": "GAS",
+      "teammate": "COL",
+      "first": 7,
+      "last": 24
+    }
+  ],
+  "qualifying_summary": {
+    "race": "Miami Grand Prix",
+    "round": 6,
+    "label": "Miami"
+  },
+  "legacy_parity_required": true,
+  "miami_audit": {
+    "status": "documented_holdout",
+    "evidence": "MIAMI_COMPOUND_INVESTIGATION.md"
+  },
+  "charts": {
+    "pairs": [
+      [
+        "TSU",
+        "VER"
+      ],
+      [
+        "NOR",
+        "PIA"
+      ],
+      [
+        "HAM",
+        "LEC"
+      ]
+    ],
+    "monaco_round": 8,
+    "provisional_caption": "* Hatched bar: provisional (Doohan). Group order is alphabetical, not a global ranking.",
+    "label_offsets": {
+      "BEA": [
+        -30,
+        10
+      ],
+      "NOR": [
+        -12,
+        -26
+      ],
+      "OCO": [
+        9,
+        -14
+      ],
+      "PIA": [
+        9,
+        8
+      ],
+      "BOR": [
+        -29,
+        8
+      ],
+      "ALB": [
+        10,
+        -2
+      ],
+      "HUL": [
+        10,
+        -13
+      ],
+      "SAI": [
+        -25,
+        -20
+      ],
+      "LAW": [
+        -45,
+        5
+      ],
+      "COL": [
+        -8,
+        20
+      ],
+      "ANT": [
+        12,
+        -7
+      ],
+      "HAM": [
+        -38,
+        7
+      ],
+      "STR": [
+        12,
+        8
+      ],
+      "ALO": [
+        -40,
+        0
+      ],
+      "RUS": [
+        -5,
+        -30
+      ],
+      "GAS": [
+        7,
+        -18
+      ],
+      "LEC": [
+        10,
+        -1
+      ],
+      "HAD": [
+        -65,
+        6
+      ]
+    }
+  },
+  "paths": {
+    "data": "data",
+    "charts": "charts",
+    "cache": "cache",
+    "runs": "data/runs",
+    "results_glob": "data/2025_[0-9][0-9]_*.csv",
+    "result_pattern": "2025_{round:02d}_{race}.csv",
+    "cache_sqlite": "cache/fastf1_http_cache.sqlite"
+  },
+  "files": {
+    "qualifying_rounds": "2025_qualifying_gaps_by_round.csv",
+    "qualifying_evidence": "2025_qualifying_round_session_evidence.csv",
+    "qualifying": "2025_qualifying_gaps_combined.csv",
+    "legacy_qualifying": "2025_qualifying_teammate_gaps.csv",
+    "dry": "race_pace_dry_final.csv",
+    "dry_summary": "race_pace_dry_run_summary.json",
+    "wet": "race_pace_wet_final.csv",
+    "ratings": "driver_rating_2025.csv",
+    "sensitivity": "driver_rating_sensitivity.csv",
+    "signal_diagnostics": "driver_rating_signal_diagnostics.csv",
+    "teammate_periods": "driver_rating_teammate_periods.csv",
+    "input_audit": "driver_rating_input_audit.csv",
+    "rating_summary": "driver_rating_run_summary.json",
+    "status": "2025_race_finish_status.csv"
+  },
+  "chart_files": [
+    "rating_by_group.png",
+    "qualifying_vs_dry.png",
+    "gap_by_race_selected_pairs.png",
+    "data_coverage.png"
+  ],
+  "run_prefixes": {
+    "dry": "dry_",
+    "wet": "wet_",
+    "prediction": "prediction_"
+  },
+  "allowlist": [
+    ".",
+    "{temp}",
+    "cache"
+  ],
+  "qualifying_advancement": {
+    "Q1": 15,
+    "Q2": 10
+  }
+}

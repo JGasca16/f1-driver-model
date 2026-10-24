@@ -1,0 +1,287 @@
+{
+  "original": "cache/_parity/original_src",
+  "adapted": "cache/_parity/adapted_src_002",
+  "outputs": [
+    {
+      "output": "data/2025_qualifying_gaps_by_round.csv",
+      "rows": 480,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/2025_qualifying_gaps_combined.csv",
+      "rows": 480,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/2025_qualifying_round_session_evidence.csv",
+      "rows": 407,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/2025_race_finish_status.csv",
+      "rows": 479,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/driver_rating_2025.csv",
+      "rows": 21,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/race_pace_dry_final.csv",
+      "rows": 200,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/race_pace_wet_final.csv",
+      "rows": 30,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/runs/prediction_001/baseline_winners.csv",
+      "rows": 27,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/runs/prediction_001/bootstrap.csv",
+      "rows": 144000,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/runs/prediction_001/coefficients.csv",
+      "rows": 180,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/runs/prediction_001/comparisons.csv",
+      "rows": 351,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/runs/prediction_001/counts.csv",
+      "rows": 3,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/runs/prediction_001/eligibility.csv",
+      "rows": 720,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/runs/prediction_001/excluded_pairs.csv",
+      "rows": 202,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/runs/prediction_001/features.csv",
+      "rows": 200,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/runs/prediction_001/full_slice_validation.csv",
+      "rows": 21,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/runs/prediction_001/group_stability.csv",
+      "rows": 81,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/runs/prediction_001/metrics.csv",
+      "rows": 72,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/runs/prediction_001/missing_qualifying_pairs.csv",
+      "rows": 7,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/runs/prediction_001/predictions.csv",
+      "rows": 4144,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/runs/prediction_001/prior_ratings.csv",
+      "rows": 417,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/runs/prediction_001/race_finish_status.csv",
+      "rows": 479,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/runs/wet_001/race_pace_wet_final.csv",
+      "rows": 30,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "rating/2025_qualifying_gaps_combined.csv",
+      "rows": 480,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "rating/driver_rating_2025.csv",
+      "rows": 21,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "rating/driver_rating_input_audit.csv",
+      "rows": 0,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "rating/driver_rating_sensitivity.csv",
+      "rows": 63,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "rating/driver_rating_signal_diagnostics.csv",
+      "rows": 63,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "rating/driver_rating_teammate_periods.csv",
+      "rows": 78,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/race_pace_dry_run_summary.json",
+      "rows": null,
+      "mismatches": 0,
+      "byte_match": false
+    },
+    {
+      "output": "rating/driver_rating_run_summary.json",
+      "rows": null,
+      "mismatches": 0,
+      "byte_match": false
+    },
+    {
+      "output": "data/runs/prediction_001/summary.json",
+      "rows": null,
+      "mismatches": 0,
+      "byte_match": false
+    },
+    {
+      "output": "data/runs/prediction_001/prediction_test_config.json",
+      "rows": null,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "data/runs/prediction_001/config.sha256",
+      "rows": null,
+      "mismatches": 0,
+      "byte_match": true
+    },
+    {
+      "output": "chart data: group_order_and_values",
+      "rows": null,
+      "mismatches": 0,
+      "byte_match": null
+    },
+    {
+      "output": "chart data: scatter_values",
+      "rows": null,
+      "mismatches": 0,
+      "byte_match": null
+    },
+    {
+      "output": "chart data: scatter_statistics",
+      "rows": null,
+      "mismatches": 0,
+      "byte_match": null
+    },
+    {
+      "output": "chart data: pair_series",
+      "rows": null,
+      "mismatches": 0,
+      "byte_match": null
+    },
+    {
+      "output": "chart data: coverage_driver_order",
+      "rows": null,
+      "mismatches": 0,
+      "byte_match": null
+    },
+    {
+      "output": "chart data: coverage_matrix",
+      "rows": null,
+      "mismatches": 0,
+      "byte_match": null
+    },
+    {
+      "output": "rating: 2000 whole-weekend bootstrap draw vectors",
+      "rows": 2000,
+      "mismatches": 0,
+      "byte_match": null
+    }
+  ],
+  "metadata": {
+    "data/race_pace_dry_run_summary.json": {
+      "runtime_seconds": {
+        "original": 13.301080791978166,
+        "adapted": 21.984895374975167
+      }
+    },
+    "rating/driver_rating_run_summary.json": {
+      "runtime_seconds": {
+        "original": 0.40426079102326185,
+        "adapted": 0.7237525000236928
+      }
+    },
+    "data/runs/prediction_001/summary.json": {
+      "runtime_seconds": {
+        "original": 2.1099193749250844,
+        "adapted": 3.246332624927163
+      },
+      "script_sha256": {
+        "original": "841e3d6f26f4aaf5372f21c7470d913bcc48c1c91b5ba8082c3dfef33991d4e0",
+        "adapted": "af8a6207994fc96ea9904d13753ab1c1f8c66265a63367b94aa53f9814dda535"
+      },
+      "rating_script_sha256": {
+        "original": "ebb38a76c9543e4c2c9fccd66e74fc3ca1be894a0999ead335ff6d9c2b56a597",
+        "adapted": "8eca498ade0bba19fdfabb49d6d8cc4f5a882f31c78994853e19fea2bd4936d2"
+      },
+      "qualifying_script_sha256": {
+        "original": "6a66a3ff702a96809a86df457f2ee2d64862eaa2312de306f9f5cde63076f7b5",
+        "adapted": "c38502bb99adf1022236d250e295a935909fdd50c0acba5819ba03065e8175df"
+      }
+    }
+  },
+  "chart_data_exact": true,
+  "bootstrap_draw_sha256": "bfee5d780fce0d3552585eae95dc6cf741caf27dcc3e6a1b471201b30395ec84",
+  "unchanged_bootstrap_functions": 11
+}

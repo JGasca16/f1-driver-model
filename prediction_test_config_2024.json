@@ -1,0 +1,151 @@
+{
+  "specification": "approved_2025_teammate_prediction_1",
+  "season": 2024,
+  "rounds": 24,
+  "inputs": {
+    "ratings": "data/driver_rating_{season}.csv",
+    "qualifying": "data/{season}_qualifying_gaps_combined.csv",
+    "qualifying_rounds": "data/{season}_qualifying_gaps_by_round.csv",
+    "dry": "data/race_pace_dry_final.csv",
+    "wet": "data/race_pace_wet_final.csv",
+    "results_glob": "data/{season}_[0-9][0-9]_*.csv",
+    "cache": "cache/fastf1_http_cache.sqlite"
+  },
+  "outputs": {
+    "status": "data/{season}_race_finish_status.csv",
+    "runs": "data/runs",
+    "run_prefix": "prediction_"
+  },
+  "target_rules": {
+    "main_both_finish": "both_finish",
+    "all_starters": "keep_retirements",
+    "no_double_retirement": "at_least_one_finisher"
+  },
+  "finisher_statuses": [
+    "Finished",
+    "Lapped"
+  ],
+  "retired_status": "Retired",
+  "excluded_statuses": [
+    "Disqualified",
+    "Did not start"
+  ],
+  "history": {
+    "calendar_rounds": 4,
+    "valid_qualifying_per_driver": 3
+  },
+  "schedule": {
+    "initial_training_first": 5,
+    "initial_training_last": 12,
+    "main_first": 13,
+    "main_last": 24,
+    "minimum_training_rows": 15,
+    "early_fallback_policy": "save earlier weekends as early_fallback; early metrics start at first weekend with 15 earlier eligible rows"
+  },
+  "models": {
+    "M1": [
+      "rating_difference"
+    ],
+    "M2": [
+      "qualifying_advantage"
+    ],
+    "M3": [
+      "rating_difference",
+      "qualifying_advantage"
+    ]
+  },
+  "logistic": {
+    "intercept": false,
+    "C": 1.0,
+    "solver": "L-BFGS-B",
+    "maxiter": 1000,
+    "gtol": 1e-10,
+    "ftol": 1e-12,
+    "feature_scaling": "none",
+    "objective": "sum logistic loss + sum squared coefficients / (2*C)"
+  },
+  "rating": {
+    "method_version": "2025_teammate_rating_1_log_round_fix",
+    "round_weights": {
+      "q1": 0.2,
+      "q2": 0.3,
+      "q3": 0.5
+    },
+    "signal_weights": [
+      0.45,
+      0.45,
+      0.1
+    ],
+    "reference_races": [
+      8,
+      8,
+      3
+    ],
+    "precision_floor": 0.25,
+    "precision_se_scale": 0.15,
+    "monaco_multiplier": 0.5,
+    "missing_signal": "absent, never a zero gap",
+    "full_slice_tolerance": 0.000500000001,
+    "qualifying_export_tolerance": 1e-12,
+    "provisional_allowed": true
+  },
+  "baselines": {
+    "methods": [
+      "qualifying",
+      "grid",
+      "previous",
+      "head_to_head",
+      "chance"
+    ],
+    "pseudo_success": 1,
+    "pseudo_failure": 1,
+    "uninformed_probability": 0.5,
+    "historical_outcome_rule": "main target before history gate: both finish and valid qualifying",
+    "calibration_rows": "same target's earlier eligible training rows from feature round 5",
+    "previous_race": "immediately preceding calendar round, exact teammates",
+    "head_to_head": "same teammate period only; earlier main-target outcomes including rounds before feature gate",
+    "invalid_grid": "nonpositive, nonfinite, duplicated or tied: probability 0.5 and flag"
+  },
+  "metrics": {
+    "primary": "brier",
+    "secondary": [
+      "accuracy",
+      "log_loss"
+    ],
+    "decision_threshold": 0.5,
+    "tie_credit": 0.5,
+    "log_loss_clip": [
+      1e-06,
+      0.999999
+    ]
+  },
+  "bootstrap": {
+    "resamples": 2000,
+    "seed": 42,
+    "percentiles": [
+      2.5,
+      97.5
+    ],
+    "unit": "whole scored weekend",
+    "refit": false
+  },
+  "comparisons": {
+    "primary": [
+      "M3",
+      "M2"
+    ],
+    "against_simple_baselines": [
+      "M1",
+      "M3"
+    ],
+    "best_baseline_selection": "separate metric winners, exploratory",
+    "group_stability": "omit each full-season teammate group from scoring only; never refit"
+  },
+  "orientation": "A is alphabetically first code for labeling only; swapped features reverse sign",
+  "missing_current_qualifying": "exclude and list; no rating-only fallback",
+  "points_and_race_wins": "never read as data columns; head-to-head successes are derived only from prior pair outcomes",
+  "network": false,
+  "cache_mode": "read-only immutable",
+  "overwrite": false,
+  "manifest": "seasons/2024.json"
+}

@@ -1,19 +1,36 @@
+import argparse
 from pathlib import Path
+
+from season_config import DEFAULT, add_season_arguments, from_args
+
 
 import fastf1
 
 
+def write_results(results, path):
+    """Exclusive creation means a repeat export cannot erase an earlier result."""
+    with Path(path).open("x", newline="") as stream:
+        results.to_csv(stream, index=False)
+
+
 def main():
-    year = 2025
-    project_folder = Path(__file__).resolve().parent
-    cache_folder = project_folder / "cache"
-    data_folder = project_folder / "data"
-    cache_folder.mkdir(exist_ok=True)
-    data_folder.mkdir(exist_ok=True)
+    parser = argparse.ArgumentParser(description="Export race results without overwriting earlier files")
+    add_season_arguments(parser)
+    parser.add_argument("--offline", action="store_true")
+    args = parser.parse_args()
+    cfg = from_args(args)
+    year = cfg.year
+    cache_folder = cfg.path("cache")
+    data_folder = cfg.path("data")
+    cache_folder.mkdir(parents=True, exist_ok=True)
+    data_folder.mkdir(parents=True, exist_ok=True)
     fastf1.Cache.enable_cache(str(cache_folder))
+    fastf1.Cache.offline_mode(args.offline)
 
     # Testing events are not races, so leave them out of the calendar.
     schedule = fastf1.get_event_schedule(year, include_testing=False)
+    if len(schedule) != cfg.facts["round_count"]:
+        raise ValueError("Schedule length differs from the verified manifest")
     columns = ["Abbreviation", "TeamName", "GridPosition", "Position"]
     saved = 0
     total_rows = 0
@@ -30,8 +47,8 @@ def main():
             if results.empty or results["Position"].isna().any():
                 raise ValueError("Race results are missing or incomplete")
 
-            filename = f"{year}_{round_number:02d}_{race_name.replace(' ', '_')}.csv"
-            results.to_csv(data_folder / filename, index=False)
+            filename = cfg.facts["paths"]["result_pattern"].format(round=round_number, race=race_name.replace(" ", "_"))
+            write_results(results, cfg.checked(data_folder / filename, published=True))
             saved += 1
             total_rows += len(results)
             print(f"Saved {race_name}: {len(results)} drivers")
