@@ -131,6 +131,7 @@ Sources: [rating table](data/driver_rating_2025.csv), [driver-rating method, Kno
 | Season rating | [driver_rating.py](driver_rating.py), [rating table](data/driver_rating_2025.csv), [DRIVER_RATING_METHOD.md](DRIVER_RATING_METHOD.md) |
 | Prediction test | [prediction_test.py](prediction_test.py), [frozen config](prediction_test_config.json), [saved run](data/runs/prediction_001/), [PREDICTION_TEST_METHOD.md](PREDICTION_TEST_METHOD.md) |
 | Inspection charts | [make_sanity_charts.py](make_sanity_charts.py), [charts/](charts/), [SANITY_CHECKS.md](SANITY_CHECKS.md) |
+| Season extension — 2024 is not runnable yet | [season_config.py](season_config.py), [seasons/](seasons/), [season_parity.py](season_parity.py), [season_eligibility_audit.py](season_eligibility_audit.py), [spec](SEASON_EXTENSION_SPEC.md), [runbook](SEASON_EXTENSION_RUNBOOK.md), [parity report](SEASON_PARITY_REPORT.md), [pilot report](PILOT_2024_REPORT.md) |
 
 The following dry-race files are **superseded research versions kept as history**, not current pipeline inputs. The superseded files are:
 
@@ -146,6 +147,8 @@ Sources: the files linked in the table above; [METHOD_DRY_RACEPACE.md](METHOD_DR
 
 Run from the repository root with the existing `.venv`. Offline data steps use the existing FastF1 cache. Commands that write to a named folder require a **new, unused folder name** on each repeat run; the dry, wet and prediction scripts reserve numbered runs automatically. These options and output protections are defined in the linked scripts above.
 
+Use Python **3.14.7** and the pinned library versions in [requirements.txt](requirements.txt).
+
 ```sh
 .venv/bin/python qualifying_gaps_by_round.py --offline --output-dir data/runs/qualifying_readme_001
 .venv/bin/python qualifying_gaps_combined.py --input data/runs/qualifying_readme_001/2025_qualifying_gaps_by_round.csv --output-dir data/runs/qualifying_readme_001
@@ -157,13 +160,15 @@ Run from the repository root with the existing `.venv`. Offline data steps use t
 .venv/bin/python -m unittest discover -v
 ```
 
-The latest full test run passed 126 tests (documented in PREDICTION_TEST_METHOD.md).
+The full offline test run on **24 October 2026** passed **141 tests with zero failures** in 9.498 seconds, using `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$PWD/cache/_parity/offline_guard" .venv/bin/python -m unittest discover -v`.
 
-Sources: [documented test count](PREDICTION_TEST_METHOD.md), [qualifying by round](qualifying_gaps_by_round.py), [qualifying combination](qualifying_gaps_combined.py), [dry script](race_pace_dry.py), [wet script](race_pace_wet.py), [rating script](driver_rating.py), [prediction script](prediction_test.py), [chart script](make_sanity_charts.py).
+Sources: the offline unittest run dated 24 October 2026 quoted above; [requirements](requirements.txt), [qualifying by round](qualifying_gaps_by_round.py), [qualifying combination](qualifying_gaps_combined.py), [dry script](race_pace_dry.py), [wet script](race_pace_wet.py), [rating script](driver_rating.py), [prediction script](prediction_test.py), [chart script](make_sanity_charts.py).
 
 ## Roadmap
 
 - **Planned, not built:** Add the **2024** season through the same pipeline.
+  Blocked since October 2026: F1's timing archive began rejecting unauthenticated downloads (HTTP 401), so new seasons cannot be fetched until access is resolved. 2025 data is already cached. See [PILOT_2024_REPORT.md](PILOT_2024_REPORT.md).
+  The pilot confirmed this failure for Bahrain qualifying only; it did not establish when the restriction began or its archive-wide scope.
 - **Planned, not built:** Build a connected career rating on a **0 to 100** scale only for drivers who can be linked across teams, and show uncertainty.
 - **Planned, not built:** Freeze the evaluation specification before testing whether ratings available before a season starts predict teammate results, using **2026** as the evaluation season.
 

@@ -1,0 +1,6 @@
+# Python 3.14.7; direct dependencies verified against pip freeze.
+fastf1==3.8.3
+pandas==2.3.3
+numpy==2.5.4
+scipy==1.18.1
+matplotlib==3.11.2

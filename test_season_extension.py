@@ -1,6 +1,7 @@
 """Season paths and exact 2025 compatibility; never load another season's data."""
 from copy import deepcopy
 from dataclasses import replace
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -22,6 +23,14 @@ ROOT = Path(__file__).resolve().parent
 SCRIPTS = ["test_fastf1.py", "qualifying_gaps_by_round.py", "qualifying_gaps_combined.py",
            "race_pace_dry.py", "race_pace_wet.py", "driver_rating.py", "prediction_test.py",
            "make_sanity_charts.py"]
+
+
+def directory_snapshot(directory):
+    """Record every file's relative path, size and contents, or nothing if absent."""
+    directory = Path(directory)
+    return {str(path.relative_to(directory)): (path.stat().st_size,
+            hashlib.sha256(path.read_bytes()).hexdigest())
+            for path in sorted(directory.rglob("*")) if path.is_file()}
 
 
 class SeasonExtensionTests(unittest.TestCase):
@@ -77,16 +86,28 @@ class SeasonExtensionTests(unittest.TestCase):
         self.assertIn("UNVERIFIED", str(caught.exception))
 
     def test_all_eight_cli_commands_stop_before_unverified_data(self):
+        directories = [ROOT / "data/2024", ROOT / "cache/season_2024"]
         for script in SCRIPTS:
             with self.subTest(script=script):
+                before = {path: directory_snapshot(path) for path in directories}
                 env = dict(os.environ, PYTHONDONTWRITEBYTECODE="1")
                 result = subprocess.run([sys.executable, "-B", str(ROOT / script), "--season", "2024", "--offline"],
                                         cwd=ROOT, env=env, capture_output=True, text=True)
                 self.assertNotEqual(result.returncode, 0)
                 self.assertIn("UNVERIFIED required facts", result.stderr)
                 self.assertIn("round_count", result.stderr)
-        self.assertFalse((ROOT / "data/2024").exists())
-        self.assertFalse((ROOT / "cache/season_2024").exists())
+                after = {path: directory_snapshot(path) for path in directories}
+                self.assertEqual(before, after, "Rejected command changed season files")
+
+    def test_directory_snapshot_detects_created_file(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "season"
+            before = directory_snapshot(path)
+            self.assertEqual(before, {})
+            path.mkdir()
+            (path / "unexpected.txt").write_text("unexpected output")
+            with self.assertRaises(self.failureException):
+                self.assertEqual(before, directory_snapshot(path))
 
     def test_unverified_manifest_never_substitutes_default_year(self):
         with self.assertRaisesRegex(ValueError, "disagrees"):
