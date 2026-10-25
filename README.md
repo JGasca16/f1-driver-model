@@ -185,3 +185,19 @@ The code in this repository is released under the MIT License (see [LICENSE](LIC
 This is an unofficial, independent project. It is not affiliated with or endorsed by Formula 1, the FIA or any team. Formula 1 and team names are trademarks of their respective owners.
 
 Sources: [FastF1 documentation](https://docs.fastf1.dev/), [data method](METHOD.md), [LICENSE](LICENSE).
+
+## Roadmap and data access
+
+The 2025 season is complete: qualifying gaps, dry and wet race-pace gaps, driver ratings, and the prediction test are saved in this repository.
+
+The scripts support a second season through explicit season settings. Parity tests showed that the season-aware scripts reproduce the approved 2025 method and outputs exactly; no 2024 results have been produced. The 2024 session data has not been downloaded successfully. A pilot scoped to rounds 1 and 2 stopped during Bahrain qualifying after repeated HTTP 401 (unauthorized) responses from F1's timing archive. No qualifying or race session completed, so 2024 is blocked on data access. See [PILOT_2024_REPORT.md](PILOT_2024_REPORT.md) and [SEASON_PARITY_REPORT.md](SEASON_PARITY_REPORT.md).
+
+2026 data access has not been tried.
+
+The following steps are planned, in this order, and are not done yet:
+
+1. Add 2024 once data access works.
+2. Give each driver a per-season rating and an overall rating on a 0 to 100 scale, keeping both.
+3. Test whether ratings available before a season starts can predict teammate head-to-head results, evaluated on 2026 after 2024 is done.
+
+[requirements.txt](requirements.txt) pins the library versions.
