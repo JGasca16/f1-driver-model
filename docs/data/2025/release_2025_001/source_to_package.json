@@ -1,0 +1,19 @@
+{
+  "data/driver_rating_2025.csv": "docs/data/2025/release_2025_001/driver_rating_2025.csv",
+  "data/driver_rating_teammate_periods.csv": "docs/data/2025/release_2025_001/driver_rating_teammate_periods.csv",
+  "data/driver_rating_signal_diagnostics.csv": "docs/data/2025/release_2025_001/driver_rating_signal_diagnostics.csv",
+  "data/driver_rating_run_summary.json": "docs/data/2025/release_2025_001/driver_rating_run_summary.json",
+  "data/2025_qualifying_gaps_combined.csv": "docs/data/2025/release_2025_001/2025_qualifying_gaps_combined.csv",
+  "data/2025_qualifying_gaps_by_round.csv": "docs/data/2025/release_2025_001/2025_qualifying_gaps_by_round.csv",
+  "data/race_pace_dry_final.csv": "docs/data/2025/release_2025_001/race_pace_dry_final.csv",
+  "data/race_pace_wet_final.csv": "docs/data/2025/release_2025_001/race_pace_wet_final.csv",
+  "data/runs/prediction_001/metrics.csv": "docs/data/2025/release_2025_001/metrics.csv",
+  "data/runs/prediction_001/comparisons.csv": "docs/data/2025/release_2025_001/comparisons.csv",
+  "data/runs/prediction_001/counts.csv": "docs/data/2025/release_2025_001/counts.csv",
+  "data/runs/prediction_001/summary.json": "docs/data/2025/release_2025_001/summary.json",
+  "data/runs/prediction_001/prediction_test_config.json": "docs/data/2025/release_2025_001/prediction_test_config.json",
+  "data/runs/prediction_001/baseline_winners.csv": "docs/data/2025/release_2025_001/baseline_winners.csv",
+  "data/runs/prediction_001/group_stability.csv": "docs/data/2025/release_2025_001/group_stability.csv",
+  "data/runs/prediction_001/eligibility.csv": "docs/data/2025/release_2025_001/eligibility.csv",
+  "data/runs/prediction_001/predictions.csv": "docs/data/2025/release_2025_001/predictions.csv"
+}

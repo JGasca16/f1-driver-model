@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; font-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <title>2025 F1 teammate pace and prediction</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="content.js" defer></script>
+  <script src="data.js" defer></script>
+  <script src="views.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="#overview">F1 Teammate Pace <span>· 2025</span></a>
+    <p class="unofficial">Unofficial project</p>
+    <nav aria-label="Main navigation">
+      <a href="#overview" data-view="overview">Overview</a>
+      <a href="#drivers" data-view="drivers">Drivers</a>
+      <a href="#prediction" data-view="prediction">Prediction test</a>
+      <a href="#method" data-view="method">How it works</a>
+    </nav>
+    <a id="repository" class="quiet-link">GitHub</a>
+    <label class="theme-label" for="theme-select">Theme:</label>
+    <select id="theme-select" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark" selected>Dark</option></select>
+  </header>
+  <main id="main" tabindex="-1" aria-busy="true">
+    <p role="status">Loading saved results…</p>
+  </main>
+  <noscript><p class="notice">JavaScript required for saved-data views.</p></noscript>
+  <footer id="footer"></footer>
+  <dialog id="data-dialog" aria-labelledby="data-title">
+    <div class="dialog-heading"><h2 id="data-title">Saved data</h2><button id="close-data" type="button">Close</button></div>
+    <div id="data-content"></div>
+  </dialog>
+</body>
+</html>

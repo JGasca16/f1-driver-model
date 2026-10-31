@@ -4,3 +4,7 @@ pandas==2.3.3
 numpy==2.5.4
 scipy==1.18.1
 matplotlib==3.11.2
+# Direct import in season_pilot_export.py; also installed as a FastF1 dependency.
+requests==2.34.2
+# Direct import in test_make_sanity_charts.py; also installed as a Matplotlib dependency.
+Pillow==12.3.0

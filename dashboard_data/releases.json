@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "releases": [
+    {
+      "season": 2025,
+      "release_id": "release_2025_001",
+      "published_at": "",
+      "results_last_updated": "2026-10-23",
+      "release_state": "candidate",
+      "rating_method_version": "2025_teammate_rating_1_log_round_fix",
+      "prediction_specification": "approved_2025_teammate_prediction_1",
+      "prediction_run_id": "prediction_001",
+      "rounds": 24,
+      "groups": [
+        "ALB+SAI",
+        "ALO+STR",
+        "ANT+RUS",
+        "BEA+OCO",
+        "BOR+HUL",
+        "COL+DOO+GAS",
+        "HAD+LAW+TSU+VER",
+        "HAM+LEC",
+        "NOR+PIA"
+      ],
+      "scope_counts": {
+        "drivers": 21,
+        "groups": 9,
+        "main_pair_races": 95,
+        "main_weekends": 12,
+        "main_exclusions": 25,
+        "confidence_counts": {
+          "high": 16,
+          "medium": 4,
+          "low/provisional": 1,
+          "unavailable": 0
+        },
+        "rating_status_counts": {
+          "established": 20,
+          "provisional": 1,
+          "unavailable": 0
+        }
+      },
+      "sources": [
+        {
+          "source": "data/driver_rating_2025.csv",
+          "package_path": "docs/data/2025/release_2025_001/driver_rating_2025.csv",
+          "source_sha256": "fe4796b7a8c626fceacfb144c4712007a577e1ecc000e532218282e1245d5c8a",
+          "bytes": 32417
+        },
+        {
+          "source": "data/driver_rating_teammate_periods.csv",
+          "package_path": "docs/data/2025/release_2025_001/driver_rating_teammate_periods.csv",
+          "source_sha256": "3e45564220525e483203b071444e6584175f57d9de7bd963606b80c0bfeada31",
+          "bytes": 8601
+        },
+        {
+          "source": "data/driver_rating_signal_diagnostics.csv",
+          "package_path": "docs/data/2025/release_2025_001/driver_rating_signal_diagnostics.csv",
+          "source_sha256": "79db3ec17f569fbc9990f46c2da218c24e68425406c848e6205b0665d9eb30c9",
+          "bytes": 7681
+        },
+        {
+          "source": "data/driver_rating_run_summary.json",
+          "package_path": "docs/data/2025/release_2025_001/driver_rating_run_summary.json",
+          "source_sha256": "1881ec2531f7b6c83798d85723b3f751a4884bb87b8d6af0ea8daa0885785cd2",
+          "bytes": 1879
+        },
+        {
+          "source": "data/2025_qualifying_gaps_combined.csv",
+          "package_path": "docs/data/2025/release_2025_001/2025_qualifying_gaps_combined.csv",
+          "source_sha256": "6e0960bd327aa55862b1856b4518ab50a207e3e0c07ba93d945bd17a1a735b68",
+          "bytes": 43027
+        },
+        {
+          "source": "data/2025_qualifying_gaps_by_round.csv",
+          "package_path": "docs/data/2025/release_2025_001/2025_qualifying_gaps_by_round.csv",
+          "source_sha256": "23cdd67e1d4f1b34d6a74dee3879b331fd0c57ddfd163e105837f719ea08a644",
+          "bytes": 175816
+        },
+        {
+          "source": "data/race_pace_dry_final.csv",
+          "package_path": "docs/data/2025/release_2025_001/race_pace_dry_final.csv",
+          "source_sha256": "5d73c1ee83732859e75570c56a880d9c15166ffa62be4bdd91ad1f69dbfb7ed2",
+          "bytes": 42538
+        },
+        {
+          "source": "data/race_pace_wet_final.csv",
+          "package_path": "docs/data/2025/release_2025_001/race_pace_wet_final.csv",
+          "source_sha256": "e9b05ca0a027a485889a8353aabaff12085566ff8a80a81200090fd49437447b",
+          "bytes": 3632
+        },
+        {
+          "source": "data/runs/prediction_001/metrics.csv",
+          "package_path": "docs/data/2025/release_2025_001/metrics.csv",
+          "source_sha256": "89fbaece7c57ff6c308c5fc89c89fb2c4c5d8062d8a8bba449e7e8d87b3a5f0f",
+          "bytes": 20463
+        },
+        {
+          "source": "data/runs/prediction_001/comparisons.csv",
+          "package_path": "docs/data/2025/release_2025_001/comparisons.csv",
+          "source_sha256": "6b125cb47e35283d98ebeec3b0bd38abcc62833ce84a9bd08f2bfd8158f06602",
+          "bytes": 43064
+        },
+        {
+          "source": "data/runs/prediction_001/counts.csv",
+          "package_path": "docs/data/2025/release_2025_001/counts.csv",
+          "source_sha256": "0f8a94833904bd1397d2dbacde258a10bf071fb0b40750fb8986e4dfb7139817",
+          "bytes": 308
+        },
+        {
+          "source": "data/runs/prediction_001/summary.json",
+          "package_path": "docs/data/2025/release_2025_001/summary.json",
+          "source_sha256": "e784fa56504176fb73c88cb4ee7dabc41d1a53bfc77cacf5f888e021da68ab76",
+          "bytes": 6146
+        },
+        {
+          "source": "data/runs/prediction_001/prediction_test_config.json",
+          "package_path": "docs/data/2025/release_2025_001/prediction_test_config.json",
+          "source_sha256": "ea1bfd32b92d1f80f00bd791a77b3d1425c89db20810881de32ef62ed032a2dd",
+          "bytes": 3755
+        },
+        {
+          "source": "data/runs/prediction_001/baseline_winners.csv",
+          "package_path": "docs/data/2025/release_2025_001/baseline_winners.csv",
+          "source_sha256": "47c359a252394ecde5701484e6f7bde81dd6adbbb6279314e56f3a6e936b8c88",
+          "bytes": 1984
+        },
+        {
+          "source": "data/runs/prediction_001/group_stability.csv",
+          "package_path": "docs/data/2025/release_2025_001/group_stability.csv",
+          "source_sha256": "e0803700cb8f0f0cbbd54f7d2934221b8a62be3c3b5b622110f8a2915446411c",
+          "bytes": 16555
+        },
+        {
+          "source": "data/runs/prediction_001/eligibility.csv",
+          "package_path": "docs/data/2025/release_2025_001/eligibility.csv",
+          "source_sha256": "8e461ab6f5f85c51e10cca81b83c4878e53b08687b9a145117bbec3239dabe89",
+          "bytes": 41656
+        },
+        {
+          "source": "data/runs/prediction_001/predictions.csv",
+          "package_path": "docs/data/2025/release_2025_001/predictions.csv",
+          "source_sha256": "370bb264983baafa7da11b031beb40896747aac888c896a20eb7f231ee301b4d",
+          "bytes": 1251711
+        }
+      ],
+      "source_sha256": {
+        "data/driver_rating_2025.csv": "fe4796b7a8c626fceacfb144c4712007a577e1ecc000e532218282e1245d5c8a",
+        "data/driver_rating_teammate_periods.csv": "3e45564220525e483203b071444e6584175f57d9de7bd963606b80c0bfeada31",
+        "data/driver_rating_signal_diagnostics.csv": "79db3ec17f569fbc9990f46c2da218c24e68425406c848e6205b0665d9eb30c9",
+        "data/driver_rating_run_summary.json": "1881ec2531f7b6c83798d85723b3f751a4884bb87b8d6af0ea8daa0885785cd2",
+        "data/2025_qualifying_gaps_combined.csv": "6e0960bd327aa55862b1856b4518ab50a207e3e0c07ba93d945bd17a1a735b68",
+        "data/2025_qualifying_gaps_by_round.csv": "23cdd67e1d4f1b34d6a74dee3879b331fd0c57ddfd163e105837f719ea08a644",
+        "data/race_pace_dry_final.csv": "5d73c1ee83732859e75570c56a880d9c15166ffa62be4bdd91ad1f69dbfb7ed2",
+        "data/race_pace_wet_final.csv": "e9b05ca0a027a485889a8353aabaff12085566ff8a80a81200090fd49437447b",
+        "data/runs/prediction_001/metrics.csv": "89fbaece7c57ff6c308c5fc89c89fb2c4c5d8062d8a8bba449e7e8d87b3a5f0f",
+        "data/runs/prediction_001/comparisons.csv": "6b125cb47e35283d98ebeec3b0bd38abcc62833ce84a9bd08f2bfd8158f06602",
+        "data/runs/prediction_001/counts.csv": "0f8a94833904bd1397d2dbacde258a10bf071fb0b40750fb8986e4dfb7139817",
+        "data/runs/prediction_001/summary.json": "e784fa56504176fb73c88cb4ee7dabc41d1a53bfc77cacf5f888e021da68ab76",
+        "data/runs/prediction_001/prediction_test_config.json": "ea1bfd32b92d1f80f00bd791a77b3d1425c89db20810881de32ef62ed032a2dd",
+        "data/runs/prediction_001/baseline_winners.csv": "47c359a252394ecde5701484e6f7bde81dd6adbbb6279314e56f3a6e936b8c88",
+        "data/runs/prediction_001/group_stability.csv": "e0803700cb8f0f0cbbd54f7d2934221b8a62be3c3b5b622110f8a2915446411c",
+        "data/runs/prediction_001/eligibility.csv": "8e461ab6f5f85c51e10cca81b83c4878e53b08687b9a145117bbec3239dabe89",
+        "data/runs/prediction_001/predictions.csv": "370bb264983baafa7da11b031beb40896747aac888c896a20eb7f231ee301b4d"
+      },
+      "method_links": {
+        "DRIVER_RATING_METHOD.md": "https://github.com/JGasca16/f1-driver-model/blob/main/DRIVER_RATING_METHOD.md",
+        "PREDICTION_TEST_METHOD.md": "https://github.com/JGasca16/f1-driver-model/blob/main/PREDICTION_TEST_METHOD.md",
+        "QUALIFYING_BY_ROUND.md": "https://github.com/JGasca16/f1-driver-model/blob/main/QUALIFYING_BY_ROUND.md",
+        "METHOD_DRY_RACEPACE.md": "https://github.com/JGasca16/f1-driver-model/blob/main/METHOD_DRY_RACEPACE.md",
+        "METHOD_WET_RACEPACE.md": "https://github.com/JGasca16/f1-driver-model/blob/main/METHOD_WET_RACEPACE.md"
+      },
+      "repository_url": "https://github.com/JGasca16/f1-driver-model",
+      "license_url": "https://github.com/JGasca16/f1-driver-model/blob/main/LICENSE",
+      "data_credit": {
+        "text": "FastF1 and the official timing feeds it wraps.",
+        "url": "https://docs.fastf1.dev/",
+        "license_scope": "MIT covers repository code only, not underlying race and timing data."
+      },
+      "unofficial_project_disclaimer": "This is an unofficial, independent project. It is not affiliated with or endorsed by Formula 1, the FIA or any team. Formula 1 and team names are trademarks of their respective owners.",
+      "hosting": {
+        "provider": "GitHub Pages",
+        "branch": "main",
+        "folder": "docs/"
+      },
+      "views": [
+        "overview",
+        "drivers",
+        "race_gaps",
+        "prediction_test",
+        "method_and_limits"
+      ],
+      "display_rules": {
+        "group_order": "alphabetical",
+        "driver_order": "alphabetical",
+        "rank_numbers": false,
+        "global_leaderboard": false,
+        "sign_explanation": "Negative = faster than the actual teammate(s); positive = slower.",
+        "zero_inclusive_interval_label": "No clear gap"
+      },
+      "teaching_examples": {
+        "purpose": "teaching examples, not top results",
+        "examples": [
+          {
+            "group": "HAM+LEC",
+            "label": "Clear gap",
+            "state": "clear_gap"
+          },
+          {
+            "group": "NOR+PIA",
+            "label": "No clear gap",
+            "state": "no_clear_gap"
+          }
+        ]
+      },
+      "date_provenance": {
+        "date_kind": "repository commit dates",
+        "ratings": {
+          "date": "2026-10-16",
+          "commit": "7388c24"
+        },
+        "prediction_run": {
+          "date": "2026-10-23",
+          "commit": "86a922d"
+        },
+        "note": "Owner-approved repository commit dates, not session dates or data-generation timestamps. published_at stays empty until deployment."
+      }
+    }
+  ]
+}

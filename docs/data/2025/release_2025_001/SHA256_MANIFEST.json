@@ -1,0 +1,87 @@
+{
+  "driver_rating_2025.csv": {
+    "source": "data/driver_rating_2025.csv",
+    "bytes": 32417,
+    "sha256": "fe4796b7a8c626fceacfb144c4712007a577e1ecc000e532218282e1245d5c8a"
+  },
+  "driver_rating_teammate_periods.csv": {
+    "source": "data/driver_rating_teammate_periods.csv",
+    "bytes": 8601,
+    "sha256": "3e45564220525e483203b071444e6584175f57d9de7bd963606b80c0bfeada31"
+  },
+  "driver_rating_signal_diagnostics.csv": {
+    "source": "data/driver_rating_signal_diagnostics.csv",
+    "bytes": 7681,
+    "sha256": "79db3ec17f569fbc9990f46c2da218c24e68425406c848e6205b0665d9eb30c9"
+  },
+  "driver_rating_run_summary.json": {
+    "source": "data/driver_rating_run_summary.json",
+    "bytes": 1879,
+    "sha256": "1881ec2531f7b6c83798d85723b3f751a4884bb87b8d6af0ea8daa0885785cd2"
+  },
+  "2025_qualifying_gaps_combined.csv": {
+    "source": "data/2025_qualifying_gaps_combined.csv",
+    "bytes": 43027,
+    "sha256": "6e0960bd327aa55862b1856b4518ab50a207e3e0c07ba93d945bd17a1a735b68"
+  },
+  "2025_qualifying_gaps_by_round.csv": {
+    "source": "data/2025_qualifying_gaps_by_round.csv",
+    "bytes": 175816,
+    "sha256": "23cdd67e1d4f1b34d6a74dee3879b331fd0c57ddfd163e105837f719ea08a644"
+  },
+  "race_pace_dry_final.csv": {
+    "source": "data/race_pace_dry_final.csv",
+    "bytes": 42538,
+    "sha256": "5d73c1ee83732859e75570c56a880d9c15166ffa62be4bdd91ad1f69dbfb7ed2"
+  },
+  "race_pace_wet_final.csv": {
+    "source": "data/race_pace_wet_final.csv",
+    "bytes": 3632,
+    "sha256": "e9b05ca0a027a485889a8353aabaff12085566ff8a80a81200090fd49437447b"
+  },
+  "metrics.csv": {
+    "source": "data/runs/prediction_001/metrics.csv",
+    "bytes": 20463,
+    "sha256": "89fbaece7c57ff6c308c5fc89c89fb2c4c5d8062d8a8bba449e7e8d87b3a5f0f"
+  },
+  "comparisons.csv": {
+    "source": "data/runs/prediction_001/comparisons.csv",
+    "bytes": 43064,
+    "sha256": "6b125cb47e35283d98ebeec3b0bd38abcc62833ce84a9bd08f2bfd8158f06602"
+  },
+  "counts.csv": {
+    "source": "data/runs/prediction_001/counts.csv",
+    "bytes": 308,
+    "sha256": "0f8a94833904bd1397d2dbacde258a10bf071fb0b40750fb8986e4dfb7139817"
+  },
+  "summary.json": {
+    "source": "data/runs/prediction_001/summary.json",
+    "bytes": 6146,
+    "sha256": "e784fa56504176fb73c88cb4ee7dabc41d1a53bfc77cacf5f888e021da68ab76"
+  },
+  "prediction_test_config.json": {
+    "source": "data/runs/prediction_001/prediction_test_config.json",
+    "bytes": 3755,
+    "sha256": "ea1bfd32b92d1f80f00bd791a77b3d1425c89db20810881de32ef62ed032a2dd"
+  },
+  "baseline_winners.csv": {
+    "source": "data/runs/prediction_001/baseline_winners.csv",
+    "bytes": 1984,
+    "sha256": "47c359a252394ecde5701484e6f7bde81dd6adbbb6279314e56f3a6e936b8c88"
+  },
+  "group_stability.csv": {
+    "source": "data/runs/prediction_001/group_stability.csv",
+    "bytes": 16555,
+    "sha256": "e0803700cb8f0f0cbbd54f7d2934221b8a62be3c3b5b622110f8a2915446411c"
+  },
+  "eligibility.csv": {
+    "source": "data/runs/prediction_001/eligibility.csv",
+    "bytes": 41656,
+    "sha256": "8e461ab6f5f85c51e10cca81b83c4878e53b08687b9a145117bbec3239dabe89"
+  },
+  "predictions.csv": {
+    "source": "data/runs/prediction_001/predictions.csv",
+    "bytes": 1251711,
+    "sha256": "370bb264983baafa7da11b031beb40896747aac888c896a20eb7f231ee301b4d"
+  }
+}
